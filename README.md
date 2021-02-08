@@ -48,4 +48,4 @@ their value, such as rating over price? Can there be multiple rankings on differ
 
 ### [Project Plan](ProjectPlan.md)
 
-#### [TimeLog](TimeLog.md)
+#### [TimeLog](timeLog.md)
