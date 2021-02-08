@@ -10,4 +10,6 @@
 | 2/2/21  | Resumed work. Brought up week 2 for refresher  | 0.5 | |
 | 2/5/21  | Completed most week 2 activities | 2 | |
 | 2/7/21  | Completed week 2 exercise | 4 | |
-| 2/8/21  | Working through week 3. Completed creating README.md and timeLog.md | 
+| 2/8/21  | Working through week 3. Completed creating README.md and timeLog.md | 1.5 | |
+| 2/8/21  | Finished week 3 activity. Got log4j and jUnit working | 2 | |
+
