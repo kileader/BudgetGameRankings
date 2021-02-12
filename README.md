@@ -42,7 +42,7 @@ their value, such as rating over price? Can there be multiple rankings on differ
 
 
 ### Design
-* [User Stories](userStories.md)
-* [Screen Design](screenDesign.md)
-* [Project Plan](projectPlan.md)
+* [User Stories](DesignDocuments/userStories.md)
+* [Screen Design](DesignDocuments/screenDesign.md)
+* [Project Plan](DesignDocuments/projectPlan.md)
 * [TimeLog](timeLog.md)
