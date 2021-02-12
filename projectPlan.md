@@ -3,7 +3,7 @@
 ### Week 4
 - [X] Finish Week 3 work
 - [X] Problem Statement
-- [ ] User Stories
+- [X] User Stories
 - [X] Project Plan
 - [ ] Screen Design
 - [ ] Checkpoint 1 discussed

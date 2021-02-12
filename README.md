@@ -15,14 +15,14 @@ their value, such as rating over price? Can there be multiple rankings on differ
   * Tomcat's JDBC Realm Authentication
 * Database
   * MySQL 8.0.21
-* ORM Framework???
+* ORM Framework
   * Hibernate 5
 * Dependency Management
   * Maven
 * Web Services consumed using Java
   * Various APIs
 * CSS
-  * Bootstrap or Materialize (tbd)
+  * Bootstrap
 * Data Validation
   * Bootstrap Validator for front end
   * Explore Hibernate's validation
@@ -30,10 +30,9 @@ their value, such as rating over price? Can there be multiple rankings on differ
   * Log4J2
 * Hosting
   * AWS
-* Independent Research Topic/s???
+* Independent Research Topic/s
   * CI tools in AWS
-  * Materialize
-  * Google Maps API
+  * API Integration
   * Hibernate Validation
   * Hibernate Search
 * Project Lombok
@@ -43,9 +42,7 @@ their value, such as rating over price? Can there be multiple rankings on differ
 
 
 ### Design
-
-* 
-
-### [Project Plan](ProjectPlan.md)
-
-#### [TimeLog](timeLog.md)
+* [User Stories](userStories.md)
+* [Screen Design](screenDesign.md)
+* [Project Plan](projectPlan.md)
+* [TimeLog](timeLog.md)
