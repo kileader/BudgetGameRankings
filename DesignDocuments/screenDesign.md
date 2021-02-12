@@ -2,7 +2,7 @@
 
 ### Home Page aka Rankings Page
 
-![Home Page](wireframes/1-Reports.png)
+![Home Page](wireframes/1-Home-Page.png)
 
 ### Dialog for Sign In
 
