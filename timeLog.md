@@ -14,3 +14,4 @@
 | 2/8/21  | Finished week 3 activity. Got log4j and jUnit working | 2 | |
 | 2/9/21  | Finished log4j and jUnit exercise. Fixed week 2 exercise. Worked some on indie project | 8 | |
 | 2/10/21 | Created basic Project Plan and wrote out common User Stories | 2 | |
+| 2/12/21 | Finished first screen designs | 2.5 | |
