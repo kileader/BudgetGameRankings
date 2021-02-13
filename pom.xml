@@ -3,17 +3,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>edu.matc.entjava.yourindieproject</groupId>
-  <artifactId>yourindieproject</artifactId>
+  <artifactId>BudgetGameRankings</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>YourIndieProject Maven Webapp</name>
+  <name>BudgetGameRankings Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <properties>
     <maven.compiler.release>11</maven.compiler.release>
     <junit.version>4.12</junit.version>
     <junit-vintage-version>4.12.0</junit-vintage-version>
     <javax.version>7.0</javax.version>
-    <mysql-version>8.0.16</mysql-version>
+    <mysql-version>8.0.21</mysql-version>
     <jstl-version>1.2</jstl-version>
     <log4j-version>2.10.0</log4j-version>
     <jupiter-version>5.0.0</jupiter-version>
@@ -75,7 +75,7 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>YourIndieProject</finalName>
+    <finalName>BudgetGameRankings</finalName>
     <pluginManagement>
       <plugins>
         <plugin>
