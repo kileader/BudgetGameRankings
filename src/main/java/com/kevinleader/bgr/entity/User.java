@@ -1,10 +1,10 @@
-package BudgetGameRankings.entity;
+package com.kevinleader.bgr.entity;
 
 
 /**
  * A javabean class to represent a user.
  *
- * @author kileader
+ * @author Kevin Leader
  */
 public class User {
     private int id;
