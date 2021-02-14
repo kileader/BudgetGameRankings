@@ -1,30 +1,57 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>edu.matc.entjava.Budget-Game-Rankings</groupId>
+  <groupId>edu.matc.entjava</groupId>
   <artifactId>Budget-Game-Rankings</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>BudgetGameRankings Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <properties>
-    <maven.compiler.release>11</maven.compiler.release>
+    <hibernate-version>5.4.4.Final</hibernate-version>
+    <javax.version>7.0</javax.version>
+    <jstl-version>1.2</jstl-version>
+    <junit-platform-runner-version>1.0.0</junit-platform-runner-version>
     <junit.version>4.12</junit.version>
     <junit-vintage-version>4.12.0</junit-vintage-version>
-    <javax.version>7.0</javax.version>
-    <mysql-version>8.0.21</mysql-version>
-    <jstl-version>1.2</jstl-version>
-    <log4j-version>2.10.0</log4j-version>
     <jupiter-version>5.0.0</jupiter-version>
-    <junit-platform-runner-version>1.0.0</junit-platform-runner-version>
+    <log4j-version>2.10.0</log4j-version>
+    <maven.compiler.release>11</maven.compiler.release>
     <maven-compiler-plugin-version>3.8.1</maven-compiler-plugin-version>
     <maven-surefire-plugin-version>2.19</maven-surefire-plugin-version>
-    <hibernate-version>5.4.4.Final</hibernate-version>
+    <mysql-version>8.0.21</mysql-version>
   </properties>
   <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>${hibernate-version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-c3p0</artifactId>
+      <version>${hibernate-version}</version>
+    </dependency>
+
+    <!-- next 2 dependencies are for log4j -->
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>${log4j-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>${log4j-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-web-api</artifactId>
+      <version>${javax.version}</version>
+    </dependency>
     <dependency>
       <groupId>org.junit.platform</groupId>
       <artifactId>junit-platform-runner</artifactId>
@@ -49,50 +76,16 @@
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
-
-    <dependency>
-      <groupId>javax</groupId>
-      <artifactId>javaee-web-api</artifactId>
-      <version>${javax.version}</version>
-    </dependency>
-
-    <!--  https://mvnrepository.com/artifact/mysql/mysql-connector-java  -->
-    <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
-      <version>${mysql-version}</version>
-    </dependency>
-
     <dependency>
       <groupId>jstl</groupId>
       <artifactId>jstl</artifactId>
       <version>${jstl-version}</version>
     </dependency>
-
-    <!--  next 2 dependencies are for log4j  -->
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
     <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-api</artifactId>
-      <version>${log4j-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-core</artifactId>
-      <version>${log4j-version}</version>
-    </dependency>
-
-    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-core</artifactId>
-      <version>5.4.4.Final</version>
-    </dependency>
-    <!-- c3p0 - used to handle connection pooling with hibernate -->
-    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-c3p0</artifactId>
-      <version>5.4.4.Final</version>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>${mysql-version}</version>
     </dependency>
   </dependencies>
 
