@@ -25,10 +25,6 @@ public class User {
 
     private String password;
 
-    private int settingsID;
-
-    private int wishlistID;
-
     /**
      * Instantiates a new User.
      */
@@ -122,42 +118,6 @@ public class User {
         this.password = password;
     }
 
-    /**
-     * Gets settings id.
-     *
-     * @return the settings id
-     */
-    public int getSettingsID() {
-        return settingsID;
-    }
-
-    /**
-     * Sets settings id.
-     *
-     * @param settingsID the settings id
-     */
-    public void setSettingsID(int settingsID) {
-        this.settingsID = settingsID;
-    }
-
-    /**
-     * Gets wishlist id.
-     *
-     * @return the wishlist id
-     */
-    public int getWishlistID() {
-        return wishlistID;
-    }
-
-    /**
-     * Sets wishlist id.
-     *
-     * @param wishlistID the wishlist id
-     */
-    public void setWishlistID(int wishlistID) {
-        this.wishlistID = wishlistID;
-    }
-
     @java.lang.Override
     public java.lang.String toString() {
         return "User{" +
@@ -165,8 +125,6 @@ public class User {
                 ", userName='" + userName + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", settingsID=" + settingsID +
-                ", wishlistID=" + wishlistID +
                 '}';
     }
 }

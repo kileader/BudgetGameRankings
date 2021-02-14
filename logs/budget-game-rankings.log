@@ -1,0 +1,10 @@
+[INFO ] 2021-02-14 15:36:45.116 [% t] UserDao - run getAllUsers
+[INFO ] 2021-02-14 15:46:05.310 [% t] UserDao - run getAllUsers
+[INFO ] 2021-02-14 15:55:44.228 [% t] UserDao - run getAllUsers
+[INFO ] 2021-02-14 15:59:20.864 [% t] UserDao - run getUsersByUserName()
+[INFO ] 2021-02-14 15:59:21.181 [% t] UserDao - run getAllUsers
+[INFO ] 2021-02-14 15:59:56.086 [% t] UserDao - run getUsersByUserName()
+[INFO ] 2021-02-14 15:59:56.345 [% t] UserDao - run getAllUsers
+[INFO ] 2021-02-14 16:24:22.905 [% t] UserDao - run getByEmail()
+[INFO ] 2021-02-14 16:24:23.228 [% t] UserDao - run getByUserName()
+[INFO ] 2021-02-14 16:24:23.242 [% t] UserDao - run getAllUsers
