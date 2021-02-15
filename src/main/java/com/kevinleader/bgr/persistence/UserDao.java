@@ -22,8 +22,17 @@ public class UserDao {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
+    /**
+     * The Session factory.
+     */
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
 
+    /**
+     * Insert int.
+     *
+     * @param user the user
+     * @return the int
+     */
     public int insert(User user) {
         logger.info("run insert");
         int id = 0;
