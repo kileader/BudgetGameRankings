@@ -1,10 +1,11 @@
 package com.kevinleader.bgr.persistence;
 
 import com.kevinleader.bgr.entity.User;
+import com.kevinleader.bgr.test.util.Database;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,18 +17,21 @@ class UserDaoTest {
     @BeforeEach
     void setUp() {
         dao = new UserDao();
+
+        Database database = Database.getInstance();
+        database.runSQL("cleandb.sql");
     }
 
-//    @Test
-//    void insertSuccess() {
-//        User newUser = new User(0, "rphilman", "rphilman@yahoo.com", "finalanswer1mil");
-//        int id = dao.insert(newUser);
-//        assertNotEquals(0, id);
-//        User insertedUser = dao.getById(id);
-//        assertEquals("rphilman", insertedUser.getUserName());
-//        assertEquals("rphilman@yahoo.com", insertedUser.getEmail());
-//        assertEquals("finalanswer1mil", insertedUser.getPassword());
-//    }
+    @Test
+    void insertSuccess() {
+        User newUser = new User(0, "rphilman", "rphilman@yahoo.com", "finalanswer1mil");
+        int id = dao.insert(newUser);
+        assertNotEquals(0, id);
+        User insertedUser = dao.getById(id);
+        assertEquals("rphilman", insertedUser.getUserName());
+        assertEquals("rphilman@yahoo.com", insertedUser.getEmail());
+        assertEquals("finalanswer1mil", insertedUser.getPassword());
+    }
 
     @Test
     void getAllSuccess() {
@@ -58,14 +62,18 @@ class UserDaoTest {
     }
 
     @Test
-    void saveOrUpdate() {
+    void saveOrUpdateSuccess() {
     }
-//
-//    @Test
-//    void deleteSuccess() {
-//        dao.delete(dao.getById(3));
-//        assertNull(dao.getById(3));
-//    }
 
+    @Test
+    void deleteSuccess() {
+        dao.delete(dao.getById(3));
+        assertNull(dao.getById(3));
+    }
 
+    @AfterEach
+    void tearDown() {
+        Database database = Database.getInstance();
+        database.runSQL("cleandb.sql");
+    }
 }
