@@ -16,3 +16,5 @@
 | 2/10/21 | Created basic Project Plan and wrote out common User Stories | 2 | |
 | 2/12/21 | Finished first screen designs | 2.5 | |
 | 2/13/21 | Tried figuring out Hibernate all afternoon | 4 | |
+| 2/14/21 | Reinstalled MySQL to fix bugs. Got Hibernate working with new test database. | 8 | |
+| 2/15/21 | 
