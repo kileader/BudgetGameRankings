@@ -7,6 +7,7 @@ import org.apache.logging.log4j.Logger;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -20,10 +21,18 @@ import java.util.List;
 public class UserDao {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
+
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
 
-    private void createUser() {
-
+    public int insert(User user) {
+        logger.info("run insert");
+        int id = 0;
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        id = (int)session.save(user);
+        transaction.commit();
+        session.close();
+        return id;
     }
 
     /**
@@ -31,8 +40,8 @@ public class UserDao {
      *
      * @return the all users
      */
-    public List<User> getAllUsers() {
-        logger.info("run getAllUsers");
+    public List<User> getAll() {
+        logger.info("run getAll");
         Session session = sessionFactory.openSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<User> query = builder.createQuery(User.class);
@@ -42,8 +51,14 @@ public class UserDao {
         return users;
     }
 
+    /**
+     * Gets by id.
+     *
+     * @param id the id
+     * @return the by id
+     */
     public User getById(int id) {
-        logger.info("run getById()");
+        logger.info("run getById");
         Session session = sessionFactory.openSession();
         User user = session.get(User.class, id);
         session.close();
@@ -57,7 +72,7 @@ public class UserDao {
      * @return the list
      */
     public List<User> getByUsername(String userName){
-        logger.info("run getByUserName()");
+        logger.info("run getByUserName");
         Session session = sessionFactory.openSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<User> query = builder.createQuery(User.class);
@@ -69,8 +84,14 @@ public class UserDao {
         return users;
     }
 
+    /**
+     * Get by email list.
+     *
+     * @param email the email
+     * @return the list
+     */
     public List<User> getByEmail(String email){
-        logger.info("run getByEmail()");
+        logger.info("run getByEmail");
         Session session = sessionFactory.openSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<User> query = builder.createQuery(User.class);
@@ -84,16 +105,29 @@ public class UserDao {
 
     /**
      * Update user.
+     *
+     * @param user the user
      */
-    public void updateUser(String userName, String email, String password) {
-
+    public void saveOrUpdate(User user) {
+        logger.info("run saveOrUpdate");
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        session.saveOrUpdate(user);
+        transaction.commit();
+        session.close();
     }
 
     /**
      * Delete user.
+     *
+     * @param user the user
      */
-    public void deleteUser() {
-
+    public void delete(User user) {
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        session.delete(user);
+        transaction.commit();
+        session.close();
     }
 
 }
