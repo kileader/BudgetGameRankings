@@ -1,204 +1,24 @@
-[INFO ] 2021-02-14 15:36:45.116 [% t] UserDao - run getAllUsers
-[INFO ] 2021-02-14 15:46:05.310 [% t] UserDao - run getAllUsers
-[INFO ] 2021-02-14 15:55:44.228 [% t] UserDao - run getAllUsers
-[INFO ] 2021-02-14 15:59:20.864 [% t] UserDao - run getUsersByUserName()
-[INFO ] 2021-02-14 15:59:21.181 [% t] UserDao - run getAllUsers
-[INFO ] 2021-02-14 15:59:56.086 [% t] UserDao - run getUsersByUserName()
-[INFO ] 2021-02-14 15:59:56.345 [% t] UserDao - run getAllUsers
-[INFO ] 2021-02-14 16:24:22.905 [% t] UserDao - run getByEmail()
-[INFO ] 2021-02-14 16:24:23.228 [% t] UserDao - run getByUserName()
-[INFO ] 2021-02-14 16:24:23.242 [% t] UserDao - run getAllUsers
-[INFO ] 2021-02-14 16:43:50.212 [% t] UserDao - run getByEmail()
-[INFO ] 2021-02-14 16:43:50.506 [% t] UserDao - run getById()
-[INFO ] 2021-02-14 16:43:50.524 [% t] UserDao - run getByUserName()
-[INFO ] 2021-02-14 16:43:50.534 [% t] UserDao - run getAllUsers
-[INFO ] 2021-02-14 21:30:53.321 [% t] UserDao - run getById
-[INFO ] 2021-02-14 21:30:53.467 [% t] UserDao - run getByEmail
-[INFO ] 2021-02-14 21:30:53.644 [% t] UserDao - run getAll
-[INFO ] 2021-02-14 21:30:53.664 [% t] UserDao - run getById
-[INFO ] 2021-02-14 21:30:53.678 [% t] UserDao - run getByUserName
-[INFO ] 2021-02-14 21:30:53.716 [% t] UserDao - run insert
-[INFO ] 2021-02-14 21:33:34.385 [% t] UserDao - run getById
-[INFO ] 2021-02-14 21:33:34.567 [% t] UserDao - run getByEmail
-[INFO ] 2021-02-14 21:33:34.711 [% t] UserDao - run getAll
-[INFO ] 2021-02-14 21:33:34.724 [% t] UserDao - run getById
-[INFO ] 2021-02-14 21:33:34.734 [% t] UserDao - run getByUserName
-[INFO ] 2021-02-14 21:33:34.748 [% t] UserDao - run insert
-[INFO ] 2021-02-14 21:54:14.959 [% t] UserDao - run getByEmail
-[INFO ] 2021-02-14 21:54:15.246 [% t] UserDao - run getAll
-[INFO ] 2021-02-14 21:54:15.254 [% t] UserDao - run getById
-[INFO ] 2021-02-14 21:54:15.268 [% t] UserDao - run getByUserName
-[INFO ] 2021-02-14 23:43:00.682 [% t] UserDao - run getById
-[INFO ] 2021-02-14 23:43:00.827 [% t] UserDao - run getById
-[INFO ] 2021-02-14 23:43:00.874 [% t] UserDao - run getByEmail
-[INFO ] 2021-02-14 23:43:01.104 [% t] UserDao - run getAll
-[INFO ] 2021-02-14 23:43:01.170 [% t] UserDao - run getById
-[INFO ] 2021-02-14 23:43:01.285 [% t] UserDao - run getByUserName
-[INFO ] 2021-02-14 23:43:01.331 [% t] UserDao - run insert
-[INFO ] 2021-02-14 23:43:01.347 [% t] UserDao - run getById
-[INFO ] 2021-02-14 23:50:34.704 [% t] UserDao - run getById
-[INFO ] 2021-02-14 23:50:34.872 [% t] UserDao - run getById
-[INFO ] 2021-02-14 23:50:34.916 [% t] UserDao - run getByEmail
-[INFO ] 2021-02-14 23:50:35.126 [% t] UserDao - run getAll
-[INFO ] 2021-02-14 23:50:35.218 [% t] UserDao - run getById
-[INFO ] 2021-02-14 23:50:35.295 [% t] UserDao - run getByUserName
-[INFO ] 2021-02-14 23:50:35.344 [% t] UserDao - run insert
-[INFO ] 2021-02-14 23:50:35.361 [% t] UserDao - run getById
-[INFO ] 2021-02-14 23:53:16.082 [% t] UserDao - run getById
-[INFO ] 2021-02-14 23:53:16.227 [% t] UserDao - run getById
-[INFO ] 2021-02-14 23:53:16.331 [% t] UserDao - run getByEmail
-[INFO ] 2021-02-14 23:53:16.761 [% t] UserDao - run getAll
-[INFO ] 2021-02-14 23:53:16.916 [% t] UserDao - run getById
-[INFO ] 2021-02-14 23:53:17.276 [% t] UserDao - run getByUserName
-[INFO ] 2021-02-14 23:53:17.373 [% t] UserDao - run insert
-[INFO ] 2021-02-14 23:53:17.396 [% t] UserDao - run getById
-[INFO ] 2021-02-15 11:23:19.939 [% t] UserDao - run getById
-[INFO ] 2021-02-15 11:23:20.100 [% t] UserDao - run getById
-[INFO ] 2021-02-15 11:23:20.185 [% t] UserDao - run getByEmail
-[INFO ] 2021-02-15 11:23:20.595 [% t] UserDao - run getAll
-[INFO ] 2021-02-15 11:23:20.729 [% t] UserDao - run getById
-[INFO ] 2021-02-15 11:23:20.864 [% t] UserDao - run getByUserName
-[INFO ] 2021-02-15 11:23:20.961 [% t] UserDao - run insert
-[INFO ] 2021-02-15 11:23:20.983 [% t] UserDao - run getById
-[INFO ] 2021-02-15 11:27:58.235 [% t] UserDao - run getById
-[INFO ] 2021-02-15 11:27:58.391 [% t] UserDao - run getById
-[INFO ] 2021-02-15 11:27:58.473 [% t] UserDao - run getByEmail
-[INFO ] 2021-02-15 11:27:58.722 [% t] UserDao - run getById
-[INFO ] 2021-02-15 11:27:58.726 [% t] UserDao - run saveOrUpdate
-[INFO ] 2021-02-15 11:27:58.740 [% t] UserDao - run getById
-[INFO ] 2021-02-15 11:27:58.835 [% t] UserDao - run getAll
-[INFO ] 2021-02-15 11:27:58.924 [% t] UserDao - run getById
-[INFO ] 2021-02-15 11:27:58.998 [% t] UserDao - run getByUserName
-[INFO ] 2021-02-15 11:27:59.082 [% t] UserDao - run insert
-[INFO ] 2021-02-15 11:27:59.098 [% t] UserDao - run getById
-[INFO ] 2021-02-15 11:30:08.000 [% t] UserDao - run getById
-[INFO ] 2021-02-15 11:30:08.155 [% t] UserDao - run getById
-[INFO ] 2021-02-15 11:30:08.205 [% t] UserDao - run getByEmail
-[INFO ] 2021-02-15 11:30:08.418 [% t] UserDao - run getById
-[INFO ] 2021-02-15 11:30:08.423 [% t] UserDao - run saveOrUpdate
-[INFO ] 2021-02-15 11:30:08.432 [% t] UserDao - run getById
-[INFO ] 2021-02-15 11:30:08.479 [% t] UserDao - run getAll
-[INFO ] 2021-02-15 11:30:08.523 [% t] UserDao - run getById
-[INFO ] 2021-02-15 11:30:08.576 [% t] UserDao - run getByUserName
-[INFO ] 2021-02-15 11:30:08.633 [% t] UserDao - run insert
-[INFO ] 2021-02-15 11:30:08.648 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:07:39.880 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:07:40.034 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:07:40.087 [% t] UserDao - run getByEmail
-[INFO ] 2021-02-15 12:07:40.274 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:07:40.279 [% t] UserDao - run saveOrUpdate
-[INFO ] 2021-02-15 12:07:40.290 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:07:40.332 [% t] UserDao - run getAll
-[INFO ] 2021-02-15 12:07:40.377 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:07:40.426 [% t] UserDao - run getByUserName
-[DEBUG] 2021-02-15 12:07:40.428 [% t] UserDao - Searching for: d
-[INFO ] 2021-02-15 12:07:40.492 [% t] UserDao - run insert
-[INFO ] 2021-02-15 12:07:40.509 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:08:20.447 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:08:20.851 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:08:20.907 [% t] UserDao - run getByEmail
-[INFO ] 2021-02-15 12:08:22.434 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:08:22.438 [% t] UserDao - run saveOrUpdate
-[INFO ] 2021-02-15 12:08:22.447 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:08:22.489 [% t] UserDao - run getAll
-[INFO ] 2021-02-15 12:08:22.533 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:08:22.586 [% t] UserDao - run getByUserName
-[DEBUG] 2021-02-15 12:08:22.587 [% t] UserDao - Searching for: d
-[INFO ] 2021-02-15 12:08:22.631 [% t] UserDao - run insert
-[INFO ] 2021-02-15 12:08:22.645 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:08:58.846 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:08:59.005 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:08:59.053 [% t] UserDao - run getByEmail
-[INFO ] 2021-02-15 12:08:59.236 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:08:59.240 [% t] UserDao - run saveOrUpdate
-[INFO ] 2021-02-15 12:08:59.248 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:08:59.298 [% t] UserDao - run getAll
-[INFO ] 2021-02-15 12:08:59.361 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:08:59.406 [% t] UserDao - run getByUserName
-[DEBUG] 2021-02-15 12:08:59.406 [% t] UserDao - Searching for: d
-[INFO ] 2021-02-15 12:08:59.462 [% t] UserDao - run insert
-[INFO ] 2021-02-15 12:08:59.482 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:09:16.689 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:09:16.818 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:09:16.898 [% t] UserDao - run getByEmail
-[INFO ] 2021-02-15 12:09:17.085 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:09:17.091 [% t] UserDao - run saveOrUpdate
-[INFO ] 2021-02-15 12:09:17.100 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:09:17.150 [% t] UserDao - run getAll
-[INFO ] 2021-02-15 12:09:17.199 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:09:17.246 [% t] UserDao - run getByUserName
-[DEBUG] 2021-02-15 12:09:17.247 [% t] UserDao - Searching for: d
-[INFO ] 2021-02-15 12:09:17.297 [% t] UserDao - run insert
-[INFO ] 2021-02-15 12:09:17.313 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:31:35.452 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:31:35.605 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:31:35.659 [% t] UserDao - run getByEmail
-[INFO ] 2021-02-15 12:31:35.881 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:31:35.885 [% t] UserDao - run saveOrUpdate
-[INFO ] 2021-02-15 12:31:35.895 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:31:35.946 [% t] UserDao - run getAll
-[INFO ] 2021-02-15 12:31:36.013 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:31:36.055 [% t] UserDao - run getByUserName
-[DEBUG] 2021-02-15 12:31:36.055 [% t] UserDao - Searching for: d
-[INFO ] 2021-02-15 12:31:36.104 [% t] UserDao - run insert
-[INFO ] 2021-02-15 12:31:36.118 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:37:55.213 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:37:55.391 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:37:55.498 [% t] UserDao - run getByEmail
-[INFO ] 2021-02-15 12:37:55.862 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:37:55.866 [% t] UserDao - run saveOrUpdate
-[INFO ] 2021-02-15 12:37:55.882 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:37:55.923 [% t] UserDao - run getAll
-[INFO ] 2021-02-15 12:37:56.031 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:37:56.129 [% t] UserDao - run getByUserName
-[DEBUG] 2021-02-15 12:37:56.129 [% t] UserDao - Searching for: d
-[INFO ] 2021-02-15 12:37:56.181 [% t] UserDao - run insert
-[INFO ] 2021-02-15 12:37:56.199 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:38:29.823 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:38:29.975 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:38:30.032 [% t] UserDao - run getByEmail
-[INFO ] 2021-02-15 12:38:30.232 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:38:30.237 [% t] UserDao - run saveOrUpdate
-[INFO ] 2021-02-15 12:38:30.247 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:38:30.288 [% t] UserDao - run getAll
-[INFO ] 2021-02-15 12:38:30.334 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:38:30.375 [% t] UserDao - run getByUserName
-[DEBUG] 2021-02-15 12:38:30.375 [% t] UserDao - Searching for: d
-[INFO ] 2021-02-15 12:38:30.418 [% t] UserDao - run insert
-[INFO ] 2021-02-15 12:38:30.433 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:38:36.817 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:38:36.984 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:38:37.064 [% t] UserDao - run getByEmail
-[INFO ] 2021-02-15 12:38:37.287 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:38:37.292 [% t] UserDao - run saveOrUpdate
-[INFO ] 2021-02-15 12:38:37.301 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:38:37.349 [% t] UserDao - run getAll
-[INFO ] 2021-02-15 12:38:37.397 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:38:37.440 [% t] UserDao - run getByUserName
-[DEBUG] 2021-02-15 12:38:37.440 [% t] UserDao - Searching for: d
-[INFO ] 2021-02-15 12:38:37.487 [% t] UserDao - run insert
-[INFO ] 2021-02-15 12:38:37.506 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:39:36.807 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:39:36.932 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:39:36.994 [% t] UserDao - run getByEmail
-[INFO ] 2021-02-15 12:39:37.213 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:39:37.216 [% t] UserDao - run saveOrUpdate
-[INFO ] 2021-02-15 12:39:37.225 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:39:37.265 [% t] UserDao - run getAll
-[INFO ] 2021-02-15 12:39:37.310 [% t] UserDao - run getById
-[INFO ] 2021-02-15 12:39:37.351 [% t] UserDao - run getByUserName
-[DEBUG] 2021-02-15 12:39:37.351 [% t] UserDao - Searching for: d
-[INFO ] 2021-02-15 12:39:37.405 [% t] UserDao - run insert
-[INFO ] 2021-02-15 12:39:37.426 [% t] UserDao - run getById
-[INFO ] 2021-02-15 13:00:44.254 [% t] UserDao - run getById
-[INFO ] 2021-02-15 13:00:44.416 [% t] UserDao - run getById
-[INFO ] 2021-02-15 13:00:44.477 [% t] UserDao - run getByEmail
-[INFO ] 2021-02-15 13:00:44.683 [% t] UserDao - run getById
-[INFO ] 2021-02-15 13:00:44.687 [% t] UserDao - run saveOrUpdate
-[INFO ] 2021-02-15 13:00:44.696 [% t] UserDao - run getById
-[INFO ] 2021-02-15 13:00:44.738 [% t] UserDao - run getAll
-[INFO ] 2021-02-15 13:00:44.788 [% t] UserDao - run getById
-[INFO ] 2021-02-15 13:00:44.838 [% t] UserDao - run getByUserName
-[DEBUG] 2021-02-15 13:00:44.839 [% t] UserDao - Searching for: d
-[INFO ] 2021-02-15 13:00:44.893 [% t] UserDao - run insert
-[INFO ] 2021-02-15 13:00:44.911 [% t] UserDao - run getById
+[INFO ] 2021-02-15 15:35:23.239 [main] UserDao - run getById
+[INFO ] 2021-02-15 15:35:23.406 [main] UserDao - run getById
+[INFO ] 2021-02-15 15:35:23.472 [main] UserDao - run getByEmail
+[INFO ] 2021-02-15 15:35:23.676 [main] UserDao - run getById
+[INFO ] 2021-02-15 15:35:23.680 [main] UserDao - run saveOrUpdate
+[INFO ] 2021-02-15 15:35:23.691 [main] UserDao - run getById
+[INFO ] 2021-02-15 15:35:23.737 [main] UserDao - run getAll
+[INFO ] 2021-02-15 15:35:23.796 [main] UserDao - run getById
+[INFO ] 2021-02-15 15:35:23.841 [main] UserDao - run getByUserName
+[DEBUG] 2021-02-15 15:35:23.844 [main] UserDao - Searching for: d
+[INFO ] 2021-02-15 15:35:23.907 [main] UserDao - run insert
+[INFO ] 2021-02-15 15:35:23.927 [main] UserDao - run getById
+[INFO ] 2021-02-15 15:35:45.393 [main] UserDao - run getById
+[INFO ] 2021-02-15 15:35:45.557 [main] UserDao - run getById
+[INFO ] 2021-02-15 15:35:45.625 [main] UserDao - run getByEmail
+[INFO ] 2021-02-15 15:35:45.847 [main] UserDao - run getById
+[INFO ] 2021-02-15 15:35:45.852 [main] UserDao - run saveOrUpdate
+[INFO ] 2021-02-15 15:35:45.859 [main] UserDao - run getById
+[INFO ] 2021-02-15 15:35:45.901 [main] UserDao - run getAll
+[INFO ] 2021-02-15 15:35:45.947 [main] UserDao - run getById
+[INFO ] 2021-02-15 15:35:46.000 [main] UserDao - run getByUserName
+[DEBUG] 2021-02-15 15:35:46.003 [main] UserDao - Searching for: d
+[INFO ] 2021-02-15 15:35:46.059 [main] UserDao - run insert
+[INFO ] 2021-02-15 15:35:46.077 [main] UserDao - run getById
