@@ -26,13 +26,13 @@ public class User {
     private String password;
 
     /**
-     * Instantiates a new User.
+     * Instantiates a new User with no parameters.
      */
     public User() {
     }
 
     /**
-     * Instantiates a new User.
+     * Instantiates a new User with full parameters.
      *
      * @param id       the id
      * @param userName the user name

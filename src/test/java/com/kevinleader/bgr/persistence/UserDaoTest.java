@@ -2,7 +2,6 @@ package com.kevinleader.bgr.persistence;
 
 import com.kevinleader.bgr.entity.User;
 import com.kevinleader.bgr.test.util.Database;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,7 +11,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * The type User dao test.
+ * Class containing tests for the UserDao class.
  */
 class UserDaoTest {
 
@@ -22,7 +21,7 @@ class UserDaoTest {
     UserDao dao;
 
     /**
-     * Sets up.
+     * Sets up new dao for each test.
      */
     @BeforeEach
     void setUp() {
@@ -30,7 +29,7 @@ class UserDaoTest {
     }
 
     /**
-     * Insert success.
+     * Tests the insert method.
      */
     @Test
     void insertSuccess() {
@@ -44,7 +43,7 @@ class UserDaoTest {
     }
 
     /**
-     * Gets all success.
+     * Tests the getAll method.
      */
     @Test
     void getAllSuccess() {
@@ -53,7 +52,7 @@ class UserDaoTest {
     }
 
     /**
-     * Gets by id success.
+     * Tests the getById method.
      */
     @Test
     void getByIdSuccess() {
@@ -64,7 +63,7 @@ class UserDaoTest {
     }
 
     /**
-     * Gets by username success.
+     * Tests the getByUsername method.
      */
     @Test
     void getByUsernameSuccess() {
@@ -74,7 +73,7 @@ class UserDaoTest {
     }
 
     /**
-     * Gets by email success.
+     * Tests the getByEmail method.
      */
     @Test
     void getByEmailSuccess() {
@@ -84,7 +83,7 @@ class UserDaoTest {
     }
 
     /**
-     * Save or update success.
+     * Tests the saveOrUpdate method.
      */
     @Test
     void saveOrUpdateSuccess() {
@@ -97,7 +96,7 @@ class UserDaoTest {
     }
 
     /**
-     * Delete success.
+     * Tests the delete method.
      */
     @Test
     void deleteSuccess() {
@@ -106,7 +105,7 @@ class UserDaoTest {
     }
 
     /**
-     * Tear down.
+     * Resets the table after every test.
      */
     @AfterEach
     void tearDown() {

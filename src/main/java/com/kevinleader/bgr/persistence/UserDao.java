@@ -16,26 +16,26 @@ import javax.persistence.criteria.Root;
 import java.util.List;
 
 /**
- * The type User dao.
+ * The data access object for use on the User class.
  */
 public class UserDao {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
     /**
-     * The Session factory.
+     * The SessionFactory object for use with Hibernate
      */
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
 
     /**
-     * Insert int.
+     * Insert a new user
      *
      * @param user the user
      * @return the int
      */
     public int insert(User user) {
         logger.info("run insert");
-        int id = 0;
+        int id;
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         id = (int)session.save(user);
@@ -45,9 +45,9 @@ public class UserDao {
     }
 
     /**
-     * Gets all users.
+     * Get all users.
      *
-     * @return the all users
+     * @return the users
      */
     public List<User> getAll() {
         logger.info("run getAll");
@@ -61,10 +61,10 @@ public class UserDao {
     }
 
     /**
-     * Gets by id.
+     * Get a user by the table id.
      *
      * @param id the id
-     * @return the by id
+     * @return the user
      */
     public User getById(int id) {
         logger.info("run getById");
@@ -75,13 +75,14 @@ public class UserDao {
     }
 
     /**
-     * Get users by username list.
+     * Get users by a user name or partial user name
      *
      * @param userName the user name
-     * @return the list
+     * @return list of users that match user name
      */
     public List<User> getByUsername(String userName){
         logger.info("run getByUserName");
+        logger.debug("Searching for: {}", userName);
         Session session = sessionFactory.openSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<User> query = builder.createQuery(User.class);
@@ -94,10 +95,10 @@ public class UserDao {
     }
 
     /**
-     * Get by email list.
+     * Get user by email or partial email
      *
      * @param email the email
-     * @return the list
+     * @return list of matching users
      */
     public List<User> getByEmail(String email){
         logger.info("run getByEmail");
@@ -113,7 +114,7 @@ public class UserDao {
     }
 
     /**
-     * Update user.
+     * Update a user.
      *
      * @param user the user
      */
