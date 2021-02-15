@@ -17,4 +17,4 @@
 | 2/12/21 | Finished first screen designs | 2.5 |
 | 2/13/21 | Tried figuring out Hibernate all afternoon | 4 |
 | 2/14/21 | Reinstalled MySQL to fix bugs. Got Hibernate working with new test database. | 8 |
-| 2/15/21 | 
+| 2/15/21 | Got jUnit to test 100% of UserDao. Implemented most logging | 3 |

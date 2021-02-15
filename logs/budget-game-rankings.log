@@ -22,3 +22,15 @@
 [DEBUG] 2021-02-15 15:35:46.003 [main] UserDao - Searching for: d
 [INFO ] 2021-02-15 15:35:46.059 [main] UserDao - run insert
 [INFO ] 2021-02-15 15:35:46.077 [main] UserDao - run getById
+[INFO ] 2021-02-15 16:13:12.998 [main] UserDao - run getById
+[INFO ] 2021-02-15 16:13:13.157 [main] UserDao - run getById
+[INFO ] 2021-02-15 16:13:13.214 [main] UserDao - run getByEmail
+[INFO ] 2021-02-15 16:13:13.414 [main] UserDao - run getById
+[INFO ] 2021-02-15 16:13:13.418 [main] UserDao - run saveOrUpdate
+[INFO ] 2021-02-15 16:13:13.426 [main] UserDao - run getById
+[INFO ] 2021-02-15 16:13:13.468 [main] UserDao - run getAll
+[INFO ] 2021-02-15 16:13:13.515 [main] UserDao - run getById
+[INFO ] 2021-02-15 16:13:13.557 [main] UserDao - run getByUserName
+[DEBUG] 2021-02-15 16:13:13.559 [main] UserDao - Searching for: d
+[INFO ] 2021-02-15 16:13:13.603 [main] UserDao - run insert
+[INFO ] 2021-02-15 16:13:13.621 [main] UserDao - run getById
