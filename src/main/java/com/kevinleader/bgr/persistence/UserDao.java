@@ -34,7 +34,7 @@ public class UserDao {
      * @return the int
      */
     public int insert(User user) {
-        logger.info("run insert");
+        logger.debug("running insert({}");
         int id;
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
