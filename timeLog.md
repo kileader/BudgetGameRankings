@@ -18,3 +18,5 @@
 | 2/13/21 | Tried figuring out Hibernate all afternoon | 4 |
 | 2/14/21 | Reinstalled MySQL to fix bugs. Got Hibernate working with new test database. | 8 |
 | 2/15/21 | Got jUnit to test 100% of UserDao. Implemented most logging | 3 |
+| 2/15/21 | Added some webapp structure | 2 |
+| 2/16/21 | Figured out IGDB API with Postman | 2 |
