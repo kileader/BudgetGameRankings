@@ -20,3 +20,5 @@
 | 2/15/21 | Got jUnit to test 100% of UserDao. Implemented most logging | 3 |
 | 2/15/21 | Added some webapp structure | 2 |
 | 2/16/21 | Figured out IGDB API with Postman | 2 |
+| 2/17/21 | Designed full first draft of database and made new entities | 4 |
+| 2/18/21 |
