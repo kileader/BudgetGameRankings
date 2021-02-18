@@ -1,6 +1,7 @@
 package com.kevinleader.bgr.persistence;
 
 import com.kevinleader.bgr.entity.User;
+import com.kevinleader.bgr.entity.WishedGame;
 import com.kevinleader.bgr.test.util.Database;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -102,6 +103,26 @@ class UserDaoTest {
     void deleteSuccess() {
         dao.delete(dao.getById(3));
         assertNull(dao.getById(3));
+    }
+
+    /**
+     * Tests the insert method.
+     */
+    @Test
+    void insertWithWishedGameSuccess() {
+        User newUser = new User("rphilman", "rphilman@yahoo.com", "finalanswer1mil");
+
+        int igdbGameId = 113112;
+        WishedGame wishedGame = new WishedGame(igdbGameId, newUser);
+
+        newUser.addWishedGame(wishedGame);
+
+        int id = dao.insert(newUser);
+
+        assertNotEquals(0, id);
+        User insertedUser = dao.getById(id);
+        assertEquals("rphilman", insertedUser.getUserName());
+        assertEquals(1, insertedUser.getWishedGames().size());
     }
 
     /**

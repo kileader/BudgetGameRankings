@@ -20,7 +20,9 @@ their value, such as rating over price? Can there be multiple rankings on differ
 * Dependency Management
   * Maven
 * Web Services consumed using Java
-  * Various APIs
+  * igdb.com API
+  * pricecharting.com API
+  * steampowered.com API
 * CSS
   * Bootstrap
 * Data Validation
