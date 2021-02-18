@@ -3,6 +3,8 @@ package com.kevinleader.bgr.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * A javabean class to represent a user.
@@ -25,101 +27,74 @@ public class User {
 
     private String password;
 
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<WishedGame> wishedGames = new HashSet<>();
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<RankingConfiguration> rankingConfigurations = new HashSet<>();
+
     /**
      * Instantiates a new User with no parameters.
      */
     public User() {
     }
 
-    /**
-     * Instantiates a new User with full parameters.
-     *
-     * @param id       the id
-     * @param userName the user name
-     * @param email    the email
-     * @param password the password
-     */
-    public User(int id, String userName, String email, String password) {
-        this.id = id;
+    public User(String userName, String email, String password) {
         this.userName = userName;
         this.email = email;
         this.password = password;
     }
 
-    /**
-     * Gets id.
-     *
-     * @return the id
-     */
     public int getId() {
         return id;
     }
 
-    /**
-     * Sets id.
-     *
-     * @param id the id
-     */
     public void setId(int id) {
         this.id = id;
     }
 
-    /**
-     * Gets user name.
-     *
-     * @return the user name
-     */
     public String getUserName() {
         return userName;
     }
 
-    /**
-     * Sets user name.
-     *
-     * @param userName the user name
-     */
     public void setUserName(String userName) {
         this.userName = userName;
     }
 
-    /**
-     * Gets email.
-     *
-     * @return the email
-     */
     public String getEmail() {
         return email;
     }
 
-    /**
-     * Sets email.
-     *
-     * @param email the email
-     */
     public void setEmail(String email) {
         this.email = email;
     }
 
-    /**
-     * Gets password.
-     *
-     * @return the password
-     */
     public String getPassword() {
         return password;
     }
 
-    /**
-     * Sets password.
-     *
-     * @param password the password
-     */
     public void setPassword(String password) {
         this.password = password;
     }
 
-    @java.lang.Override
-    public java.lang.String toString() {
+    public Set<WishedGame> getWishedGames() {
+        return wishedGames;
+    }
+
+    public void setWishedGames(Set<WishedGame> wishedGames) {
+        this.wishedGames = wishedGames;
+    }
+
+    public Set<RankingConfiguration> getRankingConfigurations() {
+        return rankingConfigurations;
+    }
+
+    public void setRankingConfigurations(Set<RankingConfiguration> rankingConfigurations) {
+        this.rankingConfigurations = rankingConfigurations;
+    }
+
+    @Override
+    public String toString() {
         return "User{" +
                 "id=" + id +
                 ", userName='" + userName + '\'' +

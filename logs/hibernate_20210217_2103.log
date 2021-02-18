@@ -1,0 +1,1337 @@
+[DEBUG] 2021-02-17 21:01:06.258 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[DEBUG] 2021-02-17 21:01:06.268 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[DEBUG] 2021-02-17 21:01:06.274 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[INFO ] 2021-02-17 21:01:06.376 [main] Version - HHH000412: Hibernate Core {5.4.4.Final}
+[DEBUG] 2021-02-17 21:01:06.379 [main] Environment - HHH000206: hibernate.properties not found
+[DEBUG] 2021-02-17 21:01:06.774 [main] LocalXmlResourceResolver - Interpreting public/system identifier : [-//Hibernate/Hibernate Configuration DTD//EN] - [http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd]
+[DEBUG] 2021-02-17 21:01:06.775 [main] LocalXmlResourceResolver - Recognized hibernate-configuration identifier; attempting to resolve on classpath under org/hibernate/
+[DEBUG] 2021-02-17 21:01:06.781 [main] JaxbCfgProcessor - cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+[DEBUG] 2021-02-17 21:01:07.217 [main] ServiceBinding - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+[DEBUG] 2021-02-17 21:01:07.256 [main] RegionFactoryInitiator - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+[DEBUG] 2021-02-17 21:01:07.258 [main] RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+[INFO ] 2021-02-17 21:01:07.284 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[DEBUG] 2021-02-17 21:01:07.480 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@4c59e45e
+[DEBUG] 2021-02-17 21:01:07.480 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@4c59e45e
+[DEBUG] 2021-02-17 21:01:07.480 [main] BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@4c59e45e
+[DEBUG] 2021-02-17 21:01:07.481 [main] BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@6dd82486
+[DEBUG] 2021-02-17 21:01:07.482 [main] BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@1aac188d
+[DEBUG] 2021-02-17 21:01:07.483 [main] BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@62a4417
+[DEBUG] 2021-02-17 21:01:07.484 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@39c1fe0b
+[DEBUG] 2021-02-17 21:01:07.485 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@39c1fe0b
+[DEBUG] 2021-02-17 21:01:07.485 [main] BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@39c1fe0b
+[DEBUG] 2021-02-17 21:01:07.487 [main] BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@55e3d6c3
+[DEBUG] 2021-02-17 21:01:07.487 [main] BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@55e3d6c3
+[DEBUG] 2021-02-17 21:01:07.487 [main] BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@55e3d6c3
+[DEBUG] 2021-02-17 21:01:07.488 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@213c3543
+[DEBUG] 2021-02-17 21:01:07.489 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@213c3543
+[DEBUG] 2021-02-17 21:01:07.489 [main] BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@213c3543
+[DEBUG] 2021-02-17 21:01:07.490 [main] BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@f096f37
+[DEBUG] 2021-02-17 21:01:07.491 [main] BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@f096f37
+[DEBUG] 2021-02-17 21:01:07.491 [main] BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@f096f37
+[DEBUG] 2021-02-17 21:01:07.492 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@39e43310
+[DEBUG] 2021-02-17 21:01:07.492 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@39e43310
+[DEBUG] 2021-02-17 21:01:07.493 [main] BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@39e43310
+[DEBUG] 2021-02-17 21:01:07.494 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@7fc7c4a
+[DEBUG] 2021-02-17 21:01:07.494 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@7fc7c4a
+[DEBUG] 2021-02-17 21:01:07.494 [main] BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@7fc7c4a
+[DEBUG] 2021-02-17 21:01:07.496 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@7c9bdee9
+[DEBUG] 2021-02-17 21:01:07.496 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@7c9bdee9
+[DEBUG] 2021-02-17 21:01:07.496 [main] BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@7c9bdee9
+[DEBUG] 2021-02-17 21:01:07.497 [main] BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@2cec704c
+[DEBUG] 2021-02-17 21:01:07.498 [main] BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@2cec704c
+[DEBUG] 2021-02-17 21:01:07.499 [main] BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@3bdb2c78
+[DEBUG] 2021-02-17 21:01:07.499 [main] BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@3bdb2c78
+[DEBUG] 2021-02-17 21:01:07.501 [main] BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@21d1b321
+[DEBUG] 2021-02-17 21:01:07.501 [main] BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@21d1b321
+[DEBUG] 2021-02-17 21:01:07.502 [main] BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@3d49fd31
+[DEBUG] 2021-02-17 21:01:07.503 [main] BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@4da9f723
+[DEBUG] 2021-02-17 21:01:07.504 [main] BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@6fca5907
+[DEBUG] 2021-02-17 21:01:07.504 [main] BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@6fca5907
+[DEBUG] 2021-02-17 21:01:07.506 [main] BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@67d86804
+[DEBUG] 2021-02-17 21:01:07.506 [main] BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@67d86804
+[DEBUG] 2021-02-17 21:01:07.533 [main] BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@5017e1
+[DEBUG] 2021-02-17 21:01:07.533 [main] BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@5017e1
+[DEBUG] 2021-02-17 21:01:07.535 [main] BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@10ef5fa0
+[DEBUG] 2021-02-17 21:01:07.536 [main] BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@10ef5fa0
+[DEBUG] 2021-02-17 21:01:07.539 [main] BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@571a9686
+[DEBUG] 2021-02-17 21:01:07.539 [main] BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@571a9686
+[DEBUG] 2021-02-17 21:01:07.541 [main] BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@4e93dcb9
+[DEBUG] 2021-02-17 21:01:07.541 [main] BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@4e93dcb9
+[DEBUG] 2021-02-17 21:01:07.543 [main] BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@3cf7298d
+[DEBUG] 2021-02-17 21:01:07.543 [main] BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@3cf7298d
+[DEBUG] 2021-02-17 21:01:07.545 [main] BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@43da41e
+[DEBUG] 2021-02-17 21:01:07.545 [main] BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@43da41e
+[DEBUG] 2021-02-17 21:01:07.550 [main] BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@2c6aed22
+[DEBUG] 2021-02-17 21:01:07.551 [main] BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@2c6aed22
+[DEBUG] 2021-02-17 21:01:07.555 [main] BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@4d27d9d
+[DEBUG] 2021-02-17 21:01:07.555 [main] BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@4d27d9d
+[DEBUG] 2021-02-17 21:01:07.558 [main] BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@255e5e2e
+[DEBUG] 2021-02-17 21:01:07.558 [main] BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@255e5e2e
+[DEBUG] 2021-02-17 21:01:07.560 [main] BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@20011bf
+[DEBUG] 2021-02-17 21:01:07.560 [main] BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@20011bf
+[DEBUG] 2021-02-17 21:01:07.562 [main] BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@20011bf
+[DEBUG] 2021-02-17 21:01:07.566 [main] BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@43f0c2d1
+[DEBUG] 2021-02-17 21:01:07.568 [main] BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@1c6c6f24
+[DEBUG] 2021-02-17 21:01:07.568 [main] BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@1c6c6f24
+[DEBUG] 2021-02-17 21:01:07.568 [main] BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@1c6c6f24
+[DEBUG] 2021-02-17 21:01:07.569 [main] BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@6a48a7f3
+[DEBUG] 2021-02-17 21:01:07.571 [main] BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@6c806c8b
+[DEBUG] 2021-02-17 21:01:07.571 [main] BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@6c806c8b
+[DEBUG] 2021-02-17 21:01:07.574 [main] BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@46d63dbb
+[DEBUG] 2021-02-17 21:01:07.574 [main] BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@46d63dbb
+[DEBUG] 2021-02-17 21:01:07.575 [main] BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@23592946
+[DEBUG] 2021-02-17 21:01:07.576 [main] BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@23592946
+[DEBUG] 2021-02-17 21:01:07.577 [main] BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@702c436b
+[DEBUG] 2021-02-17 21:01:07.578 [main] BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@702c436b
+[DEBUG] 2021-02-17 21:01:07.579 [main] BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@37303f12
+[DEBUG] 2021-02-17 21:01:07.580 [main] BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@37303f12
+[DEBUG] 2021-02-17 21:01:07.581 [main] BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@165e389b
+[DEBUG] 2021-02-17 21:01:07.583 [main] BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@7a34f66a
+[DEBUG] 2021-02-17 21:01:07.583 [main] BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@7a34f66a
+[DEBUG] 2021-02-17 21:01:07.583 [main] BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@7a34f66a
+[DEBUG] 2021-02-17 21:01:07.585 [main] BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@2459319c
+[DEBUG] 2021-02-17 21:01:07.585 [main] BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@2459319c
+[DEBUG] 2021-02-17 21:01:07.585 [main] BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@2459319c
+[DEBUG] 2021-02-17 21:01:07.587 [main] BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@7808f638
+[DEBUG] 2021-02-17 21:01:07.588 [main] BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@1d0a61c8
+[DEBUG] 2021-02-17 21:01:07.589 [main] BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@47fbc56
+[DEBUG] 2021-02-17 21:01:07.589 [main] BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@47fbc56
+[DEBUG] 2021-02-17 21:01:07.589 [main] BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@47fbc56
+[DEBUG] 2021-02-17 21:01:07.591 [main] BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@64f16277
+[DEBUG] 2021-02-17 21:01:07.591 [main] BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@64f16277
+[DEBUG] 2021-02-17 21:01:07.591 [main] BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@64f16277
+[DEBUG] 2021-02-17 21:01:07.592 [main] BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@21e20ad5
+[DEBUG] 2021-02-17 21:01:07.593 [main] BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@336880df
+[DEBUG] 2021-02-17 21:01:07.595 [main] BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@7a0f244f
+[DEBUG] 2021-02-17 21:01:07.595 [main] BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@7a0f244f
+[DEBUG] 2021-02-17 21:01:07.596 [main] BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@4defd42
+[DEBUG] 2021-02-17 21:01:07.598 [main] BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@5ac6c4f2
+[DEBUG] 2021-02-17 21:01:07.598 [main] BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@5ac6c4f2
+[DEBUG] 2021-02-17 21:01:07.600 [main] BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@3bfc6a5e
+[DEBUG] 2021-02-17 21:01:07.600 [main] BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@3bfc6a5e
+[DEBUG] 2021-02-17 21:01:07.601 [main] BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@350a94ce
+[DEBUG] 2021-02-17 21:01:07.602 [main] BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@62db0521
+[DEBUG] 2021-02-17 21:01:07.605 [main] BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@285f38f6
+[DEBUG] 2021-02-17 21:01:07.609 [main] BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@1abfe081
+[DEBUG] 2021-02-17 21:01:07.610 [main] BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@1abfe081
+[DEBUG] 2021-02-17 21:01:07.611 [main] BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@75a118e6
+[DEBUG] 2021-02-17 21:01:07.611 [main] BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@1d540566
+[DEBUG] 2021-02-17 21:01:07.611 [main] BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@6014a9ba
+[DEBUG] 2021-02-17 21:01:07.611 [main] BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@acdcf71
+[DEBUG] 2021-02-17 21:01:07.611 [main] BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@77d680e6
+[DEBUG] 2021-02-17 21:01:07.611 [main] BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@4a14c44f
+[DEBUG] 2021-02-17 21:01:07.611 [main] BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@f08fdce
+[DEBUG] 2021-02-17 21:01:07.611 [main] BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@6bda1d19
+[DEBUG] 2021-02-17 21:01:07.648 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+[DEBUG] 2021-02-17 21:01:07.648 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+[DEBUG] 2021-02-17 21:01:07.649 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2021-02-17 21:01:07.649 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2021-02-17 21:01:07.649 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+[DEBUG] 2021-02-17 21:01:07.650 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+[DEBUG] 2021-02-17 21:01:07.651 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+[DEBUG] 2021-02-17 21:01:07.652 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2021-02-17 21:01:07.652 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+[DEBUG] 2021-02-17 21:01:07.653 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+[DEBUG] 2021-02-17 21:01:07.653 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+[DEBUG] 2021-02-17 21:01:07.654 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+[DEBUG] 2021-02-17 21:01:07.654 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2021-02-17 21:01:07.654 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+[INFO ] 2021-02-17 21:01:07.663 [main] C3P0ConnectionProvider - HHH010002: C3P0 using driver: com.mysql.cj.jdbc.Driver at URL: jdbc:mysql://localhost:3306/test_bgr
+[INFO ] 2021-02-17 21:01:07.664 [main] C3P0ConnectionProvider - HHH10001001: Connection properties: {password=****, user=root}
+[INFO ] 2021-02-17 21:01:07.664 [main] C3P0ConnectionProvider - HHH10001003: Autocommit mode: false
+[INFO ] 2021-02-17 21:01:07.841 [main] C3P0ConnectionProvider - HHH10001007: JDBC isolation level: <unknown>
+[DEBUG] 2021-02-17 21:01:08.721 [main] JdbcEnvironmentInitiator - Database ->
+       name : MySQL
+    version : 8.0.23
+      major : 8
+      minor : 0
+[DEBUG] 2021-02-17 21:01:08.721 [main] JdbcEnvironmentInitiator - Driver ->
+       name : MySQL Connector/J
+    version : mysql-connector-java-8.0.23 (Revision: 18bbd5e68195d0da083cbd5bd0d05d76320df7cd)
+      major : 8
+      minor : 0
+[DEBUG] 2021-02-17 21:01:08.721 [main] JdbcEnvironmentInitiator - JDBC version : 4.2
+[INFO ] 2021-02-17 21:01:08.757 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[DEBUG] 2021-02-17 21:01:08.787 [main] IdentifierHelperBuilder - JDBC driver metadata reported database stores quoted identifiers in more than one case
+[DEBUG] 2021-02-17 21:01:08.823 [main] IdentifierHelperBuilder - IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [LOWER]; that will likely lead to problems in schema update and validation if using quoted identifiers
+[DEBUG] 2021-02-17 21:01:08.867 [main] Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+[DEBUG] 2021-02-17 21:01:08.872 [main] TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@7d7cac8] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@6fc6deb7]
+[DEBUG] 2021-02-17 21:01:08.939 [main] AnnotationBinder - Binding entity from annotated class: com.kevinleader.bgr.entity.RankingConfiguration
+[DEBUG] 2021-02-17 21:01:08.966 [main] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2021-02-17 21:01:08.973 [main] EntityBinder - Import with entity name RankingConfiguration
+[DEBUG] 2021-02-17 21:01:08.977 [main] EntityBinder - Bind entity com.kevinleader.bgr.entity.RankingConfiguration on table ranking_configuration
+[DEBUG] 2021-02-17 21:01:09.016 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ranking_configuration), mappingColumn=id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.019 [main] PropertyBinder - MetadataSourceProcessor property id with lazy=false
+[DEBUG] 2021-02-17 21:01:09.021 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.kevinleader.bgr.entity.RankingConfiguration:id]
+[DEBUG] 2021-02-17 21:01:09.024 [main] SimpleValueBinder - building SimpleValue for id
+[DEBUG] 2021-02-17 21:01:09.027 [main] PropertyBinder - Building property id
+[DEBUG] 2021-02-17 21:01:09.033 [main] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, org.hibernate.id.enhanced.SequenceStyleGenerator, native, ...)
+[DEBUG] 2021-02-17 21:01:09.035 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ranking_configuration), mappingColumn=configuration_name, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.035 [main] PropertyBinder - MetadataSourceProcessor property configurationName with lazy=false
+[DEBUG] 2021-02-17 21:01:09.035 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.kevinleader.bgr.entity.RankingConfiguration:configurationName]
+[DEBUG] 2021-02-17 21:01:09.035 [main] SimpleValueBinder - building SimpleValue for configurationName
+[DEBUG] 2021-02-17 21:01:09.035 [main] PropertyBinder - Building property configurationName
+[DEBUG] 2021-02-17 21:01:09.035 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ranking_configuration), mappingColumn=genres, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.036 [main] PropertyBinder - MetadataSourceProcessor property genres with lazy=false
+[DEBUG] 2021-02-17 21:01:09.036 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.kevinleader.bgr.entity.RankingConfiguration:genres]
+[DEBUG] 2021-02-17 21:01:09.036 [main] SimpleValueBinder - building SimpleValue for genres
+[DEBUG] 2021-02-17 21:01:09.036 [main] PropertyBinder - Building property genres
+[DEBUG] 2021-02-17 21:01:09.036 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ranking_configuration), mappingColumn=highest_price, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.036 [main] PropertyBinder - MetadataSourceProcessor property highestPrice with lazy=false
+[DEBUG] 2021-02-17 21:01:09.036 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.kevinleader.bgr.entity.RankingConfiguration:highestPrice]
+[DEBUG] 2021-02-17 21:01:09.036 [main] SimpleValueBinder - building SimpleValue for highestPrice
+[DEBUG] 2021-02-17 21:01:09.036 [main] PropertyBinder - Building property highestPrice
+[DEBUG] 2021-02-17 21:01:09.036 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ranking_configuration), mappingColumn=lowest_price, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.036 [main] PropertyBinder - MetadataSourceProcessor property lowestPrice with lazy=false
+[DEBUG] 2021-02-17 21:01:09.036 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.kevinleader.bgr.entity.RankingConfiguration:lowestPrice]
+[DEBUG] 2021-02-17 21:01:09.037 [main] SimpleValueBinder - building SimpleValue for lowestPrice
+[DEBUG] 2021-02-17 21:01:09.037 [main] PropertyBinder - Building property lowestPrice
+[DEBUG] 2021-02-17 21:01:09.037 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ranking_configuration), mappingColumn=platforms, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.037 [main] PropertyBinder - MetadataSourceProcessor property platforms with lazy=false
+[DEBUG] 2021-02-17 21:01:09.037 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.kevinleader.bgr.entity.RankingConfiguration:platforms]
+[DEBUG] 2021-02-17 21:01:09.037 [main] SimpleValueBinder - building SimpleValue for platforms
+[DEBUG] 2021-02-17 21:01:09.037 [main] PropertyBinder - Building property platforms
+[DEBUG] 2021-02-17 21:01:09.037 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ranking_configuration), mappingColumn=release_span, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.037 [main] PropertyBinder - MetadataSourceProcessor property releaseSpan with lazy=false
+[DEBUG] 2021-02-17 21:01:09.037 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.kevinleader.bgr.entity.RankingConfiguration:releaseSpan]
+[DEBUG] 2021-02-17 21:01:09.037 [main] SimpleValueBinder - building SimpleValue for releaseSpan
+[DEBUG] 2021-02-17 21:01:09.037 [main] PropertyBinder - Building property releaseSpan
+[DEBUG] 2021-02-17 21:01:09.040 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='null'}
+[DEBUG] 2021-02-17 21:01:09.040 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ranking_configuration), mappingColumn=user, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.046 [main] PropertyBinder - Building property user
+[DEBUG] 2021-02-17 21:01:09.048 [main] AnnotationBinder - Binding entity from annotated class: com.kevinleader.bgr.entity.User
+[DEBUG] 2021-02-17 21:01:09.048 [main] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2021-02-17 21:01:09.048 [main] EntityBinder - Import with entity name User
+[DEBUG] 2021-02-17 21:01:09.048 [main] EntityBinder - Bind entity com.kevinleader.bgr.entity.User on table user
+[DEBUG] 2021-02-17 21:01:09.052 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.052 [main] PropertyBinder - MetadataSourceProcessor property id with lazy=false
+[DEBUG] 2021-02-17 21:01:09.052 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.kevinleader.bgr.entity.User:id]
+[DEBUG] 2021-02-17 21:01:09.052 [main] SimpleValueBinder - building SimpleValue for id
+[DEBUG] 2021-02-17 21:01:09.052 [main] PropertyBinder - Building property id
+[DEBUG] 2021-02-17 21:01:09.053 [main] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, org.hibernate.id.enhanced.SequenceStyleGenerator, native, ...)
+[DEBUG] 2021-02-17 21:01:09.053 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=email, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.053 [main] PropertyBinder - MetadataSourceProcessor property email with lazy=false
+[DEBUG] 2021-02-17 21:01:09.053 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.kevinleader.bgr.entity.User:email]
+[DEBUG] 2021-02-17 21:01:09.053 [main] SimpleValueBinder - building SimpleValue for email
+[DEBUG] 2021-02-17 21:01:09.053 [main] PropertyBinder - Building property email
+[DEBUG] 2021-02-17 21:01:09.053 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=password, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.053 [main] PropertyBinder - MetadataSourceProcessor property password with lazy=false
+[DEBUG] 2021-02-17 21:01:09.053 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.kevinleader.bgr.entity.User:password]
+[DEBUG] 2021-02-17 21:01:09.053 [main] SimpleValueBinder - building SimpleValue for password
+[DEBUG] 2021-02-17 21:01:09.053 [main] PropertyBinder - Building property password
+[DEBUG] 2021-02-17 21:01:09.054 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+[DEBUG] 2021-02-17 21:01:09.054 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=rankingConfigurations, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.056 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=null, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.064 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=element, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.064 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=rankingConfigurations_KEY, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.065 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='rankingConfigurations_KEY', referencedColumn='null', mappedBy='null'}
+[DEBUG] 2021-02-17 21:01:09.065 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+[DEBUG] 2021-02-17 21:01:09.065 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+[DEBUG] 2021-02-17 21:01:09.066 [main] CollectionBinder - Collection role: com.kevinleader.bgr.entity.User.rankingConfigurations
+[DEBUG] 2021-02-17 21:01:09.068 [main] PropertyBinder - Building property rankingConfigurations
+[DEBUG] 2021-02-17 21:01:09.069 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=user_name, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.069 [main] PropertyBinder - MetadataSourceProcessor property userName with lazy=false
+[DEBUG] 2021-02-17 21:01:09.069 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.kevinleader.bgr.entity.User:userName]
+[DEBUG] 2021-02-17 21:01:09.069 [main] SimpleValueBinder - building SimpleValue for userName
+[DEBUG] 2021-02-17 21:01:09.069 [main] PropertyBinder - Building property userName
+[DEBUG] 2021-02-17 21:01:09.069 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+[DEBUG] 2021-02-17 21:01:09.069 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=wishedGames, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.070 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=null, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.070 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=element, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.070 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(user), mappingColumn=wishedGames_KEY, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.070 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='wishedGames_KEY', referencedColumn='null', mappedBy='null'}
+[DEBUG] 2021-02-17 21:01:09.070 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+[DEBUG] 2021-02-17 21:01:09.070 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+[DEBUG] 2021-02-17 21:01:09.070 [main] CollectionBinder - Collection role: com.kevinleader.bgr.entity.User.wishedGames
+[DEBUG] 2021-02-17 21:01:09.070 [main] PropertyBinder - Building property wishedGames
+[DEBUG] 2021-02-17 21:01:09.070 [main] AnnotationBinder - Binding entity from annotated class: com.kevinleader.bgr.entity.WishedGame
+[DEBUG] 2021-02-17 21:01:09.070 [main] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2021-02-17 21:01:09.070 [main] EntityBinder - Import with entity name WishedGame
+[DEBUG] 2021-02-17 21:01:09.070 [main] EntityBinder - Bind entity com.kevinleader.bgr.entity.WishedGame on table wished_game
+[DEBUG] 2021-02-17 21:01:09.071 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(wished_game), mappingColumn=id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.071 [main] PropertyBinder - MetadataSourceProcessor property id with lazy=false
+[DEBUG] 2021-02-17 21:01:09.072 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.kevinleader.bgr.entity.WishedGame:id]
+[DEBUG] 2021-02-17 21:01:09.072 [main] SimpleValueBinder - building SimpleValue for id
+[DEBUG] 2021-02-17 21:01:09.072 [main] PropertyBinder - Building property id
+[DEBUG] 2021-02-17 21:01:09.072 [main] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, org.hibernate.id.enhanced.SequenceStyleGenerator, native, ...)
+[DEBUG] 2021-02-17 21:01:09.072 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(wished_game), mappingColumn=igdb_game_id, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.072 [main] PropertyBinder - MetadataSourceProcessor property igdbGameId with lazy=false
+[DEBUG] 2021-02-17 21:01:09.072 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.kevinleader.bgr.entity.WishedGame:igdbGameId]
+[DEBUG] 2021-02-17 21:01:09.072 [main] SimpleValueBinder - building SimpleValue for igdbGameId
+[DEBUG] 2021-02-17 21:01:09.072 [main] PropertyBinder - Building property igdbGameId
+[DEBUG] 2021-02-17 21:01:09.072 [main] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='null'}
+[DEBUG] 2021-02-17 21:01:09.073 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(wished_game), mappingColumn=user, insertable=true, updatable=true, unique=false}
+[DEBUG] 2021-02-17 21:01:09.073 [main] PropertyBinder - Building property user
+[DEBUG] 2021-02-17 21:01:09.074 [main] SimpleValueBinder - Starting fillSimpleValue for id
+[DEBUG] 2021-02-17 21:01:09.074 [main] SimpleValueBinder - Starting fillSimpleValue for configurationName
+[DEBUG] 2021-02-17 21:01:09.074 [main] SimpleValueBinder - Starting fillSimpleValue for genres
+[DEBUG] 2021-02-17 21:01:09.074 [main] SimpleValueBinder - Starting fillSimpleValue for highestPrice
+[DEBUG] 2021-02-17 21:01:09.074 [main] SimpleValueBinder - Starting fillSimpleValue for lowestPrice
+[DEBUG] 2021-02-17 21:01:09.075 [main] SimpleValueBinder - Starting fillSimpleValue for platforms
+[DEBUG] 2021-02-17 21:01:09.075 [main] SimpleValueBinder - Starting fillSimpleValue for releaseSpan
+[DEBUG] 2021-02-17 21:01:09.075 [main] SimpleValueBinder - Starting fillSimpleValue for id
+[DEBUG] 2021-02-17 21:01:09.075 [main] SimpleValueBinder - Starting fillSimpleValue for email
+[DEBUG] 2021-02-17 21:01:09.075 [main] SimpleValueBinder - Starting fillSimpleValue for password
+[DEBUG] 2021-02-17 21:01:09.075 [main] SimpleValueBinder - Starting fillSimpleValue for userName
+[DEBUG] 2021-02-17 21:01:09.075 [main] SimpleValueBinder - Starting fillSimpleValue for id
+[DEBUG] 2021-02-17 21:01:09.075 [main] SimpleValueBinder - Starting fillSimpleValue for igdbGameId
+[DEBUG] 2021-02-17 21:01:09.083 [main] PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [ranking_configuration]
+[DEBUG] 2021-02-17 21:01:09.083 [main] PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [user]
+[DEBUG] 2021-02-17 21:01:09.083 [main] PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [wished_game]
+[DEBUG] 2021-02-17 21:01:09.083 [main] CollectionSecondPass - Second pass for collection: com.kevinleader.bgr.entity.User.wishedGames
+[DEBUG] 2021-02-17 21:01:09.083 [main] CollectionBinder - Binding a OneToMany: com.kevinleader.bgr.entity.User.wishedGames through an association table
+[DEBUG] 2021-02-17 21:01:09.093 [main] PrimaryKey - Forcing column [user_id] to be non-null as it is part of the primary key for table [user_wished_game]
+[DEBUG] 2021-02-17 21:01:09.093 [main] PrimaryKey - Forcing column [wishedgames_id] to be non-null as it is part of the primary key for table [user_wished_game]
+[DEBUG] 2021-02-17 21:01:09.093 [main] CollectionSecondPass - Mapped collection key: User_id, element: wishedGames_id
+[DEBUG] 2021-02-17 21:01:09.093 [main] CollectionSecondPass - Second pass for collection: com.kevinleader.bgr.entity.User.rankingConfigurations
+[DEBUG] 2021-02-17 21:01:09.093 [main] CollectionBinder - Binding a OneToMany: com.kevinleader.bgr.entity.User.rankingConfigurations through an association table
+[DEBUG] 2021-02-17 21:01:09.094 [main] PrimaryKey - Forcing column [user_id] to be non-null as it is part of the primary key for table [user_ranking_configuration]
+[DEBUG] 2021-02-17 21:01:09.094 [main] PrimaryKey - Forcing column [rankingconfigurations_id] to be non-null as it is part of the primary key for table [user_ranking_configuration]
+[DEBUG] 2021-02-17 21:01:09.094 [main] CollectionSecondPass - Mapped collection key: User_id, element: rankingConfigurations_id
+[DEBUG] 2021-02-17 21:01:09.094 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.kevinleader.bgr.entity.User
+[DEBUG] 2021-02-17 21:01:09.097 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.kevinleader.bgr.entity.RankingConfiguration
+[DEBUG] 2021-02-17 21:01:09.097 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.kevinleader.bgr.entity.User
+[DEBUG] 2021-02-17 21:01:09.097 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.kevinleader.bgr.entity.WishedGame
+[DEBUG] 2021-02-17 21:01:09.097 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.kevinleader.bgr.entity.User
+[DEBUG] 2021-02-17 21:01:09.097 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.kevinleader.bgr.entity.User
+[DEBUG] 2021-02-17 21:01:09.099 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.kevinleader.bgr.entity.User
+[DEBUG] 2021-02-17 21:01:09.099 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.kevinleader.bgr.entity.RankingConfiguration
+[DEBUG] 2021-02-17 21:01:09.099 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.kevinleader.bgr.entity.User
+[DEBUG] 2021-02-17 21:01:09.099 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.kevinleader.bgr.entity.WishedGame
+[DEBUG] 2021-02-17 21:01:09.099 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.kevinleader.bgr.entity.User
+[DEBUG] 2021-02-17 21:01:09.099 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.kevinleader.bgr.entity.User
+[DEBUG] 2021-02-17 21:01:09.153 [main] SessionFactoryImpl - Building session factory
+[DEBUG] 2021-02-17 21:01:09.155 [main] Settings - SessionFactory name : null
+[DEBUG] 2021-02-17 21:01:09.155 [main] Settings - Automatic flush during beforeCompletion(): enabled
+[DEBUG] 2021-02-17 21:01:09.155 [main] Settings - Automatic session close at end of transaction: disabled
+[DEBUG] 2021-02-17 21:01:09.155 [main] Settings - Statistics: disabled
+[DEBUG] 2021-02-17 21:01:09.155 [main] Settings - Deleted entity synthetic identifier rollback: disabled
+[DEBUG] 2021-02-17 21:01:09.155 [main] Settings - Default entity-mode: pojo
+[DEBUG] 2021-02-17 21:01:09.155 [main] Settings - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - Allow initialization of lazy state outside session : disabled
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - Using BatchFetchStyle : LEGACY
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - Default batch fetch size: -1
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - Maximum outer join fetch depth: 2
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - Default null ordering: NONE
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - Order SQL updates by primary key: disabled
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - Order SQL inserts for batching: disabled
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - multi-tenancy strategy : NONE
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - JTA Track by Thread: enabled
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - Query language substitutions: {}
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - Named query checking : enabled
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - Second-level cache: disabled
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - Second-level query cache: disabled
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - Second-level query cache factory: null
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - Second-level cache region prefix: null
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - Optimize second-level cache for minimal puts: disabled
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - Structured second-level cache entries: disabled
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - Second-level cache direct-reference entries: disabled
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - Automatic eviction of collection cache: disabled
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - JDBC batch size: 15
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - JDBC batch updates for versioned data: enabled
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - Scrollable result sets: enabled
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - Wrap result sets: disabled
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - JDBC3 getGeneratedKeys(): enabled
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - JDBC result set fetch size: null
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - Connection release mode: AFTER_TRANSACTION
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - Generate SQL with comments: disabled
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - JPA compliance - query : 
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - JPA compliance - closed-handling : 
+[DEBUG] 2021-02-17 21:01:09.156 [main] Settings - JPA compliance - lists : 
+[DEBUG] 2021-02-17 21:01:09.157 [main] Settings - JPA compliance - transactions : 
+[INFO ] 2021-02-17 21:01:09.237 [main] beans - HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.
+[DEBUG] 2021-02-17 21:01:09.265 [main] SessionFactoryImpl - Session factory constructed with filter configurations : {}
+[DEBUG] 2021-02-17 21:01:09.265 [main] SessionFactoryImpl - Instantiating session factory with properties: {sun.desktop=windows, awt.toolkit=sun.awt.windows.WToolkit, java.specification.version=11, sun.cpu.isalist=amd64, hibernate.c3p0.idle_test_period=3000, sun.jnu.encoding=Cp1252, hibernate.c3p0.min_size=5, java.class.path=C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.1\lib\idea_rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.1\plugins\junit\lib\junit5-rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.1\plugins\junit\lib\junit-rt.jar;C:\Users\Kevin\Desktop\Enterprise-Java-Repos\Budget-Game-Rankings\target\test-classes;C:\Users\Kevin\Desktop\Enterprise-Java-Repos\Budget-Game-Rankings\target\classes;C:\Users\Kevin\.m2\repository\org\hibernate\hibernate-core\5.4.4.Final\hibernate-core-5.4.4.Final.jar;C:\Users\Kevin\.m2\repository\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;C:\Users\Kevin\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\Kevin\.m2\repository\org\javassist\javassist\3.24.0-GA\javassist-3.24.0-GA.jar;C:\Users\Kevin\.m2\repository\net\bytebuddy\byte-buddy\1.9.11\byte-buddy-1.9.11.jar;C:\Users\Kevin\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Kevin\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\Kevin\.m2\repository\org\jboss\jandex\2.0.5.Final\jandex-2.0.5.Final.jar;C:\Users\Kevin\.m2\repository\com\fasterxml\classmate\1.3.4\classmate-1.3.4.jar;C:\Users\Kevin\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\Kevin\.m2\repository\org\dom4j\dom4j\2.1.1\dom4j-2.1.1.jar;C:\Users\Kevin\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.0.Final\hibernate-commons-annotations-5.1.0.Final.jar;C:\Users\Kevin\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\Kevin\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.1\jaxb-runtime-2.3.1.jar;C:\Users\Kevin\.m2\repository\org\glassfish\jaxb\txw2\2.3.1\txw2-2.3.1.jar;C:\Users\Kevin\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.7\istack-commons-runtime-3.0.7.jar;C:\Users\Kevin\.m2\repository\org\jvnet\staxex\stax-ex\1.8\stax-ex-1.8.jar;C:\Users\Kevin\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.15\FastInfoset-1.2.15.jar;C:\Users\Kevin\.m2\repository\org\hibernate\hibernate-c3p0\5.4.4.Final\hibernate-c3p0-5.4.4.Final.jar;C:\Users\Kevin\.m2\repository\com\mchange\c3p0\0.9.5.3\c3p0-0.9.5.3.jar;C:\Users\Kevin\.m2\repository\com\mchange\mchange-commons-java\0.2.15\mchange-commons-java-0.2.15.jar;C:\Users\Kevin\.m2\repository\org\apache\logging\log4j\log4j-api\2.10.0\log4j-api-2.10.0.jar;C:\Users\Kevin\.m2\repository\org\apache\logging\log4j\log4j-core\2.10.0\log4j-core-2.10.0.jar;C:\Users\Kevin\.m2\repository\javax\javaee-web-api\7.0\javaee-web-api-7.0.jar;C:\Users\Kevin\.m2\repository\org\junit\platform\junit-platform-runner\1.0.0\junit-platform-runner-1.0.0.jar;C:\Users\Kevin\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\Kevin\.m2\repository\org\junit\platform\junit-platform-launcher\1.0.0\junit-platform-launcher-1.0.0.jar;C:\Users\Kevin\.m2\repository\org\junit\platform\junit-platform-suite-api\1.0.0\junit-platform-suite-api-1.0.0.jar;C:\Users\Kevin\.m2\repository\org\junit\platform\junit-platform-commons\1.0.0\junit-platform-commons-1.0.0.jar;C:\Users\Kevin\.m2\repository\org\junit\vintage\junit-vintage-engine\4.12.0\junit-vintage-engine-4.12.0.jar;C:\Users\Kevin\.m2\repository\org\junit\platform\junit-platform-engine\1.0.0\junit-platform-engine-1.0.0.jar;C:\Users\Kevin\.m2\repository\org\opentest4j\opentest4j\1.0.0\opentest4j-1.0.0.jar;C:\Users\Kevin\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.0.0\junit-jupiter-engine-5.0.0.jar;C:\Users\Kevin\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.0.0\junit-jupiter-api-5.0.0.jar;C:\Users\Kevin\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Kevin\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Kevin\.m2\repository\jstl\jstl\1.2\jstl-1.2.jar;C:\Users\Kevin\.m2\repository\mysql\mysql-connector-java\8.0.23\mysql-connector-java-8.0.23.jar;C:\Users\Kevin\.m2\repository\com\google\protobuf\protobuf-java\3.11.4\protobuf-java-3.11.4.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, idea.test.cyclic.buffer.size=1048576, user.variant=, java.vendor.url=https://openjdk.java.net/, user.timezone=America/New_York, os.name=Windows 10, java.vm.specification.version=11, sun.java.launcher=SUN_STANDARD, user.country=US, sun.boot.library.path=C:\Program Files\Java\jdk-11.0.8\bin, sun.java.command=com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit5 com.kevinleader.bgr.persistence.UserDaoTest, jdk.debug=release, sun.cpu.endian=little, user.home=C:\Users\Kevin, hibernate.c3p0.max_statements=50, user.language=en, java.specification.vendor=Oracle Corporation, java.version.date=2020-07-14, java.home=C:\Program Files\Java\jdk-11.0.8, file.separator=\, java.vm.compressedOopsMode=32-bit, line.separator=
+, hibernate.c3p0.timeout=300, java.specification.name=Java Platform API Specification, java.vm.specification.vendor=Oracle Corporation, intellij.debug.agent=true, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, user.script=, connection.password=password, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, hibernate.c3p0.max_size=20, java.runtime.version=11.0.8+10-LTS, user.name=Kevin, path.separator=;, hibernate.connection.username=****, os.version=10.0, java.runtime.name=Java(TM) SE Runtime Environment, hibernate.connection.url=jdbc:mysql://localhost:3306/test_bgr, file.encoding=UTF-8, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, java.vendor.version=18.9, hibernate.connection.driver_class=com.mysql.cj.jdbc.Driver, java.vendor.url.bug=https://bugreport.java.com/bugreport/, java.io.tmpdir=C:\Users\Kevin\AppData\Local\Temp\, java.version=11.0.8, jboss.modules.system.pkgs=com.intellij.rt, user.dir=C:\Users\Kevin\Desktop\Enterprise-Java-Repos\Budget-Game-Rankings, os.arch=amd64, connection.username=root, java.vm.specification.name=Java Virtual Machine Specification, java.awt.printerjob=sun.awt.windows.WPrinterJob, hibernate.connection.password=****, sun.os.patch.level=, connection.driver_class=com.mysql.cj.jdbc.Driver, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@5dfe23e8, java.library.path=C:\Program Files\Java\jdk-11.0.8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Skype\Phone\;C:\Users\Kevin\AppData\Local\Microsoft\WindowsApps;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-14.0.1\bin;C:\PHP7;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Users\Kevin\AppData\Local\atom\bin;C:\Users\Kevin\AppData\Roaming\npm;C:\Users\Kevin\AppData\Local\Microsoft\WindowsApps;;., java.vendor=Oracle Corporation, java.vm.info=mixed mode, java.vm.version=11.0.8+10-LTS, hibernate.bytecode.use_reflection_optimizer=false, sun.io.unicode.encoding=UnicodeLittle, connection.url=jdbc:mysql://localhost:3306/test_bgr, java.class.version=55.0}
+[DEBUG] 2021-02-17 21:01:09.299 [main] TypeSafeActivator - Unable to acquire Bean Validation ValidatorFactory, skipping activation
+[DEBUG] 2021-02-17 21:01:09.299 [main] JaccIntegrator - Skipping JACC integration as it was not enabled
+[DEBUG] 2021-02-17 21:01:09.300 [main] SessionFactoryImpl - Instantiated session factory
+[DEBUG] 2021-02-17 21:01:09.300 [main] TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@7d7cac8] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@2668c286]
+[DEBUG] 2021-02-17 21:01:09.362 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.kevinleader.bgr.entity.RankingConfiguration] is safe
+[DEBUG] 2021-02-17 21:01:09.362 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.kevinleader.bgr.entity.RankingConfiguration
+[DEBUG] 2021-02-17 21:01:09.399 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.kevinleader.bgr.entity.RankingConfiguration] is safe
+[DEBUG] 2021-02-17 21:01:09.399 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.kevinleader.bgr.entity.RankingConfiguration
+[DEBUG] 2021-02-17 21:01:09.747 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.kevinleader.bgr.entity.WishedGame] is safe
+[DEBUG] 2021-02-17 21:01:09.748 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.kevinleader.bgr.entity.WishedGame
+[DEBUG] 2021-02-17 21:01:09.748 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.kevinleader.bgr.entity.WishedGame] is safe
+[DEBUG] 2021-02-17 21:01:09.748 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.kevinleader.bgr.entity.WishedGame
+[DEBUG] 2021-02-17 21:01:09.757 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.kevinleader.bgr.entity.User] is safe
+[DEBUG] 2021-02-17 21:01:09.757 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.kevinleader.bgr.entity.User
+[DEBUG] 2021-02-17 21:01:09.757 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.kevinleader.bgr.entity.User] is safe
+[DEBUG] 2021-02-17 21:01:09.757 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.kevinleader.bgr.entity.User
+[DEBUG] 2021-02-17 21:01:09.788 [main] AbstractCollectionPersister - Static SQL for collection: com.kevinleader.bgr.entity.User.rankingConfigurations
+[DEBUG] 2021-02-17 21:01:09.788 [main] AbstractCollectionPersister -  Row insert: insert into user_ranking_configuration (User_id, rankingConfigurations_id) values (?, ?)
+[DEBUG] 2021-02-17 21:01:09.788 [main] AbstractCollectionPersister -  Row update: update user_ranking_configuration set rankingConfigurations_id=? where User_id=? and rankingConfigurations_id=?
+[DEBUG] 2021-02-17 21:01:09.788 [main] AbstractCollectionPersister -  Row delete: delete from user_ranking_configuration where User_id=? and rankingConfigurations_id=?
+[DEBUG] 2021-02-17 21:01:09.788 [main] AbstractCollectionPersister -  One-shot delete: delete from user_ranking_configuration where User_id=?
+[DEBUG] 2021-02-17 21:01:09.788 [main] AbstractCollectionPersister - Static SQL for collection: com.kevinleader.bgr.entity.User.wishedGames
+[DEBUG] 2021-02-17 21:01:09.788 [main] AbstractCollectionPersister -  Row insert: insert into user_wished_game (User_id, wishedGames_id) values (?, ?)
+[DEBUG] 2021-02-17 21:01:09.788 [main] AbstractCollectionPersister -  Row update: update user_wished_game set wishedGames_id=? where User_id=? and wishedGames_id=?
+[DEBUG] 2021-02-17 21:01:09.788 [main] AbstractCollectionPersister -  Row delete: delete from user_wished_game where User_id=? and wishedGames_id=?
+[DEBUG] 2021-02-17 21:01:09.788 [main] AbstractCollectionPersister -  One-shot delete: delete from user_wished_game where User_id=?
+[DEBUG] 2021-02-17 21:01:09.793 [main] AbstractEntityPersister - Static SQL for entity: com.kevinleader.bgr.entity.RankingConfiguration
+[DEBUG] 2021-02-17 21:01:09.793 [main] AbstractEntityPersister -  Version select: select id from ranking_configuration where id =?
+[DEBUG] 2021-02-17 21:01:09.793 [main] AbstractEntityPersister -  Snapshot select: select rankingcon_.id, rankingcon_.configuration_name as configur2_0_, rankingcon_.genres as genres3_0_, rankingcon_.highest_price as highest_4_0_, rankingcon_.lowest_price as lowest_p5_0_, rankingcon_.platforms as platform6_0_, rankingcon_.release_span as release_7_0_, rankingcon_.user_id as user_id8_0_ from ranking_configuration rankingcon_ where rankingcon_.id=?
+[DEBUG] 2021-02-17 21:01:09.794 [main] AbstractEntityPersister -  Insert 0: insert into ranking_configuration (configuration_name, genres, highest_price, lowest_price, platforms, release_span, user_id, id) values (?, ?, ?, ?, ?, ?, ?, ?)
+[DEBUG] 2021-02-17 21:01:09.794 [main] AbstractEntityPersister -  Update 0: update ranking_configuration set configuration_name=?, genres=?, highest_price=?, lowest_price=?, platforms=?, release_span=?, user_id=? where id=?
+[DEBUG] 2021-02-17 21:01:09.794 [main] AbstractEntityPersister -  Delete 0: delete from ranking_configuration where id=?
+[DEBUG] 2021-02-17 21:01:09.794 [main] AbstractEntityPersister -  Identity insert: insert into ranking_configuration (configuration_name, genres, highest_price, lowest_price, platforms, release_span, user_id) values (?, ?, ?, ?, ?, ?, ?)
+[DEBUG] 2021-02-17 21:01:09.827 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4ce25e47]
+[DEBUG] 2021-02-17 21:01:09.828 [main] MetamodelGraphWalker - Visiting attribute path : configurationName
+[DEBUG] 2021-02-17 21:01:09.828 [main] MetamodelGraphWalker - Visiting attribute path : genres
+[DEBUG] 2021-02-17 21:01:09.828 [main] MetamodelGraphWalker - Visiting attribute path : highestPrice
+[DEBUG] 2021-02-17 21:01:09.828 [main] MetamodelGraphWalker - Visiting attribute path : lowestPrice
+[DEBUG] 2021-02-17 21:01:09.828 [main] MetamodelGraphWalker - Visiting attribute path : platforms
+[DEBUG] 2021-02-17 21:01:09.829 [main] MetamodelGraphWalker - Visiting attribute path : releaseSpan
+[DEBUG] 2021-02-17 21:01:09.829 [main] MetamodelGraphWalker - Visiting attribute path : user
+[DEBUG] 2021-02-17 21:01:09.846 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7f0d8eff]
+[DEBUG] 2021-02-17 21:01:09.849 [main] MetamodelGraphWalker - Visiting attribute path : user.email
+[DEBUG] 2021-02-17 21:01:09.849 [main] MetamodelGraphWalker - Visiting attribute path : user.password
+[DEBUG] 2021-02-17 21:01:09.849 [main] MetamodelGraphWalker - Visiting attribute path : user.rankingConfigurations
+[DEBUG] 2021-02-17 21:01:09.850 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@5f5297e3]
+[DEBUG] 2021-02-17 21:01:09.853 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4703c998]
+[DEBUG] 2021-02-17 21:01:09.854 [main] MetamodelGraphWalker - Visiting attribute path : user.userName
+[DEBUG] 2021-02-17 21:01:09.854 [main] MetamodelGraphWalker - Visiting attribute path : user.wishedGames
+[DEBUG] 2021-02-17 21:01:09.854 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@3be3e76c]
+[DEBUG] 2021-02-17 21:01:09.854 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6c07ad6b]
+[DEBUG] 2021-02-17 21:01:09.854 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2021-02-17 21:01:09.874 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2021-02-17 21:01:09.887 [main] LoadPlanTreePrinter - LoadPlan(entity=com.kevinleader.bgr.entity.RankingConfiguration)
+    - Returns
+       - EntityReturnImpl(entity=com.kevinleader.bgr.entity.RankingConfiguration, querySpaceUid=<gen:0>, path=com.kevinleader.bgr.entity.RankingConfiguration)
+          - EntityAttributeFetchImpl(entity=com.kevinleader.bgr.entity.User, querySpaceUid=<gen:1>, path=com.kevinleader.bgr.entity.RankingConfiguration.user)
+             - CollectionAttributeFetchImpl(collection=com.kevinleader.bgr.entity.User.rankingConfigurations, querySpaceUid=<gen:2>, path=com.kevinleader.bgr.entity.RankingConfiguration.user.rankingConfigurations)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.kevinleader.bgr.entity.RankingConfiguration, querySpaceUid=<gen:3>, path=com.kevinleader.bgr.entity.RankingConfiguration.user.rankingConfigurations.<elements>)
+             - CollectionAttributeFetchImpl(collection=com.kevinleader.bgr.entity.User.wishedGames, querySpaceUid=<gen:4>, path=com.kevinleader.bgr.entity.RankingConfiguration.user.wishedGames)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.kevinleader.bgr.entity.WishedGame, querySpaceUid=<gen:5>, path=com.kevinleader.bgr.entity.RankingConfiguration.user.wishedGames.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.kevinleader.bgr.entity.RankingConfiguration)
+          - SQL table alias mapping - rankingcon0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+          - JOIN (JoinDefinedByMetadata(user)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.kevinleader.bgr.entity.User)
+                - SQL table alias mapping - user1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_1_1_}
+
+[DEBUG] 2021-02-17 21:01:09.890 [main] EntityLoader - Static select for entity com.kevinleader.bgr.entity.RankingConfiguration [NONE]: select rankingcon0_.id as id1_0_0_, rankingcon0_.configuration_name as configur2_0_0_, rankingcon0_.genres as genres3_0_0_, rankingcon0_.highest_price as highest_4_0_0_, rankingcon0_.lowest_price as lowest_p5_0_0_, rankingcon0_.platforms as platform6_0_0_, rankingcon0_.release_span as release_7_0_0_, rankingcon0_.user_id as user_id8_0_0_, user1_.id as id1_1_1_, user1_.email as email2_1_1_, user1_.password as password3_1_1_, user1_.user_name as user_nam4_1_1_ from ranking_configuration rankingcon0_ left outer join user user1_ on rankingcon0_.user_id=user1_.id where rankingcon0_.id=?
+[DEBUG] 2021-02-17 21:01:09.890 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@103c97ff]
+[DEBUG] 2021-02-17 21:01:09.891 [main] MetamodelGraphWalker - Visiting attribute path : configurationName
+[DEBUG] 2021-02-17 21:01:09.891 [main] MetamodelGraphWalker - Visiting attribute path : genres
+[DEBUG] 2021-02-17 21:01:09.891 [main] MetamodelGraphWalker - Visiting attribute path : highestPrice
+[DEBUG] 2021-02-17 21:01:09.891 [main] MetamodelGraphWalker - Visiting attribute path : lowestPrice
+[DEBUG] 2021-02-17 21:01:09.891 [main] MetamodelGraphWalker - Visiting attribute path : platforms
+[DEBUG] 2021-02-17 21:01:09.891 [main] MetamodelGraphWalker - Visiting attribute path : releaseSpan
+[DEBUG] 2021-02-17 21:01:09.891 [main] MetamodelGraphWalker - Visiting attribute path : user
+[DEBUG] 2021-02-17 21:01:09.891 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@c14e5a5]
+[DEBUG] 2021-02-17 21:01:09.891 [main] MetamodelGraphWalker - Visiting attribute path : user.email
+[DEBUG] 2021-02-17 21:01:09.891 [main] MetamodelGraphWalker - Visiting attribute path : user.password
+[DEBUG] 2021-02-17 21:01:09.891 [main] MetamodelGraphWalker - Visiting attribute path : user.rankingConfigurations
+[DEBUG] 2021-02-17 21:01:09.891 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@6206b4a7]
+[DEBUG] 2021-02-17 21:01:09.891 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@77896335]
+[DEBUG] 2021-02-17 21:01:09.891 [main] MetamodelGraphWalker - Visiting attribute path : user.userName
+[DEBUG] 2021-02-17 21:01:09.891 [main] MetamodelGraphWalker - Visiting attribute path : user.wishedGames
+[DEBUG] 2021-02-17 21:01:09.891 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@5c1b89ac]
+[DEBUG] 2021-02-17 21:01:09.891 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@40a1b6d4]
+[DEBUG] 2021-02-17 21:01:09.891 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2021-02-17 21:01:09.891 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2021-02-17 21:01:09.892 [main] LoadPlanTreePrinter - LoadPlan(entity=com.kevinleader.bgr.entity.RankingConfiguration)
+    - Returns
+       - EntityReturnImpl(entity=com.kevinleader.bgr.entity.RankingConfiguration, querySpaceUid=<gen:0>, path=com.kevinleader.bgr.entity.RankingConfiguration)
+          - EntityAttributeFetchImpl(entity=com.kevinleader.bgr.entity.User, querySpaceUid=<gen:1>, path=com.kevinleader.bgr.entity.RankingConfiguration.user)
+             - CollectionAttributeFetchImpl(collection=com.kevinleader.bgr.entity.User.rankingConfigurations, querySpaceUid=<gen:2>, path=com.kevinleader.bgr.entity.RankingConfiguration.user.rankingConfigurations)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.kevinleader.bgr.entity.RankingConfiguration, querySpaceUid=<gen:3>, path=com.kevinleader.bgr.entity.RankingConfiguration.user.rankingConfigurations.<elements>)
+             - CollectionAttributeFetchImpl(collection=com.kevinleader.bgr.entity.User.wishedGames, querySpaceUid=<gen:4>, path=com.kevinleader.bgr.entity.RankingConfiguration.user.wishedGames)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.kevinleader.bgr.entity.WishedGame, querySpaceUid=<gen:5>, path=com.kevinleader.bgr.entity.RankingConfiguration.user.wishedGames.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.kevinleader.bgr.entity.RankingConfiguration)
+          - SQL table alias mapping - rankingcon0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+          - JOIN (JoinDefinedByMetadata(user)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.kevinleader.bgr.entity.User)
+                - SQL table alias mapping - user1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_1_1_}
+
+[DEBUG] 2021-02-17 21:01:09.892 [main] EntityLoader - Static select for entity com.kevinleader.bgr.entity.RankingConfiguration [READ]: select rankingcon0_.id as id1_0_0_, rankingcon0_.configuration_name as configur2_0_0_, rankingcon0_.genres as genres3_0_0_, rankingcon0_.highest_price as highest_4_0_0_, rankingcon0_.lowest_price as lowest_p5_0_0_, rankingcon0_.platforms as platform6_0_0_, rankingcon0_.release_span as release_7_0_0_, rankingcon0_.user_id as user_id8_0_0_, user1_.id as id1_1_1_, user1_.email as email2_1_1_, user1_.password as password3_1_1_, user1_.user_name as user_nam4_1_1_ from ranking_configuration rankingcon0_ left outer join user user1_ on rankingcon0_.user_id=user1_.id where rankingcon0_.id=?
+[DEBUG] 2021-02-17 21:01:09.911 [main] Loader - Static select for action ACTION_MERGE on entity com.kevinleader.bgr.entity.RankingConfiguration: select rankingcon0_.id as id1_0_0_, rankingcon0_.configuration_name as configur2_0_0_, rankingcon0_.genres as genres3_0_0_, rankingcon0_.highest_price as highest_4_0_0_, rankingcon0_.lowest_price as lowest_p5_0_0_, rankingcon0_.platforms as platform6_0_0_, rankingcon0_.release_span as release_7_0_0_, rankingcon0_.user_id as user_id8_0_0_ from ranking_configuration rankingcon0_ where rankingcon0_.id=?
+[DEBUG] 2021-02-17 21:01:09.911 [main] Loader - Static select for action ACTION_REFRESH on entity com.kevinleader.bgr.entity.RankingConfiguration: select rankingcon0_.id as id1_0_0_, rankingcon0_.configuration_name as configur2_0_0_, rankingcon0_.genres as genres3_0_0_, rankingcon0_.highest_price as highest_4_0_0_, rankingcon0_.lowest_price as lowest_p5_0_0_, rankingcon0_.platforms as platform6_0_0_, rankingcon0_.release_span as release_7_0_0_, rankingcon0_.user_id as user_id8_0_0_ from ranking_configuration rankingcon0_ where rankingcon0_.id=?
+[DEBUG] 2021-02-17 21:01:09.911 [main] AbstractEntityPersister - Static SQL for entity: com.kevinleader.bgr.entity.WishedGame
+[DEBUG] 2021-02-17 21:01:09.911 [main] AbstractEntityPersister -  Version select: select id from wished_game where id =?
+[DEBUG] 2021-02-17 21:01:09.911 [main] AbstractEntityPersister -  Snapshot select: select wishedgame_.id, wishedgame_.igdb_game_id as igdb_gam2_4_, wishedgame_.user_id as user_id3_4_ from wished_game wishedgame_ where wishedgame_.id=?
+[DEBUG] 2021-02-17 21:01:09.911 [main] AbstractEntityPersister -  Insert 0: insert into wished_game (igdb_game_id, user_id, id) values (?, ?, ?)
+[DEBUG] 2021-02-17 21:01:09.911 [main] AbstractEntityPersister -  Update 0: update wished_game set igdb_game_id=?, user_id=? where id=?
+[DEBUG] 2021-02-17 21:01:09.911 [main] AbstractEntityPersister -  Delete 0: delete from wished_game where id=?
+[DEBUG] 2021-02-17 21:01:09.911 [main] AbstractEntityPersister -  Identity insert: insert into wished_game (igdb_game_id, user_id) values (?, ?)
+[DEBUG] 2021-02-17 21:01:09.911 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4975dda1]
+[DEBUG] 2021-02-17 21:01:09.911 [main] MetamodelGraphWalker - Visiting attribute path : igdbGameId
+[DEBUG] 2021-02-17 21:01:09.911 [main] MetamodelGraphWalker - Visiting attribute path : user
+[DEBUG] 2021-02-17 21:01:09.911 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5463f035]
+[DEBUG] 2021-02-17 21:01:09.911 [main] MetamodelGraphWalker - Visiting attribute path : user.email
+[DEBUG] 2021-02-17 21:01:09.911 [main] MetamodelGraphWalker - Visiting attribute path : user.password
+[DEBUG] 2021-02-17 21:01:09.912 [main] MetamodelGraphWalker - Visiting attribute path : user.rankingConfigurations
+[DEBUG] 2021-02-17 21:01:09.912 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@44fd7ba4]
+[DEBUG] 2021-02-17 21:01:09.912 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@22f8adc2]
+[DEBUG] 2021-02-17 21:01:09.912 [main] MetamodelGraphWalker - Visiting attribute path : user.userName
+[DEBUG] 2021-02-17 21:01:09.912 [main] MetamodelGraphWalker - Visiting attribute path : user.wishedGames
+[DEBUG] 2021-02-17 21:01:09.912 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@69d103f0]
+[DEBUG] 2021-02-17 21:01:09.912 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5b742bc8]
+[DEBUG] 2021-02-17 21:01:09.912 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2021-02-17 21:01:09.912 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2021-02-17 21:01:09.912 [main] LoadPlanTreePrinter - LoadPlan(entity=com.kevinleader.bgr.entity.WishedGame)
+    - Returns
+       - EntityReturnImpl(entity=com.kevinleader.bgr.entity.WishedGame, querySpaceUid=<gen:0>, path=com.kevinleader.bgr.entity.WishedGame)
+          - EntityAttributeFetchImpl(entity=com.kevinleader.bgr.entity.User, querySpaceUid=<gen:1>, path=com.kevinleader.bgr.entity.WishedGame.user)
+             - CollectionAttributeFetchImpl(collection=com.kevinleader.bgr.entity.User.rankingConfigurations, querySpaceUid=<gen:2>, path=com.kevinleader.bgr.entity.WishedGame.user.rankingConfigurations)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.kevinleader.bgr.entity.RankingConfiguration, querySpaceUid=<gen:3>, path=com.kevinleader.bgr.entity.WishedGame.user.rankingConfigurations.<elements>)
+             - CollectionAttributeFetchImpl(collection=com.kevinleader.bgr.entity.User.wishedGames, querySpaceUid=<gen:4>, path=com.kevinleader.bgr.entity.WishedGame.user.wishedGames)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.kevinleader.bgr.entity.WishedGame, querySpaceUid=<gen:5>, path=com.kevinleader.bgr.entity.WishedGame.user.wishedGames.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.kevinleader.bgr.entity.WishedGame)
+          - SQL table alias mapping - wishedgame0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_4_0_}
+          - JOIN (JoinDefinedByMetadata(user)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.kevinleader.bgr.entity.User)
+                - SQL table alias mapping - user1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_1_1_}
+
+[DEBUG] 2021-02-17 21:01:09.912 [main] EntityLoader - Static select for entity com.kevinleader.bgr.entity.WishedGame [NONE]: select wishedgame0_.id as id1_4_0_, wishedgame0_.igdb_game_id as igdb_gam2_4_0_, wishedgame0_.user_id as user_id3_4_0_, user1_.id as id1_1_1_, user1_.email as email2_1_1_, user1_.password as password3_1_1_, user1_.user_name as user_nam4_1_1_ from wished_game wishedgame0_ left outer join user user1_ on wishedgame0_.user_id=user1_.id where wishedgame0_.id=?
+[DEBUG] 2021-02-17 21:01:09.912 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@74fb5b59]
+[DEBUG] 2021-02-17 21:01:09.912 [main] MetamodelGraphWalker - Visiting attribute path : igdbGameId
+[DEBUG] 2021-02-17 21:01:09.912 [main] MetamodelGraphWalker - Visiting attribute path : user
+[DEBUG] 2021-02-17 21:01:09.912 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@722531ab]
+[DEBUG] 2021-02-17 21:01:09.913 [main] MetamodelGraphWalker - Visiting attribute path : user.email
+[DEBUG] 2021-02-17 21:01:09.913 [main] MetamodelGraphWalker - Visiting attribute path : user.password
+[DEBUG] 2021-02-17 21:01:09.913 [main] MetamodelGraphWalker - Visiting attribute path : user.rankingConfigurations
+[DEBUG] 2021-02-17 21:01:09.913 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@26fadd98]
+[DEBUG] 2021-02-17 21:01:09.913 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@66451058]
+[DEBUG] 2021-02-17 21:01:09.913 [main] MetamodelGraphWalker - Visiting attribute path : user.userName
+[DEBUG] 2021-02-17 21:01:09.913 [main] MetamodelGraphWalker - Visiting attribute path : user.wishedGames
+[DEBUG] 2021-02-17 21:01:09.913 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@3db6dd52]
+[DEBUG] 2021-02-17 21:01:09.913 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1e92c3b6]
+[DEBUG] 2021-02-17 21:01:09.913 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2021-02-17 21:01:09.913 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2021-02-17 21:01:09.913 [main] LoadPlanTreePrinter - LoadPlan(entity=com.kevinleader.bgr.entity.WishedGame)
+    - Returns
+       - EntityReturnImpl(entity=com.kevinleader.bgr.entity.WishedGame, querySpaceUid=<gen:0>, path=com.kevinleader.bgr.entity.WishedGame)
+          - EntityAttributeFetchImpl(entity=com.kevinleader.bgr.entity.User, querySpaceUid=<gen:1>, path=com.kevinleader.bgr.entity.WishedGame.user)
+             - CollectionAttributeFetchImpl(collection=com.kevinleader.bgr.entity.User.rankingConfigurations, querySpaceUid=<gen:2>, path=com.kevinleader.bgr.entity.WishedGame.user.rankingConfigurations)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.kevinleader.bgr.entity.RankingConfiguration, querySpaceUid=<gen:3>, path=com.kevinleader.bgr.entity.WishedGame.user.rankingConfigurations.<elements>)
+             - CollectionAttributeFetchImpl(collection=com.kevinleader.bgr.entity.User.wishedGames, querySpaceUid=<gen:4>, path=com.kevinleader.bgr.entity.WishedGame.user.wishedGames)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.kevinleader.bgr.entity.WishedGame, querySpaceUid=<gen:5>, path=com.kevinleader.bgr.entity.WishedGame.user.wishedGames.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.kevinleader.bgr.entity.WishedGame)
+          - SQL table alias mapping - wishedgame0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_4_0_}
+          - JOIN (JoinDefinedByMetadata(user)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.kevinleader.bgr.entity.User)
+                - SQL table alias mapping - user1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_1_1_}
+
+[DEBUG] 2021-02-17 21:01:09.913 [main] EntityLoader - Static select for entity com.kevinleader.bgr.entity.WishedGame [READ]: select wishedgame0_.id as id1_4_0_, wishedgame0_.igdb_game_id as igdb_gam2_4_0_, wishedgame0_.user_id as user_id3_4_0_, user1_.id as id1_1_1_, user1_.email as email2_1_1_, user1_.password as password3_1_1_, user1_.user_name as user_nam4_1_1_ from wished_game wishedgame0_ left outer join user user1_ on wishedgame0_.user_id=user1_.id where wishedgame0_.id=?
+[DEBUG] 2021-02-17 21:01:09.913 [main] Loader - Static select for action ACTION_MERGE on entity com.kevinleader.bgr.entity.WishedGame: select wishedgame0_.id as id1_4_0_, wishedgame0_.igdb_game_id as igdb_gam2_4_0_, wishedgame0_.user_id as user_id3_4_0_ from wished_game wishedgame0_ where wishedgame0_.id=?
+[DEBUG] 2021-02-17 21:01:09.914 [main] Loader - Static select for action ACTION_REFRESH on entity com.kevinleader.bgr.entity.WishedGame: select wishedgame0_.id as id1_4_0_, wishedgame0_.igdb_game_id as igdb_gam2_4_0_, wishedgame0_.user_id as user_id3_4_0_ from wished_game wishedgame0_ where wishedgame0_.id=?
+[DEBUG] 2021-02-17 21:01:09.914 [main] AbstractEntityPersister - Static SQL for entity: com.kevinleader.bgr.entity.User
+[DEBUG] 2021-02-17 21:01:09.914 [main] AbstractEntityPersister -  Version select: select id from user where id =?
+[DEBUG] 2021-02-17 21:01:09.914 [main] AbstractEntityPersister -  Snapshot select: select user_.id, user_.email as email2_1_, user_.password as password3_1_, user_.user_name as user_nam4_1_ from user user_ where user_.id=?
+[DEBUG] 2021-02-17 21:01:09.914 [main] AbstractEntityPersister -  Insert 0: insert into user (email, password, user_name, id) values (?, ?, ?, ?)
+[DEBUG] 2021-02-17 21:01:09.914 [main] AbstractEntityPersister -  Update 0: update user set email=?, password=?, user_name=? where id=?
+[DEBUG] 2021-02-17 21:01:09.914 [main] AbstractEntityPersister -  Delete 0: delete from user where id=?
+[DEBUG] 2021-02-17 21:01:09.914 [main] AbstractEntityPersister -  Identity insert: insert into user (email, password, user_name) values (?, ?, ?)
+[DEBUG] 2021-02-17 21:01:09.914 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6ef4cbe1]
+[DEBUG] 2021-02-17 21:01:09.914 [main] MetamodelGraphWalker - Visiting attribute path : email
+[DEBUG] 2021-02-17 21:01:09.914 [main] MetamodelGraphWalker - Visiting attribute path : password
+[DEBUG] 2021-02-17 21:01:09.914 [main] MetamodelGraphWalker - Visiting attribute path : rankingConfigurations
+[DEBUG] 2021-02-17 21:01:09.914 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@2baac4a7]
+[DEBUG] 2021-02-17 21:01:09.914 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@23ad2d17]
+[DEBUG] 2021-02-17 21:01:09.914 [main] MetamodelGraphWalker - Visiting attribute path : userName
+[DEBUG] 2021-02-17 21:01:09.914 [main] MetamodelGraphWalker - Visiting attribute path : wishedGames
+[DEBUG] 2021-02-17 21:01:09.914 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@6bce4140]
+[DEBUG] 2021-02-17 21:01:09.914 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@25f0c5e7]
+[DEBUG] 2021-02-17 21:01:09.914 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2021-02-17 21:01:09.914 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2021-02-17 21:01:09.915 [main] LoadPlanTreePrinter - LoadPlan(entity=com.kevinleader.bgr.entity.User)
+    - Returns
+       - EntityReturnImpl(entity=com.kevinleader.bgr.entity.User, querySpaceUid=<gen:0>, path=com.kevinleader.bgr.entity.User)
+          - CollectionAttributeFetchImpl(collection=com.kevinleader.bgr.entity.User.rankingConfigurations, querySpaceUid=<gen:1>, path=com.kevinleader.bgr.entity.User.rankingConfigurations)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.kevinleader.bgr.entity.RankingConfiguration, querySpaceUid=<gen:2>, path=com.kevinleader.bgr.entity.User.rankingConfigurations.<elements>)
+          - CollectionAttributeFetchImpl(collection=com.kevinleader.bgr.entity.User.wishedGames, querySpaceUid=<gen:3>, path=com.kevinleader.bgr.entity.User.wishedGames)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.kevinleader.bgr.entity.WishedGame, querySpaceUid=<gen:4>, path=com.kevinleader.bgr.entity.User.wishedGames.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.kevinleader.bgr.entity.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+[DEBUG] 2021-02-17 21:01:09.915 [main] EntityLoader - Static select for entity com.kevinleader.bgr.entity.User [NONE]: select user0_.id as id1_1_0_, user0_.email as email2_1_0_, user0_.password as password3_1_0_, user0_.user_name as user_nam4_1_0_ from user user0_ where user0_.id=?
+[DEBUG] 2021-02-17 21:01:09.915 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5882b202]
+[DEBUG] 2021-02-17 21:01:09.915 [main] MetamodelGraphWalker - Visiting attribute path : email
+[DEBUG] 2021-02-17 21:01:09.915 [main] MetamodelGraphWalker - Visiting attribute path : password
+[DEBUG] 2021-02-17 21:01:09.915 [main] MetamodelGraphWalker - Visiting attribute path : rankingConfigurations
+[DEBUG] 2021-02-17 21:01:09.915 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@b506ed0]
+[DEBUG] 2021-02-17 21:01:09.915 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@282c4da0]
+[DEBUG] 2021-02-17 21:01:09.915 [main] MetamodelGraphWalker - Visiting attribute path : userName
+[DEBUG] 2021-02-17 21:01:09.915 [main] MetamodelGraphWalker - Visiting attribute path : wishedGames
+[DEBUG] 2021-02-17 21:01:09.915 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@65f3e805]
+[DEBUG] 2021-02-17 21:01:09.915 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@18cf5c52]
+[DEBUG] 2021-02-17 21:01:09.915 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2021-02-17 21:01:09.915 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2021-02-17 21:01:09.915 [main] LoadPlanTreePrinter - LoadPlan(entity=com.kevinleader.bgr.entity.User)
+    - Returns
+       - EntityReturnImpl(entity=com.kevinleader.bgr.entity.User, querySpaceUid=<gen:0>, path=com.kevinleader.bgr.entity.User)
+          - CollectionAttributeFetchImpl(collection=com.kevinleader.bgr.entity.User.rankingConfigurations, querySpaceUid=<gen:1>, path=com.kevinleader.bgr.entity.User.rankingConfigurations)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.kevinleader.bgr.entity.RankingConfiguration, querySpaceUid=<gen:2>, path=com.kevinleader.bgr.entity.User.rankingConfigurations.<elements>)
+          - CollectionAttributeFetchImpl(collection=com.kevinleader.bgr.entity.User.wishedGames, querySpaceUid=<gen:3>, path=com.kevinleader.bgr.entity.User.wishedGames)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.kevinleader.bgr.entity.WishedGame, querySpaceUid=<gen:4>, path=com.kevinleader.bgr.entity.User.wishedGames.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.kevinleader.bgr.entity.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_1_0_}
+
+[DEBUG] 2021-02-17 21:01:09.915 [main] EntityLoader - Static select for entity com.kevinleader.bgr.entity.User [READ]: select user0_.id as id1_1_0_, user0_.email as email2_1_0_, user0_.password as password3_1_0_, user0_.user_name as user_nam4_1_0_ from user user0_ where user0_.id=?
+[DEBUG] 2021-02-17 21:01:09.915 [main] Loader - Static select for action ACTION_MERGE on entity com.kevinleader.bgr.entity.User: select user0_.id as id1_1_0_, user0_.email as email2_1_0_, user0_.password as password3_1_0_, user0_.user_name as user_nam4_1_0_ from user user0_ where user0_.id=?
+[DEBUG] 2021-02-17 21:01:09.916 [main] Loader - Static select for action ACTION_REFRESH on entity com.kevinleader.bgr.entity.User: select user0_.id as id1_1_0_, user0_.email as email2_1_0_, user0_.password as password3_1_0_, user0_.user_name as user_nam4_1_0_ from user user0_ where user0_.id=?
+[DEBUG] 2021-02-17 21:01:09.922 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@7f2b39a]
+[DEBUG] 2021-02-17 21:01:09.922 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7a358613]
+[DEBUG] 2021-02-17 21:01:09.923 [main] MetamodelGraphWalker - Visiting attribute path : configurationName
+[DEBUG] 2021-02-17 21:01:09.923 [main] MetamodelGraphWalker - Visiting attribute path : genres
+[DEBUG] 2021-02-17 21:01:09.923 [main] MetamodelGraphWalker - Visiting attribute path : highestPrice
+[DEBUG] 2021-02-17 21:01:09.923 [main] MetamodelGraphWalker - Visiting attribute path : lowestPrice
+[DEBUG] 2021-02-17 21:01:09.923 [main] MetamodelGraphWalker - Visiting attribute path : platforms
+[DEBUG] 2021-02-17 21:01:09.923 [main] MetamodelGraphWalker - Visiting attribute path : releaseSpan
+[DEBUG] 2021-02-17 21:01:09.923 [main] MetamodelGraphWalker - Visiting attribute path : user
+[DEBUG] 2021-02-17 21:01:09.923 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@14457a95]
+[DEBUG] 2021-02-17 21:01:09.923 [main] MetamodelGraphWalker - Visiting attribute path : user.email
+[DEBUG] 2021-02-17 21:01:09.923 [main] MetamodelGraphWalker - Visiting attribute path : user.password
+[DEBUG] 2021-02-17 21:01:09.923 [main] MetamodelGraphWalker - Visiting attribute path : user.rankingConfigurations
+[DEBUG] 2021-02-17 21:01:09.923 [main] MetamodelGraphWalker - Property path deemed to be circular : user.rankingConfigurations
+[DEBUG] 2021-02-17 21:01:09.923 [main] MetamodelGraphWalker - Visiting attribute path : user.userName
+[DEBUG] 2021-02-17 21:01:09.923 [main] MetamodelGraphWalker - Visiting attribute path : user.wishedGames
+[DEBUG] 2021-02-17 21:01:09.924 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@10e9a5fe]
+[DEBUG] 2021-02-17 21:01:09.924 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@259287ac]
+[DEBUG] 2021-02-17 21:01:09.924 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2021-02-17 21:01:09.930 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2021-02-17 21:01:09.930 [main] LoadPlanTreePrinter - LoadPlan(collection=com.kevinleader.bgr.entity.User.rankingConfigurations)
+    - Returns
+       - CollectionReturnImpl(collection=com.kevinleader.bgr.entity.User.rankingConfigurations, querySpaceUid=<gen:0>, path=[com.kevinleader.bgr.entity.User.rankingConfigurations])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=com.kevinleader.bgr.entity.RankingConfiguration, querySpaceUid=<gen:1>, path=[com.kevinleader.bgr.entity.User.rankingConfigurations].<elements>)
+             - EntityAttributeFetchImpl(entity=com.kevinleader.bgr.entity.User, querySpaceUid=<gen:2>, path=[com.kevinleader.bgr.entity.User.rankingConfigurations].<elements>.user)
+                - CollectionAttributeFetchImpl(collection=com.kevinleader.bgr.entity.User.wishedGames, querySpaceUid=<gen:3>, path=[com.kevinleader.bgr.entity.User.rankingConfigurations].<elements>.user.wishedGames)
+                   - (collection element) CollectionFetchableElementEntityGraph(entity=com.kevinleader.bgr.entity.WishedGame, querySpaceUid=<gen:4>, path=[com.kevinleader.bgr.entity.User.rankingConfigurations].<elements>.user.wishedGames.<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=com.kevinleader.bgr.entity.User.rankingConfigurations)
+          - SQL table alias mapping - rankingcon0_
+          - alias suffix - 0_
+          - suffixed key columns - {User_id1_2_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - id1_0_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.kevinleader.bgr.entity.RankingConfiguration)
+                - SQL table alias mapping - rankingcon1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_0_1_}
+                - JOIN (JoinDefinedByMetadata(user)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=com.kevinleader.bgr.entity.User)
+                      - SQL table alias mapping - user2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {id1_1_2_}
+
+[DEBUG] 2021-02-17 21:01:09.931 [main] CollectionLoader - Static select for collection com.kevinleader.bgr.entity.User.rankingConfigurations: select rankingcon0_.User_id as User_id1_2_0_, rankingcon0_.rankingConfigurations_id as rankingC2_2_0_, rankingcon1_.id as id1_0_1_, rankingcon1_.configuration_name as configur2_0_1_, rankingcon1_.genres as genres3_0_1_, rankingcon1_.highest_price as highest_4_0_1_, rankingcon1_.lowest_price as lowest_p5_0_1_, rankingcon1_.platforms as platform6_0_1_, rankingcon1_.release_span as release_7_0_1_, rankingcon1_.user_id as user_id8_0_1_, user2_.id as id1_1_2_, user2_.email as email2_1_2_, user2_.password as password3_1_2_, user2_.user_name as user_nam4_1_2_ from user_ranking_configuration rankingcon0_ inner join ranking_configuration rankingcon1_ on rankingcon0_.rankingConfigurations_id=rankingcon1_.id left outer join user user2_ on rankingcon1_.user_id=user2_.id where rankingcon0_.User_id=?
+[DEBUG] 2021-02-17 21:01:09.931 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@3a109ff7]
+[DEBUG] 2021-02-17 21:01:09.931 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@111a7973]
+[DEBUG] 2021-02-17 21:01:09.931 [main] MetamodelGraphWalker - Visiting attribute path : igdbGameId
+[DEBUG] 2021-02-17 21:01:09.931 [main] MetamodelGraphWalker - Visiting attribute path : user
+[DEBUG] 2021-02-17 21:01:09.931 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@46612bfc]
+[DEBUG] 2021-02-17 21:01:09.931 [main] MetamodelGraphWalker - Visiting attribute path : user.email
+[DEBUG] 2021-02-17 21:01:09.931 [main] MetamodelGraphWalker - Visiting attribute path : user.password
+[DEBUG] 2021-02-17 21:01:09.932 [main] MetamodelGraphWalker - Visiting attribute path : user.rankingConfigurations
+[DEBUG] 2021-02-17 21:01:09.932 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@25699aa7]
+[DEBUG] 2021-02-17 21:01:09.932 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5a47730c]
+[DEBUG] 2021-02-17 21:01:09.932 [main] MetamodelGraphWalker - Visiting attribute path : user.userName
+[DEBUG] 2021-02-17 21:01:09.932 [main] MetamodelGraphWalker - Visiting attribute path : user.wishedGames
+[DEBUG] 2021-02-17 21:01:09.932 [main] MetamodelGraphWalker - Property path deemed to be circular : user.wishedGames
+[DEBUG] 2021-02-17 21:01:09.932 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2021-02-17 21:01:09.932 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2021-02-17 21:01:09.932 [main] LoadPlanTreePrinter - LoadPlan(collection=com.kevinleader.bgr.entity.User.wishedGames)
+    - Returns
+       - CollectionReturnImpl(collection=com.kevinleader.bgr.entity.User.wishedGames, querySpaceUid=<gen:0>, path=[com.kevinleader.bgr.entity.User.wishedGames])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=com.kevinleader.bgr.entity.WishedGame, querySpaceUid=<gen:1>, path=[com.kevinleader.bgr.entity.User.wishedGames].<elements>)
+             - EntityAttributeFetchImpl(entity=com.kevinleader.bgr.entity.User, querySpaceUid=<gen:2>, path=[com.kevinleader.bgr.entity.User.wishedGames].<elements>.user)
+                - CollectionAttributeFetchImpl(collection=com.kevinleader.bgr.entity.User.rankingConfigurations, querySpaceUid=<gen:3>, path=[com.kevinleader.bgr.entity.User.wishedGames].<elements>.user.rankingConfigurations)
+                   - (collection element) CollectionFetchableElementEntityGraph(entity=com.kevinleader.bgr.entity.RankingConfiguration, querySpaceUid=<gen:4>, path=[com.kevinleader.bgr.entity.User.wishedGames].<elements>.user.rankingConfigurations.<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=com.kevinleader.bgr.entity.User.wishedGames)
+          - SQL table alias mapping - wishedgame0_
+          - alias suffix - 0_
+          - suffixed key columns - {User_id1_3_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - id1_4_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.kevinleader.bgr.entity.WishedGame)
+                - SQL table alias mapping - wishedgame1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_4_1_}
+                - JOIN (JoinDefinedByMetadata(user)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=com.kevinleader.bgr.entity.User)
+                      - SQL table alias mapping - user2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {id1_1_2_}
+
+[DEBUG] 2021-02-17 21:01:09.932 [main] CollectionLoader - Static select for collection com.kevinleader.bgr.entity.User.wishedGames: select wishedgame0_.User_id as User_id1_3_0_, wishedgame0_.wishedGames_id as wishedGa2_3_0_, wishedgame1_.id as id1_4_1_, wishedgame1_.igdb_game_id as igdb_gam2_4_1_, wishedgame1_.user_id as user_id3_4_1_, user2_.id as id1_1_2_, user2_.email as email2_1_2_, user2_.password as password3_1_2_, user2_.user_name as user_nam4_1_2_ from user_wished_game wishedgame0_ inner join wished_game wishedgame1_ on wishedgame0_.wishedGames_id=wishedgame1_.id left outer join user user2_ on wishedgame1_.user_id=user2_.id where wishedgame0_.User_id=?
+[DEBUG] 2021-02-17 21:01:09.988 [main] SchemaManagementToolCoordinator - No actions specified; doing nothing
+[DEBUG] 2021-02-17 21:01:09.988 [main] JtaPlatformInitiator - No JtaPlatform was specified, checking resolver
+[DEBUG] 2021-02-17 21:01:09.988 [main] JtaPlatformResolverInitiator - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+[DEBUG] 2021-02-17 21:01:09.995 [main] StandardJtaPlatformResolver - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2021-02-17 21:01:09.996 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 2021-02-17 21:01:09.997 [main] NamedQueryRepository - Checking 0 named HQL queries
+[DEBUG] 2021-02-17 21:01:09.997 [main] NamedQueryRepository - Checking 0 named SQL queries
+[DEBUG] 2021-02-17 21:01:10.000 [main] SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@781dac73
+[DEBUG] 2021-02-17 21:01:10.003 [main] SessionFactoryRegistry - Registering SessionFactory: ff205cde-a780-43ee-bddc-ddf669f42894 (<unnamed>)
+[DEBUG] 2021-02-17 21:01:10.003 [main] SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
+[DEBUG] 2021-02-17 21:01:48.085 [main] StatisticsInitiator - Statistics initialized [enabled=false]
+[DEBUG] 2021-02-17 21:01:48.160 [main] SQL - select user0_.id as id1_1_0_, user0_.email as email2_1_0_, user0_.password as password3_1_0_, user0_.user_name as user_nam4_1_0_ from user user0_ where user0_.id=?
+[DEBUG] 2021-02-17 21:01:48.215 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2021-02-17 21:01:48.217 [main] EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+[DEBUG] 2021-02-17 21:01:48.258 [main] TwoPhaseLoad - Resolving attributes for [com.kevinleader.bgr.entity.User#3]
+[DEBUG] 2021-02-17 21:01:48.262 [main] TwoPhaseLoad - Processing attribute `email` : value = baconcurry@gmail.com
+[DEBUG] 2021-02-17 21:01:48.262 [main] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:01:48.263 [main] TwoPhaseLoad - Processing attribute `password` : value = supersecret3
+[DEBUG] 2021-02-17 21:01:48.263 [main] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:01:48.263 [main] TwoPhaseLoad - Processing attribute `rankingConfigurations` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:01:48.264 [main] TwoPhaseLoad - Attribute (`rankingConfigurations`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:01:48.291 [main] TwoPhaseLoad - Processing attribute `userName` : value = bcurry
+[DEBUG] 2021-02-17 21:01:48.291 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:01:48.292 [main] TwoPhaseLoad - Processing attribute `wishedGames` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:01:48.292 [main] TwoPhaseLoad - Attribute (`wishedGames`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:01:48.294 [main] TwoPhaseLoad - Done materializing entity [com.kevinleader.bgr.entity.User#3]
+[DEBUG] 2021-02-17 21:01:48.296 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-02-17 21:01:48.297 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.kevinleader.bgr.entity.User#3
+[DEBUG] 2021-02-17 21:01:48.297 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-02-17 21:03:08.709 [main] TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+[DEBUG] 2021-02-17 21:03:08.710 [main] TransactionImpl - begin
+[DEBUG] 2021-02-17 21:03:47.777 [main] TransactionImpl - committing
+[DEBUG] 2021-02-17 21:03:47.779 [main] AbstractFlushingEventListener - Processing flush-time cascades
+[DEBUG] 2021-02-17 21:03:47.780 [main] AbstractFlushingEventListener - Dirty checking collections
+[DEBUG] 2021-02-17 21:03:47.798 [main] Collections - Collection dereferenced: [com.kevinleader.bgr.entity.User.rankingConfigurations#3]
+[DEBUG] 2021-02-17 21:03:47.798 [main] Collections - Collection dereferenced: [com.kevinleader.bgr.entity.User.wishedGames#3]
+[DEBUG] 2021-02-17 21:03:47.800 [main] AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+[DEBUG] 2021-02-17 21:03:47.800 [main] AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 2 removals to 2 collections
+[DEBUG] 2021-02-17 21:03:47.809 [main] EntityPrinter - Listing entities:
+[DEBUG] 2021-02-17 21:03:47.810 [main] EntityPrinter - com.kevinleader.bgr.entity.User{rankingConfigurations=<uninitialized>, password=supersecret3, id=3, userName=bcurry, wishedGames=<uninitialized>, email=baconcurry@gmail.com}
+[DEBUG] 2021-02-17 21:03:47.810 [main] AbstractCollectionPersister - Deleting collection: [com.kevinleader.bgr.entity.User.rankingConfigurations#3]
+[DEBUG] 2021-02-17 21:03:47.850 [main] SQL - delete from user_ranking_configuration where User_id=?
+[DEBUG] 2021-02-17 21:03:47.897 [main] SqlExceptionHelper - could not execute statement [n/a]
+java.sql.SQLSyntaxErrorException: Table 'test_bgr.user_ranking_configuration' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeUpdate(NewProxyPreparedStatement.java:410) ~[c3p0-0.9.5.3.jar:0.9.5.3]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:45) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.persister.collection.AbstractCollectionPersister.remove(AbstractCollectionPersister.java:1245) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.action.internal.CollectionRemoveAction.execute(CollectionRemoveAction.java:99) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:478) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:361) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1493) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:496) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3371) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2540) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:473) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:178) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:39) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:271) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:104) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at com.kevinleader.bgr.persistence.UserDao.delete(UserDao.java:139) [classes/:?]
+	at com.kevinleader.bgr.persistence.UserDaoTest.deleteSuccess(UserDaoTest.java:103) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:389) [junit-platform-commons-1.0.0.jar:1.0.0]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:115) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:167) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.jupiter.engine.execution.ThrowableCollector.execute(ThrowableCollector.java:40) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:163) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:110) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:57) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.lambda$execute$3(HierarchicalTestExecutor.java:83) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.SingleTestExecutor.executeSafely(SingleTestExecutor.java:66) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:77) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.lambda$null$2(HierarchicalTestExecutor.java:92) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177) [?:?]
+	at java.util.Iterator.forEachRemaining(Iterator.java:133) [?:?]
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) [?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) [?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) [?:?]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497) [?:?]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.lambda$execute$3(HierarchicalTestExecutor.java:92) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.SingleTestExecutor.executeSafely(SingleTestExecutor.java:66) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:77) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.lambda$null$2(HierarchicalTestExecutor.java:92) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177) [?:?]
+	at java.util.Iterator.forEachRemaining(Iterator.java:133) [?:?]
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) [?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) [?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) [?:?]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497) [?:?]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.lambda$execute$3(HierarchicalTestExecutor.java:92) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.SingleTestExecutor.executeSafely(SingleTestExecutor.java:66) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:77) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:51) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:43) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:170) [junit-platform-launcher-1.0.0.jar:1.0.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:154) [junit-platform-launcher-1.0.0.jar:1.0.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:90) [junit-platform-launcher-1.0.0.jar:1.0.0]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) [junit5-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53) [junit-rt.jar:?]
+[WARN ] 2021-02-17 21:03:47.922 [main] SqlExceptionHelper - SQL Error: 1146, SQLState: 42S02
+[ERROR] 2021-02-17 21:03:47.922 [main] SqlExceptionHelper - Table 'test_bgr.user_ranking_configuration' doesn't exist
+[INFO ] 2021-02-17 21:03:47.925 [main] AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
+[DEBUG] 2021-02-17 21:03:47.929 [main] JdbcResourceLocalTransactionCoordinatorImpl - JDBC transaction marked for rollback-only (exception provided for stack trace)
+java.lang.Exception: exception just for purpose of providing stack trace
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.markRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:314) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.markRollbackOnly(TransactionImpl.java:206) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.internal.AbstractSharedSessionContract.markForRollbackOnly(AbstractSharedSessionContract.java:392) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.internal.ExceptionConverterImpl.handlePersistenceException(ExceptionConverterImpl.java:297) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:155) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:181) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:188) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1499) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:496) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3371) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2540) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:473) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:178) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:39) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:271) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:104) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at com.kevinleader.bgr.persistence.UserDao.delete(UserDao.java:139) [classes/:?]
+	at com.kevinleader.bgr.persistence.UserDaoTest.deleteSuccess(UserDaoTest.java:103) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:389) [junit-platform-commons-1.0.0.jar:1.0.0]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:115) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:167) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.jupiter.engine.execution.ThrowableCollector.execute(ThrowableCollector.java:40) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:163) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:110) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:57) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.lambda$execute$3(HierarchicalTestExecutor.java:83) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.SingleTestExecutor.executeSafely(SingleTestExecutor.java:66) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:77) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.lambda$null$2(HierarchicalTestExecutor.java:92) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177) [?:?]
+	at java.util.Iterator.forEachRemaining(Iterator.java:133) [?:?]
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) [?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) [?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) [?:?]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497) [?:?]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.lambda$execute$3(HierarchicalTestExecutor.java:92) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.SingleTestExecutor.executeSafely(SingleTestExecutor.java:66) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:77) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.lambda$null$2(HierarchicalTestExecutor.java:92) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177) [?:?]
+	at java.util.Iterator.forEachRemaining(Iterator.java:133) [?:?]
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) [?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) [?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) [?:?]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497) [?:?]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.lambda$execute$3(HierarchicalTestExecutor.java:92) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.SingleTestExecutor.executeSafely(SingleTestExecutor.java:66) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:77) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:51) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:43) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:170) [junit-platform-launcher-1.0.0.jar:1.0.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:154) [junit-platform-launcher-1.0.0.jar:1.0.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:90) [junit-platform-launcher-1.0.0.jar:1.0.0]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) [junit5-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53) [junit-rt.jar:?]
+[DEBUG] 2021-02-17 21:03:47.936 [main] JdbcResourceLocalTransactionCoordinatorImpl - JDBC transaction marked for rollback-only (exception provided for stack trace)
+java.lang.Exception: exception just for purpose of providing stack trace
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.markRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:314) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:187) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:39) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:271) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:104) [hibernate-core-5.4.4.Final.jar:5.4.4.Final]
+	at com.kevinleader.bgr.persistence.UserDao.delete(UserDao.java:139) [classes/:?]
+	at com.kevinleader.bgr.persistence.UserDaoTest.deleteSuccess(UserDaoTest.java:103) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:389) [junit-platform-commons-1.0.0.jar:1.0.0]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:115) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:167) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.jupiter.engine.execution.ThrowableCollector.execute(ThrowableCollector.java:40) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:163) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:110) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:57) [junit-jupiter-engine-5.0.0.jar:5.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.lambda$execute$3(HierarchicalTestExecutor.java:83) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.SingleTestExecutor.executeSafely(SingleTestExecutor.java:66) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:77) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.lambda$null$2(HierarchicalTestExecutor.java:92) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177) [?:?]
+	at java.util.Iterator.forEachRemaining(Iterator.java:133) [?:?]
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) [?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) [?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) [?:?]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497) [?:?]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.lambda$execute$3(HierarchicalTestExecutor.java:92) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.SingleTestExecutor.executeSafely(SingleTestExecutor.java:66) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:77) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.lambda$null$2(HierarchicalTestExecutor.java:92) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) [?:?]
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177) [?:?]
+	at java.util.Iterator.forEachRemaining(Iterator.java:133) [?:?]
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) [?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) [?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) [?:?]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) [?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) [?:?]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) [?:?]
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497) [?:?]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.lambda$execute$3(HierarchicalTestExecutor.java:92) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.SingleTestExecutor.executeSafely(SingleTestExecutor.java:66) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:77) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:51) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:43) [junit-platform-engine-1.0.0.jar:1.0.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:170) [junit-platform-launcher-1.0.0.jar:1.0.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:154) [junit-platform-launcher-1.0.0.jar:1.0.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:90) [junit-platform-launcher-1.0.0.jar:1.0.0]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) [junit5-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53) [junit-rt.jar:?]
+[DEBUG] 2021-02-17 21:03:47.944 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-02-17 21:03:47.944 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-02-17 21:03:48.524 [main] CriteriaQueryImpl - Rendered criteria query -> select generatedAlias0 from User as generatedAlias0 where generatedAlias0.email like :param0
+[DEBUG] 2021-02-17 21:03:48.578 [main] QueryTranslatorFactoryInitiator - QueryTranslatorFactory: org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@30dd00b6
+[DEBUG] 2021-02-17 21:03:48.664 [main] QueryTranslatorImpl - parse() - HQL: select generatedAlias0 from com.kevinleader.bgr.entity.User as generatedAlias0 where generatedAlias0.email like :param0
+[DEBUG] 2021-02-17 21:03:48.689 [main] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2021-02-17 21:03:48.714 [main] QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  +-[FROM] Node: 'from'
+    |  |  \-[RANGE] Node: 'RANGE'
+    |  |     +-[DOT] Node: '.'
+    |  |     |  +-[DOT] Node: '.'
+    |  |     |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  +-[IDENT] Node: 'com'
+    |  |     |  |  |  |  \-[IDENT] Node: 'kevinleader'
+    |  |     |  |  |  \-[IDENT] Node: 'bgr'
+    |  |     |  |  \-[IDENT] Node: 'entity'
+    |  |     |  \-[IDENT] Node: 'User'
+    |  |     \-[ALIAS] Node: 'generatedAlias0'
+    |  \-[SELECT] Node: 'select'
+    |     \-[IDENT] Node: 'generatedAlias0'
+    \-[WHERE] Node: 'where'
+       \-[LIKE] Node: 'like'
+          +-[DOT] Node: '.'
+          |  +-[IDENT] Node: 'generatedAlias0'
+          |  \-[IDENT] Node: 'email'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'param0'
+
+[DEBUG] 2021-02-17 21:03:48.791 [main] HqlSqlBaseWalker - select << begin [level=1, statement=select]
+[DEBUG] 2021-02-17 21:03:48.850 [main] FromElement - FromClause{level=1} : com.kevinleader.bgr.entity.User (generatedAlias0) -> user0_
+[DEBUG] 2021-02-17 21:03:48.853 [main] FromReferenceNode - Resolved : generatedAlias0 -> user0_.id
+[DEBUG] 2021-02-17 21:03:48.863 [main] FromReferenceNode - Resolved : generatedAlias0 -> user0_.id
+[DEBUG] 2021-02-17 21:03:48.866 [main] DotNode - getDataType() : email -> org.hibernate.type.StringType@21d1b321
+[DEBUG] 2021-02-17 21:03:48.868 [main] FromReferenceNode - Resolved : generatedAlias0.email -> user0_.email
+[DEBUG] 2021-02-17 21:03:48.876 [main] HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+[DEBUG] 2021-02-17 21:03:48.877 [main] HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} user0_.id ) ( FromClause{level=1} user user0_ ) ( where ( like ( user0_.email user0_.id email ) ? ) ) )
+[DEBUG] 2021-02-17 21:03:48.907 [main] JoinProcessor - Using FROM fragment [user user0_]
+[DEBUG] 2021-02-17 21:03:48.908 [main] HqlSqlBaseWalker - select >> end [level=1, statement=select]
+[DEBUG] 2021-02-17 21:03:48.910 [main] QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (user)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'user0_.id as id1_1_' {alias=generatedAlias0, className=com.kevinleader.bgr.entity.User, tableAlias=user0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'user0_.email as email2_1_, user0_.password as password3_1_, user0_.user_name as user_nam4_1_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[generatedAlias0], fromElementByTableAlias=[user0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'user user0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=user,tableAlias=user0_,origin=null,columns={,className=com.kevinleader.bgr.entity.User}}
+    \-[WHERE] SqlNode: 'where'
+       \-[LIKE] BinaryLogicOperatorNode: 'like'
+          +-[DOT] DotNode: 'user0_.email' {propertyName=email,dereferenceType=PRIMITIVE,getPropertyPath=email,path=generatedAlias0.email,tableAlias=user0_,className=com.kevinleader.bgr.entity.User,classAlias=generatedAlias0}
+          |  +-[ALIAS_REF] IdentNode: 'user0_.id' {alias=generatedAlias0, className=com.kevinleader.bgr.entity.User, tableAlias=user0_}
+          |  \-[IDENT] IdentNode: 'email' {originalText=email}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=param0, expectedType=org.hibernate.type.StringType@21d1b321}
+
+[DEBUG] 2021-02-17 21:03:48.912 [main] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2021-02-17 21:03:48.925 [main] QueryTranslatorImpl - HQL: select generatedAlias0 from com.kevinleader.bgr.entity.User as generatedAlias0 where generatedAlias0.email like :param0
+[DEBUG] 2021-02-17 21:03:48.926 [main] QueryTranslatorImpl - SQL: select user0_.id as id1_1_, user0_.email as email2_1_, user0_.password as password3_1_, user0_.user_name as user_nam4_1_ from user user0_ where user0_.email like ?
+[DEBUG] 2021-02-17 21:03:48.926 [main] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2021-02-17 21:03:48.972 [main] SQL - select user0_.id as id1_1_, user0_.email as email2_1_, user0_.password as password3_1_, user0_.user_name as user_nam4_1_ from user user0_ where user0_.email like ?
+[DEBUG] 2021-02-17 21:03:48.978 [main] Loader - Result set row: 0
+[DEBUG] 2021-02-17 21:03:48.981 [main] Loader - Result row: EntityKey[com.kevinleader.bgr.entity.User#3]
+[DEBUG] 2021-02-17 21:03:48.982 [main] TwoPhaseLoad - Resolving attributes for [com.kevinleader.bgr.entity.User#3]
+[DEBUG] 2021-02-17 21:03:48.982 [main] TwoPhaseLoad - Processing attribute `email` : value = baconcurry@gmail.com
+[DEBUG] 2021-02-17 21:03:48.982 [main] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:48.982 [main] TwoPhaseLoad - Processing attribute `password` : value = supersecret3
+[DEBUG] 2021-02-17 21:03:48.983 [main] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:48.983 [main] TwoPhaseLoad - Processing attribute `rankingConfigurations` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:48.983 [main] TwoPhaseLoad - Attribute (`rankingConfigurations`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:48.984 [main] TwoPhaseLoad - Processing attribute `userName` : value = bcurry
+[DEBUG] 2021-02-17 21:03:48.984 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:48.985 [main] TwoPhaseLoad - Processing attribute `wishedGames` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:48.985 [main] TwoPhaseLoad - Attribute (`wishedGames`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:48.985 [main] TwoPhaseLoad - Done materializing entity [com.kevinleader.bgr.entity.User#3]
+[DEBUG] 2021-02-17 21:03:48.991 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-02-17 21:03:49.336 [main] SQL - select user0_.id as id1_1_0_, user0_.email as email2_1_0_, user0_.password as password3_1_0_, user0_.user_name as user_nam4_1_0_ from user user0_ where user0_.id=?
+[DEBUG] 2021-02-17 21:03:49.340 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2021-02-17 21:03:49.340 [main] EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+[DEBUG] 2021-02-17 21:03:49.342 [main] TwoPhaseLoad - Resolving attributes for [com.kevinleader.bgr.entity.User#2]
+[DEBUG] 2021-02-17 21:03:49.342 [main] TwoPhaseLoad - Processing attribute `email` : value = scoobydoolover@yahoo.com
+[DEBUG] 2021-02-17 21:03:49.342 [main] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.343 [main] TwoPhaseLoad - Processing attribute `password` : value = supersecret2
+[DEBUG] 2021-02-17 21:03:49.343 [main] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.343 [main] TwoPhaseLoad - Processing attribute `rankingConfigurations` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:49.344 [main] TwoPhaseLoad - Attribute (`rankingConfigurations`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.344 [main] TwoPhaseLoad - Processing attribute `userName` : value = fhensen
+[DEBUG] 2021-02-17 21:03:49.345 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.345 [main] TwoPhaseLoad - Processing attribute `wishedGames` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:49.345 [main] TwoPhaseLoad - Attribute (`wishedGames`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.346 [main] TwoPhaseLoad - Done materializing entity [com.kevinleader.bgr.entity.User#2]
+[DEBUG] 2021-02-17 21:03:49.346 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-02-17 21:03:49.347 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.kevinleader.bgr.entity.User#2
+[DEBUG] 2021-02-17 21:03:49.347 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-02-17 21:03:49.349 [main] TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+[DEBUG] 2021-02-17 21:03:49.349 [main] TransactionImpl - begin
+[DEBUG] 2021-02-17 21:03:49.354 [main] TransactionImpl - committing
+[DEBUG] 2021-02-17 21:03:49.355 [main] AbstractFlushingEventListener - Processing flush-time cascades
+[DEBUG] 2021-02-17 21:03:49.355 [main] AbstractFlushingEventListener - Dirty checking collections
+[DEBUG] 2021-02-17 21:03:49.359 [main] Collections - Collection found: [com.kevinleader.bgr.entity.User.rankingConfigurations#2], was: [com.kevinleader.bgr.entity.User.rankingConfigurations#2] (uninitialized)
+[DEBUG] 2021-02-17 21:03:49.360 [main] Collections - Collection found: [com.kevinleader.bgr.entity.User.wishedGames#2], was: [com.kevinleader.bgr.entity.User.wishedGames#2] (uninitialized)
+[DEBUG] 2021-02-17 21:03:49.361 [main] AbstractFlushingEventListener - Flushed: 0 insertions, 1 updates, 0 deletions to 1 objects
+[DEBUG] 2021-02-17 21:03:49.361 [main] AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[DEBUG] 2021-02-17 21:03:49.362 [main] EntityPrinter - Listing entities:
+[DEBUG] 2021-02-17 21:03:49.362 [main] EntityPrinter - com.kevinleader.bgr.entity.User{rankingConfigurations=<uninitialized>, password=supersecret2, id=2, userName=kileader, wishedGames=<uninitialized>, email=scoobydoolover@yahoo.com}
+[DEBUG] 2021-02-17 21:03:49.362 [main] SQL - update user set email=?, password=?, user_name=? where id=?
+[DEBUG] 2021-02-17 21:03:49.371 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-02-17 21:03:49.372 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-02-17 21:03:49.373 [main] SQL - select user0_.id as id1_1_0_, user0_.email as email2_1_0_, user0_.password as password3_1_0_, user0_.user_name as user_nam4_1_0_ from user user0_ where user0_.id=?
+[DEBUG] 2021-02-17 21:03:49.376 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2021-02-17 21:03:49.376 [main] EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+[DEBUG] 2021-02-17 21:03:49.378 [main] TwoPhaseLoad - Resolving attributes for [com.kevinleader.bgr.entity.User#2]
+[DEBUG] 2021-02-17 21:03:49.378 [main] TwoPhaseLoad - Processing attribute `email` : value = scoobydoolover@yahoo.com
+[DEBUG] 2021-02-17 21:03:49.378 [main] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.379 [main] TwoPhaseLoad - Processing attribute `password` : value = supersecret2
+[DEBUG] 2021-02-17 21:03:49.379 [main] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.379 [main] TwoPhaseLoad - Processing attribute `rankingConfigurations` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:49.380 [main] TwoPhaseLoad - Attribute (`rankingConfigurations`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.380 [main] TwoPhaseLoad - Processing attribute `userName` : value = kileader
+[DEBUG] 2021-02-17 21:03:49.381 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.381 [main] TwoPhaseLoad - Processing attribute `wishedGames` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:49.381 [main] TwoPhaseLoad - Attribute (`wishedGames`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.382 [main] TwoPhaseLoad - Done materializing entity [com.kevinleader.bgr.entity.User#2]
+[DEBUG] 2021-02-17 21:03:49.382 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-02-17 21:03:49.383 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.kevinleader.bgr.entity.User#2
+[DEBUG] 2021-02-17 21:03:49.383 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-02-17 21:03:49.737 [main] CriteriaQueryImpl - Rendered criteria query -> select generatedAlias0 from User as generatedAlias0
+[DEBUG] 2021-02-17 21:03:49.739 [main] QueryTranslatorImpl - parse() - HQL: select generatedAlias0 from com.kevinleader.bgr.entity.User as generatedAlias0
+[DEBUG] 2021-02-17 21:03:49.742 [main] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2021-02-17 21:03:49.744 [main] QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       +-[FROM] Node: 'from'
+       |  \-[RANGE] Node: 'RANGE'
+       |     +-[DOT] Node: '.'
+       |     |  +-[DOT] Node: '.'
+       |     |  |  +-[DOT] Node: '.'
+       |     |  |  |  +-[DOT] Node: '.'
+       |     |  |  |  |  +-[IDENT] Node: 'com'
+       |     |  |  |  |  \-[IDENT] Node: 'kevinleader'
+       |     |  |  |  \-[IDENT] Node: 'bgr'
+       |     |  |  \-[IDENT] Node: 'entity'
+       |     |  \-[IDENT] Node: 'User'
+       |     \-[ALIAS] Node: 'generatedAlias0'
+       \-[SELECT] Node: 'select'
+          \-[IDENT] Node: 'generatedAlias0'
+
+[DEBUG] 2021-02-17 21:03:49.745 [main] HqlSqlBaseWalker - select << begin [level=1, statement=select]
+[DEBUG] 2021-02-17 21:03:49.746 [main] FromElement - FromClause{level=1} : com.kevinleader.bgr.entity.User (generatedAlias0) -> user0_
+[DEBUG] 2021-02-17 21:03:49.746 [main] FromReferenceNode - Resolved : generatedAlias0 -> user0_.id
+[DEBUG] 2021-02-17 21:03:49.746 [main] HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+[DEBUG] 2021-02-17 21:03:49.747 [main] HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} user0_.id ) ( FromClause{level=1} user user0_ ) )
+[DEBUG] 2021-02-17 21:03:49.748 [main] JoinProcessor - Using FROM fragment [user user0_]
+[DEBUG] 2021-02-17 21:03:49.748 [main] HqlSqlBaseWalker - select >> end [level=1, statement=select]
+[DEBUG] 2021-02-17 21:03:49.749 [main] QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (user)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'user0_.id as id1_1_' {alias=generatedAlias0, className=com.kevinleader.bgr.entity.User, tableAlias=user0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'user0_.email as email2_1_, user0_.password as password3_1_, user0_.user_name as user_nam4_1_'
+    \-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[generatedAlias0], fromElementByTableAlias=[user0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'user user0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=user,tableAlias=user0_,origin=null,columns={,className=com.kevinleader.bgr.entity.User}}
+
+[DEBUG] 2021-02-17 21:03:49.751 [main] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2021-02-17 21:03:49.751 [main] QueryTranslatorImpl - HQL: select generatedAlias0 from com.kevinleader.bgr.entity.User as generatedAlias0
+[DEBUG] 2021-02-17 21:03:49.751 [main] QueryTranslatorImpl - SQL: select user0_.id as id1_1_, user0_.email as email2_1_, user0_.password as password3_1_, user0_.user_name as user_nam4_1_ from user user0_
+[DEBUG] 2021-02-17 21:03:49.751 [main] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2021-02-17 21:03:49.752 [main] SQL - select user0_.id as id1_1_, user0_.email as email2_1_, user0_.password as password3_1_, user0_.user_name as user_nam4_1_ from user user0_
+[DEBUG] 2021-02-17 21:03:49.755 [main] Loader - Result set row: 0
+[DEBUG] 2021-02-17 21:03:49.756 [main] Loader - Result row: EntityKey[com.kevinleader.bgr.entity.User#1]
+[DEBUG] 2021-02-17 21:03:49.757 [main] Loader - Result set row: 1
+[DEBUG] 2021-02-17 21:03:49.757 [main] Loader - Result row: EntityKey[com.kevinleader.bgr.entity.User#2]
+[DEBUG] 2021-02-17 21:03:49.757 [main] Loader - Result set row: 2
+[DEBUG] 2021-02-17 21:03:49.758 [main] Loader - Result row: EntityKey[com.kevinleader.bgr.entity.User#3]
+[DEBUG] 2021-02-17 21:03:49.758 [main] Loader - Result set row: 3
+[DEBUG] 2021-02-17 21:03:49.758 [main] Loader - Result row: EntityKey[com.kevinleader.bgr.entity.User#4]
+[DEBUG] 2021-02-17 21:03:49.759 [main] Loader - Result set row: 4
+[DEBUG] 2021-02-17 21:03:49.759 [main] Loader - Result row: EntityKey[com.kevinleader.bgr.entity.User#5]
+[DEBUG] 2021-02-17 21:03:49.759 [main] Loader - Result set row: 5
+[DEBUG] 2021-02-17 21:03:49.760 [main] Loader - Result row: EntityKey[com.kevinleader.bgr.entity.User#6]
+[DEBUG] 2021-02-17 21:03:49.760 [main] TwoPhaseLoad - Resolving attributes for [com.kevinleader.bgr.entity.User#1]
+[DEBUG] 2021-02-17 21:03:49.761 [main] TwoPhaseLoad - Processing attribute `email` : value = coynemcgoin@hotmail.com
+[DEBUG] 2021-02-17 21:03:49.761 [main] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.761 [main] TwoPhaseLoad - Processing attribute `password` : value = supersecret1
+[DEBUG] 2021-02-17 21:03:49.762 [main] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.762 [main] TwoPhaseLoad - Processing attribute `rankingConfigurations` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:49.762 [main] TwoPhaseLoad - Attribute (`rankingConfigurations`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.763 [main] TwoPhaseLoad - Processing attribute `userName` : value = jcoyne
+[DEBUG] 2021-02-17 21:03:49.763 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.764 [main] TwoPhaseLoad - Processing attribute `wishedGames` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:49.764 [main] TwoPhaseLoad - Attribute (`wishedGames`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.764 [main] TwoPhaseLoad - Done materializing entity [com.kevinleader.bgr.entity.User#1]
+[DEBUG] 2021-02-17 21:03:49.765 [main] TwoPhaseLoad - Resolving attributes for [com.kevinleader.bgr.entity.User#2]
+[DEBUG] 2021-02-17 21:03:49.765 [main] TwoPhaseLoad - Processing attribute `email` : value = scoobydoolover@yahoo.com
+[DEBUG] 2021-02-17 21:03:49.765 [main] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.766 [main] TwoPhaseLoad - Processing attribute `password` : value = supersecret2
+[DEBUG] 2021-02-17 21:03:49.766 [main] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.767 [main] TwoPhaseLoad - Processing attribute `rankingConfigurations` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:49.767 [main] TwoPhaseLoad - Attribute (`rankingConfigurations`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.767 [main] TwoPhaseLoad - Processing attribute `userName` : value = fhensen
+[DEBUG] 2021-02-17 21:03:49.768 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.768 [main] TwoPhaseLoad - Processing attribute `wishedGames` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:49.768 [main] TwoPhaseLoad - Attribute (`wishedGames`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.769 [main] TwoPhaseLoad - Done materializing entity [com.kevinleader.bgr.entity.User#2]
+[DEBUG] 2021-02-17 21:03:49.769 [main] TwoPhaseLoad - Resolving attributes for [com.kevinleader.bgr.entity.User#3]
+[DEBUG] 2021-02-17 21:03:49.770 [main] TwoPhaseLoad - Processing attribute `email` : value = baconcurry@gmail.com
+[DEBUG] 2021-02-17 21:03:49.770 [main] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.770 [main] TwoPhaseLoad - Processing attribute `password` : value = supersecret3
+[DEBUG] 2021-02-17 21:03:49.771 [main] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.771 [main] TwoPhaseLoad - Processing attribute `rankingConfigurations` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:49.771 [main] TwoPhaseLoad - Attribute (`rankingConfigurations`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.772 [main] TwoPhaseLoad - Processing attribute `userName` : value = bcurry
+[DEBUG] 2021-02-17 21:03:49.772 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.772 [main] TwoPhaseLoad - Processing attribute `wishedGames` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:49.773 [main] TwoPhaseLoad - Attribute (`wishedGames`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.773 [main] TwoPhaseLoad - Done materializing entity [com.kevinleader.bgr.entity.User#3]
+[DEBUG] 2021-02-17 21:03:49.774 [main] TwoPhaseLoad - Resolving attributes for [com.kevinleader.bgr.entity.User#4]
+[DEBUG] 2021-02-17 21:03:49.774 [main] TwoPhaseLoad - Processing attribute `email` : value = mackattack@valdosta.edu
+[DEBUG] 2021-02-17 21:03:49.774 [main] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.775 [main] TwoPhaseLoad - Processing attribute `password` : value = supersecret4
+[DEBUG] 2021-02-17 21:03:49.775 [main] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.775 [main] TwoPhaseLoad - Processing attribute `rankingConfigurations` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:49.776 [main] TwoPhaseLoad - Attribute (`rankingConfigurations`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.776 [main] TwoPhaseLoad - Processing attribute `userName` : value = kmack
+[DEBUG] 2021-02-17 21:03:49.776 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.777 [main] TwoPhaseLoad - Processing attribute `wishedGames` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:49.777 [main] TwoPhaseLoad - Attribute (`wishedGames`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.777 [main] TwoPhaseLoad - Done materializing entity [com.kevinleader.bgr.entity.User#4]
+[DEBUG] 2021-02-17 21:03:49.778 [main] TwoPhaseLoad - Resolving attributes for [com.kevinleader.bgr.entity.User#5]
+[DEBUG] 2021-02-17 21:03:49.778 [main] TwoPhaseLoad - Processing attribute `email` : value = inkleined@madisoncollege.edu
+[DEBUG] 2021-02-17 21:03:49.778 [main] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.779 [main] TwoPhaseLoad - Processing attribute `password` : value = supersecret5
+[DEBUG] 2021-02-17 21:03:49.779 [main] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.779 [main] TwoPhaseLoad - Processing attribute `rankingConfigurations` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:49.780 [main] TwoPhaseLoad - Attribute (`rankingConfigurations`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.780 [main] TwoPhaseLoad - Processing attribute `userName` : value = dklein
+[DEBUG] 2021-02-17 21:03:49.781 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.781 [main] TwoPhaseLoad - Processing attribute `wishedGames` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:49.781 [main] TwoPhaseLoad - Attribute (`wishedGames`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.782 [main] TwoPhaseLoad - Done materializing entity [com.kevinleader.bgr.entity.User#5]
+[DEBUG] 2021-02-17 21:03:49.782 [main] TwoPhaseLoad - Resolving attributes for [com.kevinleader.bgr.entity.User#6]
+[DEBUG] 2021-02-17 21:03:49.782 [main] TwoPhaseLoad - Processing attribute `email` : value = xxtillmanxx@hotmail.com
+[DEBUG] 2021-02-17 21:03:49.783 [main] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.783 [main] TwoPhaseLoad - Processing attribute `password` : value = supersecret6
+[DEBUG] 2021-02-17 21:03:49.783 [main] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.784 [main] TwoPhaseLoad - Processing attribute `rankingConfigurations` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:49.784 [main] TwoPhaseLoad - Attribute (`rankingConfigurations`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.784 [main] TwoPhaseLoad - Processing attribute `userName` : value = dtillman
+[DEBUG] 2021-02-17 21:03:49.785 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.785 [main] TwoPhaseLoad - Processing attribute `wishedGames` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:49.785 [main] TwoPhaseLoad - Attribute (`wishedGames`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:49.786 [main] TwoPhaseLoad - Done materializing entity [com.kevinleader.bgr.entity.User#6]
+[DEBUG] 2021-02-17 21:03:49.786 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-02-17 21:03:50.130 [main] SQL - select user0_.id as id1_1_0_, user0_.email as email2_1_0_, user0_.password as password3_1_0_, user0_.user_name as user_nam4_1_0_ from user user0_ where user0_.id=?
+[DEBUG] 2021-02-17 21:03:50.133 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2021-02-17 21:03:50.133 [main] EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+[DEBUG] 2021-02-17 21:03:50.135 [main] TwoPhaseLoad - Resolving attributes for [com.kevinleader.bgr.entity.User#1]
+[DEBUG] 2021-02-17 21:03:50.135 [main] TwoPhaseLoad - Processing attribute `email` : value = coynemcgoin@hotmail.com
+[DEBUG] 2021-02-17 21:03:50.135 [main] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:50.136 [main] TwoPhaseLoad - Processing attribute `password` : value = supersecret1
+[DEBUG] 2021-02-17 21:03:50.136 [main] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:50.136 [main] TwoPhaseLoad - Processing attribute `rankingConfigurations` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:50.137 [main] TwoPhaseLoad - Attribute (`rankingConfigurations`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:50.137 [main] TwoPhaseLoad - Processing attribute `userName` : value = jcoyne
+[DEBUG] 2021-02-17 21:03:50.137 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:50.138 [main] TwoPhaseLoad - Processing attribute `wishedGames` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:50.138 [main] TwoPhaseLoad - Attribute (`wishedGames`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:50.139 [main] TwoPhaseLoad - Done materializing entity [com.kevinleader.bgr.entity.User#1]
+[DEBUG] 2021-02-17 21:03:50.139 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-02-17 21:03:50.139 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.kevinleader.bgr.entity.User#1
+[DEBUG] 2021-02-17 21:03:50.140 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-02-17 21:03:50.486 [main] CriteriaQueryImpl - Rendered criteria query -> select generatedAlias0 from User as generatedAlias0 where generatedAlias0.userName like :param0
+[DEBUG] 2021-02-17 21:03:50.488 [main] QueryTranslatorImpl - parse() - HQL: select generatedAlias0 from com.kevinleader.bgr.entity.User as generatedAlias0 where generatedAlias0.userName like :param0
+[DEBUG] 2021-02-17 21:03:50.492 [main] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2021-02-17 21:03:50.496 [main] QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  +-[FROM] Node: 'from'
+    |  |  \-[RANGE] Node: 'RANGE'
+    |  |     +-[DOT] Node: '.'
+    |  |     |  +-[DOT] Node: '.'
+    |  |     |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  +-[IDENT] Node: 'com'
+    |  |     |  |  |  |  \-[IDENT] Node: 'kevinleader'
+    |  |     |  |  |  \-[IDENT] Node: 'bgr'
+    |  |     |  |  \-[IDENT] Node: 'entity'
+    |  |     |  \-[IDENT] Node: 'User'
+    |  |     \-[ALIAS] Node: 'generatedAlias0'
+    |  \-[SELECT] Node: 'select'
+    |     \-[IDENT] Node: 'generatedAlias0'
+    \-[WHERE] Node: 'where'
+       \-[LIKE] Node: 'like'
+          +-[DOT] Node: '.'
+          |  +-[IDENT] Node: 'generatedAlias0'
+          |  \-[IDENT] Node: 'userName'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'param0'
+
+[DEBUG] 2021-02-17 21:03:50.497 [main] HqlSqlBaseWalker - select << begin [level=1, statement=select]
+[DEBUG] 2021-02-17 21:03:50.501 [main] FromElement - FromClause{level=1} : com.kevinleader.bgr.entity.User (generatedAlias0) -> user0_
+[DEBUG] 2021-02-17 21:03:50.502 [main] FromReferenceNode - Resolved : generatedAlias0 -> user0_.id
+[DEBUG] 2021-02-17 21:03:50.502 [main] FromReferenceNode - Resolved : generatedAlias0 -> user0_.id
+[DEBUG] 2021-02-17 21:03:50.503 [main] DotNode - getDataType() : userName -> org.hibernate.type.StringType@21d1b321
+[DEBUG] 2021-02-17 21:03:50.503 [main] FromReferenceNode - Resolved : generatedAlias0.userName -> user0_.user_name
+[DEBUG] 2021-02-17 21:03:50.504 [main] HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+[DEBUG] 2021-02-17 21:03:50.504 [main] HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} user0_.id ) ( FromClause{level=1} user user0_ ) ( where ( like ( user0_.user_name user0_.id userName ) ? ) ) )
+[DEBUG] 2021-02-17 21:03:50.505 [main] JoinProcessor - Using FROM fragment [user user0_]
+[DEBUG] 2021-02-17 21:03:50.506 [main] HqlSqlBaseWalker - select >> end [level=1, statement=select]
+[DEBUG] 2021-02-17 21:03:50.508 [main] QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (user)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'user0_.id as id1_1_' {alias=generatedAlias0, className=com.kevinleader.bgr.entity.User, tableAlias=user0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'user0_.email as email2_1_, user0_.password as password3_1_, user0_.user_name as user_nam4_1_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[generatedAlias0], fromElementByTableAlias=[user0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'user user0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=user,tableAlias=user0_,origin=null,columns={,className=com.kevinleader.bgr.entity.User}}
+    \-[WHERE] SqlNode: 'where'
+       \-[LIKE] BinaryLogicOperatorNode: 'like'
+          +-[DOT] DotNode: 'user0_.user_name' {propertyName=userName,dereferenceType=PRIMITIVE,getPropertyPath=userName,path=generatedAlias0.userName,tableAlias=user0_,className=com.kevinleader.bgr.entity.User,classAlias=generatedAlias0}
+          |  +-[ALIAS_REF] IdentNode: 'user0_.id' {alias=generatedAlias0, className=com.kevinleader.bgr.entity.User, tableAlias=user0_}
+          |  \-[IDENT] IdentNode: 'userName' {originalText=userName}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=param0, expectedType=org.hibernate.type.StringType@21d1b321}
+
+[DEBUG] 2021-02-17 21:03:50.509 [main] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2021-02-17 21:03:50.510 [main] QueryTranslatorImpl - HQL: select generatedAlias0 from com.kevinleader.bgr.entity.User as generatedAlias0 where generatedAlias0.userName like :param0
+[DEBUG] 2021-02-17 21:03:50.510 [main] QueryTranslatorImpl - SQL: select user0_.id as id1_1_, user0_.email as email2_1_, user0_.password as password3_1_, user0_.user_name as user_nam4_1_ from user user0_ where user0_.user_name like ?
+[DEBUG] 2021-02-17 21:03:50.510 [main] ErrorTracker - throwQueryException() : no errors
+[DEBUG] 2021-02-17 21:03:50.511 [main] SQL - select user0_.id as id1_1_, user0_.email as email2_1_, user0_.password as password3_1_, user0_.user_name as user_nam4_1_ from user user0_ where user0_.user_name like ?
+[DEBUG] 2021-02-17 21:03:50.515 [main] Loader - Result set row: 0
+[DEBUG] 2021-02-17 21:03:50.515 [main] Loader - Result row: EntityKey[com.kevinleader.bgr.entity.User#5]
+[DEBUG] 2021-02-17 21:03:50.516 [main] Loader - Result set row: 1
+[DEBUG] 2021-02-17 21:03:50.516 [main] Loader - Result row: EntityKey[com.kevinleader.bgr.entity.User#6]
+[DEBUG] 2021-02-17 21:03:50.517 [main] TwoPhaseLoad - Resolving attributes for [com.kevinleader.bgr.entity.User#5]
+[DEBUG] 2021-02-17 21:03:50.517 [main] TwoPhaseLoad - Processing attribute `email` : value = inkleined@madisoncollege.edu
+[DEBUG] 2021-02-17 21:03:50.517 [main] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:50.518 [main] TwoPhaseLoad - Processing attribute `password` : value = supersecret5
+[DEBUG] 2021-02-17 21:03:50.518 [main] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:50.518 [main] TwoPhaseLoad - Processing attribute `rankingConfigurations` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:50.519 [main] TwoPhaseLoad - Attribute (`rankingConfigurations`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:50.519 [main] TwoPhaseLoad - Processing attribute `userName` : value = dklein
+[DEBUG] 2021-02-17 21:03:50.519 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:50.520 [main] TwoPhaseLoad - Processing attribute `wishedGames` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:50.520 [main] TwoPhaseLoad - Attribute (`wishedGames`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:50.521 [main] TwoPhaseLoad - Done materializing entity [com.kevinleader.bgr.entity.User#5]
+[DEBUG] 2021-02-17 21:03:50.521 [main] TwoPhaseLoad - Resolving attributes for [com.kevinleader.bgr.entity.User#6]
+[DEBUG] 2021-02-17 21:03:50.522 [main] TwoPhaseLoad - Processing attribute `email` : value = xxtillmanxx@hotmail.com
+[DEBUG] 2021-02-17 21:03:50.522 [main] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:50.522 [main] TwoPhaseLoad - Processing attribute `password` : value = supersecret6
+[DEBUG] 2021-02-17 21:03:50.523 [main] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:50.523 [main] TwoPhaseLoad - Processing attribute `rankingConfigurations` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:50.523 [main] TwoPhaseLoad - Attribute (`rankingConfigurations`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:50.524 [main] TwoPhaseLoad - Processing attribute `userName` : value = dtillman
+[DEBUG] 2021-02-17 21:03:50.524 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:50.524 [main] TwoPhaseLoad - Processing attribute `wishedGames` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:50.525 [main] TwoPhaseLoad - Attribute (`wishedGames`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:50.525 [main] TwoPhaseLoad - Done materializing entity [com.kevinleader.bgr.entity.User#6]
+[DEBUG] 2021-02-17 21:03:50.526 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-02-17 21:03:50.869 [main] TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+[DEBUG] 2021-02-17 21:03:50.870 [main] TransactionImpl - begin
+[DEBUG] 2021-02-17 21:03:50.884 [main] ActionQueue - Executing identity-insert immediately
+[DEBUG] 2021-02-17 21:03:50.888 [main] SQL - insert into user (email, password, user_name) values (?, ?, ?)
+[DEBUG] 2021-02-17 21:03:50.896 [main] IdentifierGeneratorHelper - Natively generated identity: 86
+[DEBUG] 2021-02-17 21:03:50.897 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-02-17 21:03:50.899 [main] TransactionImpl - committing
+[DEBUG] 2021-02-17 21:03:50.899 [main] AbstractFlushingEventListener - Processing flush-time cascades
+[DEBUG] 2021-02-17 21:03:50.899 [main] AbstractFlushingEventListener - Dirty checking collections
+[DEBUG] 2021-02-17 21:03:50.900 [main] Collections - Collection found: [com.kevinleader.bgr.entity.User.rankingConfigurations#86], was: [<unreferenced>] (initialized)
+[DEBUG] 2021-02-17 21:03:50.900 [main] Collections - Collection found: [com.kevinleader.bgr.entity.User.wishedGames#86], was: [<unreferenced>] (initialized)
+[DEBUG] 2021-02-17 21:03:50.901 [main] AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+[DEBUG] 2021-02-17 21:03:50.902 [main] AbstractFlushingEventListener - Flushed: 2 (re)creations, 0 updates, 0 removals to 2 collections
+[DEBUG] 2021-02-17 21:03:50.902 [main] EntityPrinter - Listing entities:
+[DEBUG] 2021-02-17 21:03:50.905 [main] EntityPrinter - com.kevinleader.bgr.entity.User{rankingConfigurations=[], password=finalanswer1mil, id=86, userName=rphilman, wishedGames=[], email=rphilman@yahoo.com}
+[DEBUG] 2021-02-17 21:03:50.905 [main] AbstractCollectionPersister - Inserting collection: [com.kevinleader.bgr.entity.User.rankingConfigurations#86]
+[DEBUG] 2021-02-17 21:03:50.905 [main] AbstractCollectionPersister - Collection was empty
+[DEBUG] 2021-02-17 21:03:50.906 [main] AbstractCollectionPersister - Inserting collection: [com.kevinleader.bgr.entity.User.wishedGames#86]
+[DEBUG] 2021-02-17 21:03:50.906 [main] AbstractCollectionPersister - Collection was empty
+[DEBUG] 2021-02-17 21:03:50.909 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-02-17 21:03:50.910 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2021-02-17 21:03:50.917 [main] SQL - select user0_.id as id1_1_0_, user0_.email as email2_1_0_, user0_.password as password3_1_0_, user0_.user_name as user_nam4_1_0_ from user user0_ where user0_.id=?
+[DEBUG] 2021-02-17 21:03:50.921 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2021-02-17 21:03:50.921 [main] EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+[DEBUG] 2021-02-17 21:03:50.922 [main] TwoPhaseLoad - Resolving attributes for [com.kevinleader.bgr.entity.User#86]
+[DEBUG] 2021-02-17 21:03:50.923 [main] TwoPhaseLoad - Processing attribute `email` : value = rphilman@yahoo.com
+[DEBUG] 2021-02-17 21:03:50.923 [main] TwoPhaseLoad - Attribute (`email`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:50.924 [main] TwoPhaseLoad - Processing attribute `password` : value = finalanswer1mil
+[DEBUG] 2021-02-17 21:03:50.924 [main] TwoPhaseLoad - Attribute (`password`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:50.925 [main] TwoPhaseLoad - Processing attribute `rankingConfigurations` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:50.925 [main] TwoPhaseLoad - Attribute (`rankingConfigurations`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:50.925 [main] TwoPhaseLoad - Processing attribute `userName` : value = rphilman
+[DEBUG] 2021-02-17 21:03:50.926 [main] TwoPhaseLoad - Attribute (`userName`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:50.926 [main] TwoPhaseLoad - Processing attribute `wishedGames` : value = NOT NULL COLLECTION
+[DEBUG] 2021-02-17 21:03:50.926 [main] TwoPhaseLoad - Attribute (`wishedGames`)  - enhanced for lazy-loading? - false
+[DEBUG] 2021-02-17 21:03:50.927 [main] TwoPhaseLoad - Done materializing entity [com.kevinleader.bgr.entity.User#86]
+[DEBUG] 2021-02-17 21:03:50.927 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2021-02-17 21:03:50.928 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.kevinleader.bgr.entity.User#86
+[DEBUG] 2021-02-17 21:03:50.928 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction

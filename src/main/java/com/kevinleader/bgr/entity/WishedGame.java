@@ -18,14 +18,14 @@ public class WishedGame {
     @GenericGenerator(name = "native", strategy = "native")
     private int id;
 
-    @Column(name = "igdb_id")
-    private int igdbId;
+    @Column(name = "igdb_game_id")
+    private int igdbGameId;
 
-    @Column(name = "user_id")
-    private int userId;
+    @ManyToOne
+    private User user;
 
     /**
-     * Instantiates a new Wished game.
+     * Instantiates a new game on a user's wishlist.
      */
     public WishedGame() {
     }
@@ -33,14 +33,12 @@ public class WishedGame {
     /**
      * Instantiates a new Wished game.
      *
-     * @param id     the id
-     * @param igdbId the igdb.com game id
-     * @param userId the user id
+     * @param igdbGameId the igdb game id
+     * @param user       the user
      */
-    public WishedGame(int id, int igdbId, int userId) {
-        this.id = id;
-        this.igdbId = igdbId;
-        this.userId = userId;
+    public WishedGame(int igdbGameId, User user) {
+        this.igdbGameId = igdbGameId;
+        this.user = user;
     }
 
     /**
@@ -62,47 +60,47 @@ public class WishedGame {
     }
 
     /**
-     * Gets igdb id.
+     * Gets igdb game id.
      *
-     * @return the igdb id
+     * @return the igdb game id
      */
-    public int getIgdbId() {
-        return igdbId;
+    public int getIgdbGameId() {
+        return igdbGameId;
     }
 
     /**
-     * Sets igdb id.
+     * Sets igdb game id.
      *
-     * @param igdbId the igdb id
+     * @param igdbGameId the igdb game id
      */
-    public void setIgdbId(int igdbId) {
-        this.igdbId = igdbId;
+    public void setIgdbGameId(int igdbGameId) {
+        this.igdbGameId = igdbGameId;
     }
 
     /**
-     * Gets user id.
+     * Gets user.
      *
-     * @return the user id
+     * @return the user
      */
-    public int getUserId() {
-        return userId;
+    public User getUser() {
+        return user;
     }
 
     /**
-     * Sets user id.
+     * Sets user.
      *
-     * @param userId the user id
+     * @param user the user
      */
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     @Override
     public String toString() {
         return "WishedGame{" +
                 "id=" + id +
-                ", igdbId=" + igdbId +
-                ", userId=" + userId +
+                ", igdbGameId=" + igdbGameId +
+                ", user=" + user +
                 '}';
     }
 }

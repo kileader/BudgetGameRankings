@@ -70,3 +70,60 @@
 [DEBUG] 2021-02-17 19:53:40.638 [main] UserDao - Searching for: d
 [DEBUG] 2021-02-17 19:53:40.677 [main] UserDao - running insert({}
 [INFO ] 2021-02-17 19:53:40.689 [main] UserDao - run getById
+[INFO ] 2021-02-17 20:56:18.395 [main] UserDao - run getById
+[INFO ] 2021-02-17 20:56:18.631 [main] UserDao - run getByEmail
+[INFO ] 2021-02-17 20:56:18.955 [main] UserDao - run getById
+[INFO ] 2021-02-17 20:56:18.960 [main] UserDao - run saveOrUpdate
+[INFO ] 2021-02-17 20:56:18.973 [main] UserDao - run getById
+[INFO ] 2021-02-17 20:56:19.024 [main] UserDao - run getAll
+[INFO ] 2021-02-17 20:56:19.075 [main] UserDao - run getById
+[INFO ] 2021-02-17 20:56:19.115 [main] UserDao - run getByUserName
+[DEBUG] 2021-02-17 20:56:19.117 [main] UserDao - Searching for: d
+[DEBUG] 2021-02-17 20:56:19.163 [main] UserDao - running insert({}
+[INFO ] 2021-02-17 20:56:19.178 [main] UserDao - run getById
+[INFO ] 2021-02-17 20:57:25.645 [main] UserDao - run getById
+[INFO ] 2021-02-17 20:57:25.861 [main] UserDao - run getByEmail
+[INFO ] 2021-02-17 20:57:26.056 [main] UserDao - run getById
+[INFO ] 2021-02-17 20:57:26.061 [main] UserDao - run saveOrUpdate
+[INFO ] 2021-02-17 20:57:26.072 [main] UserDao - run getById
+[INFO ] 2021-02-17 20:57:26.117 [main] UserDao - run getAll
+[INFO ] 2021-02-17 20:57:26.164 [main] UserDao - run getById
+[INFO ] 2021-02-17 20:57:26.208 [main] UserDao - run getByUserName
+[DEBUG] 2021-02-17 20:57:26.210 [main] UserDao - Searching for: d
+[DEBUG] 2021-02-17 20:57:26.255 [main] UserDao - running insert({}
+[INFO ] 2021-02-17 20:57:26.273 [main] UserDao - run getById
+[INFO ] 2021-02-17 20:59:46.713 [main] UserDao - run getById
+[INFO ] 2021-02-17 20:59:46.940 [main] UserDao - run getByEmail
+[INFO ] 2021-02-17 20:59:47.136 [main] UserDao - run getById
+[INFO ] 2021-02-17 20:59:47.152 [main] UserDao - run saveOrUpdate
+[INFO ] 2021-02-17 20:59:47.213 [main] UserDao - run getById
+[INFO ] 2021-02-17 20:59:47.300 [main] UserDao - run getAll
+[INFO ] 2021-02-17 20:59:47.386 [main] UserDao - run getById
+[INFO ] 2021-02-17 20:59:47.505 [main] UserDao - run getByUserName
+[DEBUG] 2021-02-17 20:59:47.508 [main] UserDao - Searching for: d
+[DEBUG] 2021-02-17 20:59:47.568 [main] UserDao - running insert({}
+[INFO ] 2021-02-17 20:59:47.581 [main] UserDao - run getById
+[INFO ] 2021-02-17 21:01:47.794 [main] UserDao - run getById
+[INFO ] 2021-02-17 21:03:48.433 [main] UserDao - run getByEmail
+[INFO ] 2021-02-17 21:03:49.335 [main] UserDao - run getById
+[INFO ] 2021-02-17 21:03:49.348 [main] UserDao - run saveOrUpdate
+[INFO ] 2021-02-17 21:03:49.373 [main] UserDao - run getById
+[INFO ] 2021-02-17 21:03:49.737 [main] UserDao - run getAll
+[INFO ] 2021-02-17 21:03:50.130 [main] UserDao - run getById
+[INFO ] 2021-02-17 21:03:50.480 [main] UserDao - run getByUserName
+[DEBUG] 2021-02-17 21:03:50.485 [main] UserDao - Searching for: d
+[DEBUG] 2021-02-17 21:03:50.869 [main] UserDao - running insert({}
+[INFO ] 2021-02-17 21:03:50.916 [main] UserDao - run getById
+[INFO ] 2021-02-17 21:05:00.695 [main] UserDao - run getById
+[INFO ] 2021-02-17 21:08:56.404 [main] UserDao - run getById
+[INFO ] 2021-02-17 21:08:56.554 [main] UserDao - run getById
+[INFO ] 2021-02-17 21:08:56.603 [main] UserDao - run getByEmail
+[INFO ] 2021-02-17 21:08:56.797 [main] UserDao - run getById
+[INFO ] 2021-02-17 21:08:56.802 [main] UserDao - run saveOrUpdate
+[INFO ] 2021-02-17 21:08:56.814 [main] UserDao - run getById
+[INFO ] 2021-02-17 21:08:56.856 [main] UserDao - run getAll
+[INFO ] 2021-02-17 21:08:56.926 [main] UserDao - run getById
+[INFO ] 2021-02-17 21:08:56.970 [main] UserDao - run getByUserName
+[DEBUG] 2021-02-17 21:08:56.972 [main] UserDao - Searching for: d
+[DEBUG] 2021-02-17 21:08:57.023 [main] UserDao - running insert({}
+[INFO ] 2021-02-17 21:08:57.036 [main] UserDao - run getById
