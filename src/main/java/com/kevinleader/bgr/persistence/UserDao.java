@@ -80,7 +80,7 @@ public class UserDao {
      * @param userName the user name
      * @return list of users that match user name
      */
-    public List<User> getByUsername(String userName){
+    public List<User> getByUsername(String userName) {
         logger.info("run getByUserName");
         logger.debug("Searching for: {}", userName);
         Session session = sessionFactory.openSession();
@@ -100,7 +100,7 @@ public class UserDao {
      * @param email the email
      * @return list of matching users
      */
-    public List<User> getByEmail(String email){
+    public List<User> getByEmail(String email) {
         logger.info("run getByEmail");
         Session session = sessionFactory.openSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
