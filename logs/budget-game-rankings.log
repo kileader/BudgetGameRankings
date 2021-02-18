@@ -34,3 +34,39 @@
 [DEBUG] 2021-02-15 16:13:13.559 [main] UserDao - Searching for: d
 [INFO ] 2021-02-15 16:13:13.603 [main] UserDao - run insert
 [INFO ] 2021-02-15 16:13:13.621 [main] UserDao - run getById
+[INFO ] 2021-02-17 19:32:39.258 [main] UserDao - run getById
+[INFO ] 2021-02-17 19:32:39.427 [main] UserDao - run getById
+[INFO ] 2021-02-17 19:32:39.480 [main] UserDao - run getByEmail
+[INFO ] 2021-02-17 19:32:39.877 [main] UserDao - run getById
+[INFO ] 2021-02-17 19:32:39.881 [main] UserDao - run saveOrUpdate
+[INFO ] 2021-02-17 19:32:39.893 [main] UserDao - run getById
+[INFO ] 2021-02-17 19:32:39.946 [main] UserDao - run getAll
+[INFO ] 2021-02-17 19:32:40.014 [main] UserDao - run getById
+[INFO ] 2021-02-17 19:32:40.112 [main] UserDao - run getByUserName
+[DEBUG] 2021-02-17 19:32:40.114 [main] UserDao - Searching for: d
+[DEBUG] 2021-02-17 19:32:40.245 [main] UserDao - running insert({}
+[INFO ] 2021-02-17 19:32:40.300 [main] UserDao - run getById
+[INFO ] 2021-02-17 19:33:02.117 [main] UserDao - run getById
+[INFO ] 2021-02-17 19:33:02.257 [main] UserDao - run getById
+[INFO ] 2021-02-17 19:33:02.307 [main] UserDao - run getByEmail
+[INFO ] 2021-02-17 19:33:02.483 [main] UserDao - run getById
+[INFO ] 2021-02-17 19:33:02.486 [main] UserDao - run saveOrUpdate
+[INFO ] 2021-02-17 19:33:02.494 [main] UserDao - run getById
+[INFO ] 2021-02-17 19:33:02.535 [main] UserDao - run getAll
+[INFO ] 2021-02-17 19:33:02.588 [main] UserDao - run getById
+[INFO ] 2021-02-17 19:33:02.628 [main] UserDao - run getByUserName
+[DEBUG] 2021-02-17 19:33:02.630 [main] UserDao - Searching for: d
+[DEBUG] 2021-02-17 19:33:02.679 [main] UserDao - running insert({}
+[INFO ] 2021-02-17 19:33:02.694 [main] UserDao - run getById
+[INFO ] 2021-02-17 19:53:40.162 [main] UserDao - run getById
+[INFO ] 2021-02-17 19:53:40.285 [main] UserDao - run getById
+[INFO ] 2021-02-17 19:53:40.335 [main] UserDao - run getByEmail
+[INFO ] 2021-02-17 19:53:40.500 [main] UserDao - run getById
+[INFO ] 2021-02-17 19:53:40.503 [main] UserDao - run saveOrUpdate
+[INFO ] 2021-02-17 19:53:40.511 [main] UserDao - run getById
+[INFO ] 2021-02-17 19:53:40.550 [main] UserDao - run getAll
+[INFO ] 2021-02-17 19:53:40.597 [main] UserDao - run getById
+[INFO ] 2021-02-17 19:53:40.637 [main] UserDao - run getByUserName
+[DEBUG] 2021-02-17 19:53:40.638 [main] UserDao - Searching for: d
+[DEBUG] 2021-02-17 19:53:40.677 [main] UserDao - running insert({}
+[INFO ] 2021-02-17 19:53:40.689 [main] UserDao - run getById
