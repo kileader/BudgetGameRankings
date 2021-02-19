@@ -21,4 +21,5 @@
 | 2/15/21 | Added some webapp structure | 2 |
 | 2/16/21 | Figured out IGDB API with Postman | 2 |
 | 2/17/21 | Designed full first draft of database and made new entities | 4 |
-| 2/18/21 |
+| 2/18/21 | Applied one to many relationships and set a few tests | 2 |
+| 2/19/21 | 
