@@ -34,7 +34,7 @@ public class UserDao {
      * @return the int
      */
     public int insert(User user) {
-        logger.debug("running insert({}");
+        logger.debug("run insert({})", user);
         int id;
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
@@ -50,7 +50,7 @@ public class UserDao {
      * @return the users
      */
     public List<User> getAll() {
-        logger.info("run getAll");
+        logger.debug("run getAll()");
         Session session = sessionFactory.openSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<User> query = builder.createQuery(User.class);
@@ -67,7 +67,7 @@ public class UserDao {
      * @return the user
      */
     public User getById(int id) {
-        logger.info("run getById");
+        logger.debug("run getById({})", id);
         Session session = sessionFactory.openSession();
         User user = session.get(User.class, id);
         session.close();
@@ -81,8 +81,7 @@ public class UserDao {
      * @return list of users that match user name
      */
     public List<User> getByUsername(String userName) {
-        logger.info("run getByUserName");
-        logger.debug("Searching for: {}", userName);
+        logger.debug("run getByUserName({})", userName);
         Session session = sessionFactory.openSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<User> query = builder.createQuery(User.class);
@@ -101,7 +100,7 @@ public class UserDao {
      * @return list of matching users
      */
     public List<User> getByEmail(String email) {
-        logger.info("run getByEmail");
+        logger.debug("run getByEmail({})", email);
         Session session = sessionFactory.openSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<User> query = builder.createQuery(User.class);
@@ -119,7 +118,7 @@ public class UserDao {
      * @param user the user
      */
     public void saveOrUpdate(User user) {
-        logger.info("run saveOrUpdate");
+        logger.debug("run saveOrUpdate({})", user);
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         session.saveOrUpdate(user);
@@ -133,6 +132,7 @@ public class UserDao {
      * @param user the user
      */
     public void delete(User user) {
+        logger.debug("run delete({})", user);
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         session.delete(user);
