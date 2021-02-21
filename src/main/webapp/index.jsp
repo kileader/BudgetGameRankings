@@ -1,5 +1,6 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<jsp:include page="contentType.jsp" />
 <html>
-<body>
-<h2>Hello World!</h2>
-</body>
+    <jsp:include page="head.jsp" />
 </html>

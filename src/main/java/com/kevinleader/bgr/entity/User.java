@@ -180,6 +180,26 @@ public class User {
         wishedGame.setUser(null);
     }
 
+    /**
+     * Add ranking configuration.
+     *
+     * @param rankingConfiguration the ranking configuration
+     */
+    public void addRankingConfiguration(RankingConfiguration rankingConfiguration) {
+        rankingConfigurations.add(rankingConfiguration);
+        rankingConfiguration.setUser(this);
+    }
+
+    /**
+     * Remove ranking configuration.
+     *
+     * @param rankingConfiguration the ranking configuration
+     */
+    public void removeRankingConfiguration(RankingConfiguration rankingConfiguration) {
+        rankingConfigurations.remove(rankingConfiguration);
+        rankingConfiguration.setUser(null);
+    }
+
     @Override
     public String toString() {
         return "User{" +
