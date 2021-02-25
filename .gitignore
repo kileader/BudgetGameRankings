@@ -8,7 +8,8 @@
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
 /logs/
-/resources/
+src/main/resources/
+src/test/resources/
 
 # Sensitive or high-churn files:
 .idea/dataSources.ids
