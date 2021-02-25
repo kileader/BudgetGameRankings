@@ -18,6 +18,9 @@ public class WishedGame {
     @GenericGenerator(name = "native", strategy = "native")
     private int id;
 
+    /**
+     *
+     */
     @Column(name = "igdb_game_id")
     private int igdbGameId;
 

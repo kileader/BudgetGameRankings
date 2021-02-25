@@ -23,3 +23,5 @@
 | 2/17/21 | Designed full first draft of database and made new entities | 4 |
 | 2/18/21 | Applied one to many relationships and set a few tests | 2 |
 | 2/19/21 | Corrected WishedGameDao and finished unit tests | 4 |
+| 2/24/21 | Applied to most companies at career fair | 6 |
+| 2/25/21 | Finished peer code reviews | 2 |
