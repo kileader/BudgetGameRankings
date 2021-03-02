@@ -49,4 +49,5 @@ rankings based on user chosen parameters.
 * [User Stories](DesignDocuments/userStories.md)
 * [Screen Design](DesignDocuments/screenDesign.md)
 * [Project Plan](DesignDocuments/projectPlan.md)
+* [Database Design](DesignDocuments/databaseDesign.png)
 * [TimeLog](timeLog.md)
