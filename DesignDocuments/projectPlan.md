@@ -5,26 +5,29 @@
 - [X] Problem Statement
 - [X] User Stories
 - [X] Project Plan
-- [ ] Screen Design
-- [ ] Checkpoint 1 discussed
-- [ ] Implement a DAO and Hibernate
-- [ ] Research the best APIs to use
+- [X] Screen Design
+- [X] Checkpoint 1 discussed
+- [X] Implement a DAO and Hibernate
+- [X] Research the best APIs to use
 
 ### Week 5 to 7
-- [ ] Database designed and created
-- [ ] At least one DAO with full CRUD with Hibernate
-- [ ] DAO is fully unit tested
-- [ ] Log4J is implemented
-- [ ] Work on API integration
+- [X] Database designed and created
+- [X] At least one DAO with full CRUD with Hibernate
+- [X] DAO is fully unit tested
+- [X] Log4J is implemented
+- [ ] Implement IGDB.com API
+- [ ] Work on user interface
 
 ### Week 8 and 9
 - [ ] Deploy to AWS
 - [ ] At least one JSP that displays data from database
 - [ ] Authentication (login) implemented
-- [ ] Have working API integration
+- [ ] Implement pricing APIs
+- [ ] Implement user and admin controls
 
 ### Week 10 to 14
-- [ ] Bells and whistles
+- [ ] Fully integrate APIs
+- [ ] Make website presentable
 
 ### Week 15
 - [ ] Final Presentation

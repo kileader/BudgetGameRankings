@@ -19,7 +19,7 @@ public class WishedGame {
     private int id;
 
     /**
-     *
+     * id number used to refer to a specific videogame on igdb.com
      */
     @Column(name = "igdb_game_id")
     private int igdbGameId;
