@@ -8,6 +8,8 @@ There aren't many straightforward rankings for budget videogames. There are of c
 current budget games, best classic games, best games for different genres, etc. Is it possible to rank games based on
 their value, such as rating over price? Can there be multiple rankings on different parameters? Can it be programmatic?
 
+This project aims to solve these questions by using APIs to gather data about game ratings and prices and displaying
+rankings based on user chosen parameters.
 
 ### Project Technologies/Techniques 
 

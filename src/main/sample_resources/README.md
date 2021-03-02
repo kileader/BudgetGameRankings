@@ -1,0 +1,1 @@
+This is a sample of the resources directory. No personal info is given.

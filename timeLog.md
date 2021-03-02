@@ -27,3 +27,4 @@
 | 2/25/21 | Finished peer code reviews | 2 |
 | 2/26/21 | Start AWS instance and database | 4 |
 | 2/28/21 | Finish hosting userdisplayexercise on AWS | 3 |
+| 3/2/21  | 
