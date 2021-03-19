@@ -33,6 +33,9 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<RankingConfiguration> rankingConfigurations = new HashSet<>();
 
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Role> roles = new HashSet<>();
+
     /**
      * Instantiates a new User with no parameters.
      */
