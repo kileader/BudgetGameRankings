@@ -28,4 +28,4 @@
 | 2/26/21 | Start AWS instance and database | 4 |
 | 2/28/21 | Finish hosting userdisplayexercise on AWS | 3 |
 | 3/2/21  | Updated files based on peer review feedback and for checkpoint 2 | 1.5 |
-| 3/19/21 | 
+| 3/19/21 | Created role entity | 1 |
