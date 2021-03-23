@@ -12,21 +12,18 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Class containing tests for the UserDao class.
+ * Class containing tests for the GenericDao and User classes.
  */
 class UserDaoTest {
 
-    /**
-     * The Dao.
-     */
-    UserDao dao;
+    GenericDao userDao;
 
     /**
      * Sets up new dao for each test.
      */
     @BeforeEach
     void setUp() {
-        dao = new UserDao();
+        userDao = new GenericDao(User.class);
     }
 
     /**
@@ -35,12 +32,10 @@ class UserDaoTest {
     @Test
     void insertSuccess() {
         User newUser = new User("rphilman", "rphilman@yahoo.com", "finalanswer1mil");
-        int id = dao.insert(newUser);
+        int id = userDao.insert(newUser);
         assertNotEquals(0, id);
-        User insertedUser = dao.getById(id);
-        assertEquals("rphilman", insertedUser.getUserName());
-        assertEquals("rphilman@yahoo.com", insertedUser.getEmail());
-        assertEquals("finalanswer1mil", insertedUser.getPassword());
+        User insertedUser = (User)userDao.getById(id);
+        assertEquals(newUser, insertedUser);
     }
 
     /**
@@ -48,7 +43,7 @@ class UserDaoTest {
      */
     @Test
     void getAllSuccess() {
-        List<User> users = dao.getAll();
+        List<User> users = userDao.getAll();
         assertEquals(6, users.size());
     }
 
@@ -57,10 +52,11 @@ class UserDaoTest {
      */
     @Test
     void getByIdSuccess() {
-        User retrievedUser = dao.getById(1);
-        assertEquals("jcoyne", retrievedUser.getUserName());
-        assertEquals("coynemcgoin@hotmail.com", retrievedUser.getEmail());
-        assertEquals("supersecret1", retrievedUser.getPassword());
+        User newUser = new User("rphilman", "rphilman@yahoo.com", "finalanswer1mil");
+        newUser.setId(3);
+        User retrievedUser = (User)userDao.getById(3);
+        assertNotNull(retrievedUser);
+        assertEquals(newUser, retrievedUser);
     }
 
     /**
