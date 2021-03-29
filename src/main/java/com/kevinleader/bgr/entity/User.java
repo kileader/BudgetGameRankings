@@ -33,8 +33,8 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<RankingConfiguration> rankingConfigurations = new HashSet<>();
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private Set<Role> roles = new HashSet<>();
+//    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+//    private Set<Role> roles = new HashSet<>();
 
     /**
      * Instantiates a new User with no parameters.
@@ -163,6 +163,14 @@ public class User {
         this.rankingConfigurations = rankingConfigurations;
     }
 
+//    public Set<Role> getRoles() {
+//        return roles;
+//    }
+//
+//    public void setRoles(Set<Role> roles) {
+//        this.roles = roles;
+//    }
+
     /**
      * Add wished game.
      *
@@ -202,6 +210,25 @@ public class User {
         rankingConfigurations.remove(rankingConfiguration);
         rankingConfiguration.setUser(null);
     }
+
+//    /**
+//     * Add wished game.
+//     *
+//     * @param wishedGame the wished game
+//     */
+//    public void addWishedGame(WishedGame wishedGame) {
+//        wishedGames.add(wishedGame);
+//        wishedGame.setUser(this);
+//    }
+//
+//    /**
+//     * Remove wished game.
+//     *
+//     * @param wishedGame the wished game
+//     */
+//    public void removeWishedGame(WishedGame wishedGame) {
+//        wishedGames.remove(wishedGame);
+//        wishedGame.setUser(null);
 
     @Override
     public String toString() {

@@ -29,3 +29,5 @@
 | 2/28/21 | Finish hosting userdisplayexercise on AWS | 3 |
 | 3/2/21  | Updated files based on peer review feedback and for checkpoint 2 | 1.5 |
 | 3/19/21 | Created role entity | 1 |
+| 3/23/21 | Worked on GenericDao | 3 |
+| 3/28/21 | 

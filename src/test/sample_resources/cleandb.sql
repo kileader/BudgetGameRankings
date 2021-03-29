@@ -1,6 +1,9 @@
 delete from user;
 delete from wished_game;
 
+ALTER TABLE user AUTO_INCREMENT = 1;
+ALTER TABLE wished_game AUTO_INCREMENT = 1;
+
 insert into user values (1, 'jcoyne', 'coynemcgoin@hotmail.com', 'supersecret1');
 insert into user values (2, 'fhensen', 'scoobydoolover@yahoo.com', 'supersecret2');
 insert into user values (3, 'bcurry', 'baconcurry@gmail.com', 'supersecret3');

@@ -1,11 +1,7 @@
 package com.kevinleader.bgr.persistence;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-
 import javax.persistence.criteria.*;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
@@ -45,6 +41,7 @@ public class GenericDao<T> {
      * Insert an entity.
      *
      * @param entity entity to be inserted
+     * @return the int
      */
     public int insert(T entity) {
         logger.debug("run insert({})", entity);
@@ -60,7 +57,7 @@ public class GenericDao<T> {
     /**
      * Get an entity by id.
      *
-     * @param id the id to search by
+     * @param id  the id to search by
      * @return the entity
      */
     public <T>T getById(int id) {
@@ -77,6 +74,7 @@ public class GenericDao<T> {
      * @return list of all entities
      */
     public List<T> getAll() {
+        logger.debug("run getAll()");
         Session session = getSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<T> query = builder.createQuery(type);
@@ -87,45 +85,49 @@ public class GenericDao<T> {
     }
 
     /**
-     * Find entities by one of its properties.
+     * Find entities by one of its properties exactly.
      *
      * @param propertyName the property name.
-     * @param value the value by which to find.
-     * @return
+     * @param value        the value by which to find.
+     * @return list
      */
-    public List<T> findByPropertyEqual(String propertyName, Object value) {
+    public List<T> getByPropertyEqual(String propertyName, Object value) {
+        logger.debug("run getByPropertyEqual() with " + propertyName + " = " + value);
         Session session = getSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<T> query = builder.createQuery(type);
         Root<T> root = query.from(type);
         query.select(root).where(builder.equal(root.get(propertyName),value));
-        return session.createQuery(query).getResultList();
+        List<T> entities = session.createQuery(query).getResultList();
+        session.close();
+        return entities;
     }
 
     /**
-     * Find entities by multiple properties.
-     * Inspired by https://stackoverflow.com/questions/11138118/really-dynamic-jpa-criteriabuilder
+     * Get entity by property (like)
+     * sample usage: getByPropertyLike("lastName", "C")
      *
-     * @param propertyMap property and value pairs
-     * @return entities with properties equal to those passed in the map
+     * @param propertyName entity property to search by
+     * @param value value of the property to search for
+     * @return list of entities meeting the criteria search
      */
-    public List<T> findByPropertyEqual(Map<String, Object> propertyMap) {
+    public List<T> getByPropertyLike(String propertyName, String value) {
+        logger.debug("run getByPropertyLike() with {} = {}",  propertyName, value);
         Session session = getSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<T> query = builder.createQuery(type);
+        CriteriaQuery<T> query = builder.createQuery( type );
         Root<T> root = query.from(type);
-        List<Predicate> predicates = new ArrayList<Predicate>();
-        for (Map.Entry entry: propertyMap.entrySet()) {
-            predicates.add(builder.equal(root.get((String) entry.getKey()), entry.getValue()));
-        }
-        query.select(root).where(builder.and(predicates.toArray(new Predicate[predicates.size()])));
-        return session.createQuery(query).getResultList();
+        Expression<String> propertyPath = root.get(propertyName);
+        query.where(builder.like(propertyPath, "%" + value + "%"));
+        List<T> entities = session.createQuery( query ).getResultList();
+        session.close();
+        return entities;
     }
 
     /**
-     * Insert or update the entity.
+     * Save or update the entity.
      *
-     * @param entity entity to be inserted/saved
+     * @param entity entity to be saved or updated
      */
     public void saveOrUpdate(T entity) {
         Session session = getSession();
