@@ -211,25 +211,6 @@ public class User {
         rankingConfiguration.setUser(null);
     }
 
-//    /**
-//     * Add wished game.
-//     *
-//     * @param wishedGame the wished game
-//     */
-//    public void addWishedGame(WishedGame wishedGame) {
-//        wishedGames.add(wishedGame);
-//        wishedGame.setUser(this);
-//    }
-//
-//    /**
-//     * Remove wished game.
-//     *
-//     * @param wishedGame the wished game
-//     */
-//    public void removeWishedGame(WishedGame wishedGame) {
-//        wishedGames.remove(wishedGame);
-//        wishedGame.setUser(null);
-
     @Override
     public String toString() {
         return "User{" +

@@ -12,21 +12,18 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * The type Wished game dao test.
+ * Class containing tests for the GenericDao and WishedGame classes.
  */
 class WishedGameDaoTest {
 
-    /**
-     * The Dao.
-     */
-    WishedGameDao dao;
+    GenericDao wishedGameDao;
 
     /**
      * Sets up new dao for each test.
      */
     @BeforeEach
     void setUp() {
-        dao = new WishedGameDao();
+        wishedGameDao = new GenericDao(WishedGame.class);
     }
 
     /**
@@ -43,16 +40,16 @@ class WishedGameDaoTest {
      */
     @Test
     void insertSuccess() {
-        UserDao userDao = new UserDao();
-        User user = userDao.getById(1);
+        GenericDao userDao = new GenericDao(User.class);
+        User user = (User) userDao.getById(1);
 
         WishedGame newWishedGame = new WishedGame(7463, user);
         user.addWishedGame(newWishedGame);
 
-        int id = dao.insert(newWishedGame);
+        int id = wishedGameDao.insert(newWishedGame);
 
         assertNotEquals(0, id);
-        WishedGame insertedWishedGame = dao.getById(id);
+        WishedGame insertedWishedGame = (WishedGame) wishedGameDao.getById(id);
         assertEquals(7463, insertedWishedGame.getIgdbGameId());
         assertNotNull(insertedWishedGame.getUser());
         assertEquals("jcoyne", insertedWishedGame.getUser().getUserName());
@@ -63,7 +60,7 @@ class WishedGameDaoTest {
      */
     @Test
     void getAllSuccess() {
-        List<WishedGame> wishedGames = dao.getAll();
+        List<WishedGame> wishedGames = wishedGameDao.getAll();
         assertEquals(6, wishedGames.size());
     }
 
@@ -72,27 +69,10 @@ class WishedGameDaoTest {
      */
     @Test
     void getByIdSuccess() {
-        WishedGame retrievedWishedGame = dao.getById(1);
+        WishedGame retrievedWishedGame = (WishedGame) wishedGameDao.getById(1);
+        assertNotNull(retrievedWishedGame);
         assertEquals(113112, retrievedWishedGame.getIgdbGameId());
         assertEquals(4, retrievedWishedGame.getUser().getId());
-    }
-
-    /**
-     * Gets by igdb game id success.
-     */
-    @Test
-    void getByIgdbGameIdSuccess() {
-        List<WishedGame> retrievedWishedGames = dao.getByIgdbGameId(113112);
-        assertEquals(2, retrievedWishedGames.size());
-    }
-
-    /**
-     * Gets by user id success.
-     */
-    @Test
-    void getByUserIdSuccess() {
-        List<WishedGame> retrievedWishedGames = dao.getByUserId(2);
-        assertEquals(2, retrievedWishedGames.size());
     }
 
     /**
@@ -101,10 +81,10 @@ class WishedGameDaoTest {
     @Test
     void saveOrUpdateSuccess() {
         int newIgdbGameId = 111469;
-        WishedGame wishedGameToUpdate = dao.getById(2);
+        WishedGame wishedGameToUpdate = (WishedGame) wishedGameDao.getById(2);
         wishedGameToUpdate.setIgdbGameId(newIgdbGameId);
-        dao.saveOrUpdate(wishedGameToUpdate);
-        WishedGame retrievedWishedGame = dao.getById(2);
+        wishedGameDao.saveOrUpdate(wishedGameToUpdate);
+        WishedGame retrievedWishedGame = (WishedGame) wishedGameDao.getById(2);
         assertEquals(newIgdbGameId, retrievedWishedGame.getIgdbGameId());
     }
 
@@ -113,8 +93,8 @@ class WishedGameDaoTest {
      */
     @Test
     void deleteSuccess() {
-        dao.delete(dao.getById(3));
-        assertNull(dao.getById(3));
+        wishedGameDao.delete(wishedGameDao.getById(3));
+        assertNull(wishedGameDao.getById(3));
     }
 
 }
