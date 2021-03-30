@@ -3,4 +3,7 @@
 <jsp:include page="contentType.jsp" />
 <html>
     <jsp:include page="head.jsp" />
+<body>
+    <a href="admin.jsp">admin</a>
+</body>
 </html>
