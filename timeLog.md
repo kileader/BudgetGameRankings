@@ -30,4 +30,5 @@
 | 3/2/21  | Updated files based on peer review feedback and for checkpoint 2 | 1.5 |
 | 3/19/21 | Created role entity | 1 |
 | 3/23/21 | Worked on GenericDao | 3 |
-| 3/28/21 | 
+| 3/28/21 | Worked on authentication | 2 |
+| 3/29/21 | Deployed project with improved security to AWS | 5 |
