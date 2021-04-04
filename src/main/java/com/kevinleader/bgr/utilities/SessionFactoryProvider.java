@@ -1,4 +1,4 @@
-package com.kevinleader.bgr.persistence;
+package com.kevinleader.bgr.utilities;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;

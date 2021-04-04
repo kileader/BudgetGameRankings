@@ -32,3 +32,4 @@
 | 3/23/21 | Worked on GenericDao | 3 |
 | 3/28/21 | Worked on authentication | 2 |
 | 3/29/21 | Deployed project with improved security to AWS | 5 |
+| 3/30/21 | Finished authentication work | 3 |

@@ -25,6 +25,7 @@ public class WishedGame {
     private int igdbGameId;
 
     @ManyToOne
+    @JoinColumn(name = "user_id", foreignKey = @ForeignKey(name = "user_id_fk"))
     private User user;
 
     /**

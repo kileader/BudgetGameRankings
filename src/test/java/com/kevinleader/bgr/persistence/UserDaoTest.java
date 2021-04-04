@@ -2,8 +2,8 @@ package com.kevinleader.bgr.persistence;
 
 import com.kevinleader.bgr.entity.User;
 import com.kevinleader.bgr.entity.WishedGame;
-//import com.kevinleader.bgr.entity.Role;
-import com.kevinleader.bgr.entity.RankingConfiguration;
+import com.kevinleader.bgr.entity.Role;
+//import com.kevinleader.bgr.entity.RankingConfiguration;
 import com.kevinleader.bgr.test.util.Database;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,9 +13,6 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * Class containing tests for the GenericDao and User classes.
- */
 class UserDaoTest {
 
     GenericDao userDao;
@@ -26,6 +23,15 @@ class UserDaoTest {
     @BeforeEach
     void setUp() {
         userDao = new GenericDao(User.class);
+    }
+
+    /**
+     * Resets the test database.
+     */
+    @AfterEach
+    void tearDown(){
+        Database database = Database.getInstance();
+        database.runSQL("cleandb.sql");
     }
 
     /**
@@ -98,6 +104,27 @@ class UserDaoTest {
         assertNull(userDao.getById(3));
     }
 
+
+    /**
+     * Tests inserting a user with a role.
+     */
+    @Test
+    void insertWithRoleSuccess() {
+        User newUser = new User("rphilman", "rphilman@yahoo.com", "finalanswer1mil");
+
+        String roleName = "user";
+        Role role = new Role(newUser, "underwater_basket_weaver", newUser.getUserName());
+
+        newUser.addRole(role);
+
+        int id = userDao.insert(newUser);
+
+        assertNotEquals(0, id);
+        User insertedUser = (User)userDao.getById(id);
+        assertEquals("rphilman", insertedUser.getUserName());
+        assertEquals(1, insertedUser.getRoles().size());
+    }
+
     /**
      * Tests inserting a user with wishedGame.
      */
@@ -116,11 +143,5 @@ class UserDaoTest {
         User insertedUser = (User)userDao.getById(id);
         assertEquals("rphilman", insertedUser.getUserName());
         assertEquals(1, insertedUser.getWishedGames().size());
-    }
-
-    @AfterEach
-    void tearDown(){
-        Database database = Database.getInstance();
-        database.runSQL("cleandb.sql");
     }
 }
