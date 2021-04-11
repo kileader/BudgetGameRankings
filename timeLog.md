@@ -34,3 +34,4 @@
 | 3/29/21 | Deployed project with improved security to AWS | 5 |
 | 3/30/21 | Finished authentication work | 3 |
 | 4/4/21  | Worked on team branching exercise | 4 |
+| 4/11/21 | Worked on implementing igdb.com API. Create test, class, and id reference. | 5 |
