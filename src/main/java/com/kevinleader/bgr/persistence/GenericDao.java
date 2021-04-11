@@ -132,6 +132,7 @@ public class GenericDao<T> {
      * @param entity entity to be saved or updated
      */
     public void saveOrUpdate(T entity) {
+        logger.debug("run saveOrUpdate({})", entity);
         Session session = getSession();
         Transaction transaction = session.beginTransaction();
         session.saveOrUpdate(entity);
@@ -145,6 +146,7 @@ public class GenericDao<T> {
      * @param entity entity to be deleted
      */
     public void delete(T entity) {
+        logger.debug("run delete({})", entity);
         Session session = getSession();
         Transaction transaction = session.beginTransaction();
         session.delete(entity);

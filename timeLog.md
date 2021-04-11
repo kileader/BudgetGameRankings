@@ -33,3 +33,4 @@
 | 3/28/21 | Worked on authentication | 2 |
 | 3/29/21 | Deployed project with improved security to AWS | 5 |
 | 3/30/21 | Finished authentication work | 3 |
+| 4/4/21  | Worked on team branching exercise | 4 |
