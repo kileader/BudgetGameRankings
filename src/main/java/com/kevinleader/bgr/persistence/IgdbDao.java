@@ -1,4 +1,4 @@
-//package com.kevinleader.bgr.persistence;
-//
-//public class IgdbDao {
-//}
+package com.kevinleader.bgr.persistence;
+
+public class IgdbDao {
+}

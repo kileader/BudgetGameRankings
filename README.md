@@ -16,14 +16,13 @@ rankings based on user chosen parameters.
 * Security/Authentication
   * Tomcat's JDBC Realm Authentication
 * Database
-  * MySQL 8.0.21
+  * MySQL 8.0.23
 * ORM Framework
   * Hibernate 5
 * Dependency Management
   * Maven
 * Web Services consumed using Java
   * igdb.com API
-  * pricecharting.com API
   * steampowered.com API
 * CSS
   * Bootstrap
@@ -34,15 +33,12 @@ rankings based on user chosen parameters.
   * Log4J2
 * Hosting
   * AWS
-* Independent Research Topic/s
-  * CI tools in AWS
-  * API Integration
-  * Hibernate Validation
-  * Hibernate Search
-* Project Lombok
 * Unit Testing
   * JUnit tests to achieve 80%+ code coverage 
-* IDE: IntelliJ IDEA
+* IDE
+  * IntelliJ IDEA
+* API Request Design
+  * Postman
 
 
 ### Design
