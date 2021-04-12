@@ -22,7 +22,7 @@ public class TestServiceClient {
 
     @Test
     public void testIgdbSearchFromName() throws Exception {
-        String search = "Hades";
+        String search = "Dark SoUls III".replaceAll(" ", "_");
         String fields = "id,aggregated_rating,aggregated_rating_count,cover,first_release_date," +
                 "genres,name,platforms,rating,rating_count,storyline,summary,total_rating," +
                 "total_rating_count,url";
@@ -39,7 +39,7 @@ public class TestServiceClient {
         String response = builder.get(String.class);
         ObjectMapper mapper = new ObjectMapper();
         Game[] games = mapper.readValue(response, Game[].class);
-        String expectedName = "Hades";
+        String expectedName = "Dark Souls III";
         assertEquals(expectedName, games[0].getName());
         client.close();
     }
