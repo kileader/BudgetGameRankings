@@ -2,7 +2,7 @@ package com.kevinleader.bgr.steampowered;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class AppsItem{
+public class GetAppListItem {
 
 	@JsonProperty("appid")
 	private int appid;
@@ -29,7 +29,7 @@ public class AppsItem{
 	@Override
  	public String toString(){
 		return 
-			"AppsItem{" + 
+			"ResponseItem{" + 
 			"appid = '" + appid + '\'' + 
 			",name = '" + name + '\'' + 
 			"}";

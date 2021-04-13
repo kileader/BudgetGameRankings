@@ -1,19 +1,14 @@
 package com.kevinleader.bgr.persistence;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.kevinleader.bgr.igdb.Game;
-import com.kevinleader.bgr.steampowered.AppsItem;
+import com.kevinleader.bgr.steampowered.AppDetails;
+import com.kevinleader.bgr.steampowered.GetAppListItem;
 import org.junit.Test;
 
 import javax.ws.rs.client.*;
 import javax.ws.rs.core.MediaType;
-
-import java.io.*;
-import java.util.Map;
-import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -62,8 +57,8 @@ public class TestServiceClient {
         JsonNode node3 = node2.get("apps");
         String json = node3.toString();
 
-        AppsItem[] appsItems = mapper.readValue(json, AppsItem[].class);
-        for (AppsItem app : appsItems) {
+        GetAppListItem[] apps = mapper.readValue(json, GetAppListItem[].class);
+        for (GetAppListItem app : apps) {
             appName = app.getName();
             if (appName.equals(gameName)) {
                 appId = app.getAppid();
@@ -74,27 +69,40 @@ public class TestServiceClient {
         client.close();
     }
 
-//    @Test
-//    public void testReadSteamIDJSON() throws JsonProcessingException {
-////        String gameName = "Hades";
-//        String result = "";
-////        boolean containsValue = false;
-//        try {
-//            BufferedReader reader = new BufferedReader(new FileReader("steamIDs.json"));
-//            StringBuilder builder = new StringBuilder();
-//            String line = reader.readLine();
-//            while (line != null) {
-//                builder.append(line);
-//                line = reader.readLine();
-//            }
-//            result = builder.toString();
-//        } catch(Exception e) {
-//            e.printStackTrace();
-//        }
-//        ObjectMapper mapper = new ObjectMapper();
-//        Map<String, Object> map
-//                = mapper.readValue(result, new TypeReference<Map<String,Object>>(){});
-//        assertEquals("???", map);
-//
-//    }
+
+    @Test
+    public void testFindSteamGameDetailsFromId() throws Exception {
+//        String steamId = String.valueOf(892970); // Valheim, an early access game with no Metacritic score
+        String steamId = String.valueOf(1145360); // Hades, a released game
+
+        String url = "https://store.steampowered.com/api/appdetails?appids=" + steamId;
+
+        Client client = ClientBuilder.newClient();
+        WebTarget target = client.target(url);
+        Invocation.Builder builder = target.request(MediaType.APPLICATION_JSON);
+        String response = builder.get(String.class);
+
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode node1 = mapper.readTree(response);
+        JsonNode node2 = node1.get(steamId);
+        JsonNode data = node2.get("data");
+
+        String priceOverview = "\"price_overview\":" + data.get("price_overview").toString();
+        String platforms = "\"platforms\":" + data.get("platforms").toString();
+        String metacritic = "\"metacritic\":" + data.get("metacritic").toString();
+        String categories = "\"categories\":" + data.get("categories").toString();
+        String genres = "\"genres\":" + data.get("genres").toString();
+        String releaseDate = "\"release_date\":" + data.get("release_date").toString();
+        String recommendations = "\"recommendations\":" + data.get("recommendations").get("total").toString();
+
+        String json = "{" + priceOverview + "," + platforms + "," + metacritic + "," + categories + "," +
+                genres + "," + releaseDate + "," + recommendations + "}";
+
+        AppDetails app = mapper.readValue(json, AppDetails.class);
+
+        assertEquals(93, app.getMetacritic().getScore());
+
+        client.close();
+    }
+
 }
