@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+nav a:hover {
+    color: white;
+    background-color: #343a40;
+}
+
+footer {
+    color: #fff;
+    background-color: black;
+    text-align: center;
+}
+
+div.container {
+    background-color: white;
+}
+/*https://www.sessions.edu/color-calculator-results/?colors=ffde05,6105ff,05a3ff*/
+img {
+    max-width: 100%;
+}
+
+label.bold, p.text-danger {
+    font-weight: bold;
+}

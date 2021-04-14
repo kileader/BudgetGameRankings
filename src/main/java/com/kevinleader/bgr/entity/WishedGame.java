@@ -18,15 +18,24 @@ public class WishedGame {
     @GenericGenerator(name = "native", strategy = "native")
     private int id;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id", foreignKey = @ForeignKey(name = "user_id_fk"))
+    private User user;
+
+    @Column(name = "game_name")
+    private String gameName;
+
     /**
-     * id number used to refer to a specific videogame on igdb.com
+     * id number used for the game on igdb.com
      */
     @Column(name = "igdb_game_id")
     private int igdbGameId;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id", foreignKey = @ForeignKey(name = "user_id_fk"))
-    private User user;
+    /**
+     * id number for the game on steampowered.com
+     */
+    @Column(name = "steam_id")
+    private int steamId;
 
     /**
      * Instantiates a new game on a user's wishlist.
@@ -34,77 +43,61 @@ public class WishedGame {
     public WishedGame() {
     }
 
-    /**
-     * Instantiates a new Wished game.
-     *
-     * @param igdbGameId the igdb game id
-     * @param user       the user
-     */
-    public WishedGame(int igdbGameId, User user) {
-        this.igdbGameId = igdbGameId;
+    public WishedGame(User user, String gameName, int igdbGameId, int steamId) {
         this.user = user;
+        this.gameName = gameName;
+        this.igdbGameId = igdbGameId;
+        this.steamId = steamId;
     }
 
-    /**
-     * Gets id.
-     *
-     * @return the id
-     */
     public int getId() {
         return id;
     }
 
-    /**
-     * Sets id.
-     *
-     * @param id the id
-     */
     public void setId(int id) {
         this.id = id;
     }
 
-    /**
-     * Gets igdb game id.
-     *
-     * @return the igdb game id
-     */
-    public int getIgdbGameId() {
-        return igdbGameId;
-    }
-
-    /**
-     * Sets igdb game id.
-     *
-     * @param igdbGameId the igdb game id
-     */
-    public void setIgdbGameId(int igdbGameId) {
-        this.igdbGameId = igdbGameId;
-    }
-
-    /**
-     * Gets user.
-     *
-     * @return the user
-     */
     public User getUser() {
         return user;
     }
 
-    /**
-     * Sets user.
-     *
-     * @param user the user
-     */
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public String getGameName() {
+        return gameName;
+    }
+
+    public void setGameName(String gameName) {
+        this.gameName = gameName;
+    }
+
+    public int getIgdbGameId() {
+        return igdbGameId;
+    }
+
+    public void setIgdbGameId(int igdbGameId) {
+        this.igdbGameId = igdbGameId;
+    }
+
+    public int getSteamId() {
+        return steamId;
+    }
+
+    public void setSteamId(int steamId) {
+        this.steamId = steamId;
     }
 
     @Override
     public String toString() {
         return "WishedGame{" +
                 "id=" + id +
-                ", igdbGameId=" + igdbGameId +
                 ", user=" + user +
+                ", gameName='" + gameName + '\'' +
+                ", igdbGameId=" + igdbGameId +
+                ", steamId=" + steamId +
                 '}';
     }
 }

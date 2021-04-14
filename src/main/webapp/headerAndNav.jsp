@@ -1,10 +1,10 @@
 <div class="col">
     <header class="jumbotron">
-        <h1>Budget Game Rankings</h1>
+        <h1 class="justify-content-center">Budget Game Rankings</h1>
     </header>
 
-    <nav class="navbar navbar-expand-sm navbar-dark">
-        <a class="navbar-brand" href="index.jsp">BudgetGameRankings</a>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+        <a class="navbar-brand brand" href="index.jsp">BudgetGameRankings</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>

@@ -58,9 +58,12 @@ class UserDaoTest {
      */
     @Test
     void getByIdSuccess() {
-        User retrievedUser = (User)userDao.getById(2);
+        User expectedUser = new User("fhensen",
+                "scoobydoolover@yahoo.com", "supersecret2");
+        expectedUser.setId(2);
+        User retrievedUser = (User) userDao.getById(2);
         assertNotNull(retrievedUser);
-        assertEquals("fhensen", retrievedUser.getUserName());
+        assertEquals(expectedUser, retrievedUser);
     }
 
     /**
@@ -88,10 +91,10 @@ class UserDaoTest {
     @Test
     void saveOrUpdateSuccess() {
         String newUserName = "kileader";
-        User userToUpdate = (User)userDao.getById(2);
+        User userToUpdate = (User) userDao.getById(2);
         userToUpdate.setUserName(newUserName);
         userDao.saveOrUpdate(userToUpdate);
-        User retrievedUser = (User)userDao.getById(2);
+        User retrievedUser = (User) userDao.getById(2);
         assertEquals(newUserName, retrievedUser.getUserName());
     }
 
@@ -111,17 +114,12 @@ class UserDaoTest {
     @Test
     void insertWithRoleSuccess() {
         User newUser = new User("rphilman", "rphilman@yahoo.com", "finalanswer1mil");
-
-        String roleName = "user";
         Role role = new Role(newUser, "underwater_basket_weaver", newUser.getUserName());
-
         newUser.addRole(role);
-
         int id = userDao.insert(newUser);
-
         assertNotEquals(0, id);
-        User insertedUser = (User)userDao.getById(id);
-        assertEquals("rphilman", insertedUser.getUserName());
+        User insertedUser = (User) userDao.getById(id);
+        assertEquals(newUser, insertedUser);
         assertEquals(1, insertedUser.getRoles().size());
     }
 
@@ -131,17 +129,14 @@ class UserDaoTest {
     @Test
     void insertWithWishedGameSuccess() {
         User newUser = new User("rphilman", "rphilman@yahoo.com", "finalanswer1mil");
-
         int igdbGameId = 113112;
-        WishedGame wishedGame = new WishedGame(igdbGameId, newUser);
-
+        WishedGame wishedGame = new WishedGame(newUser,
+                "Hello Kitty and Sanrio Friends Racing", 35243, 370600);
         newUser.addWishedGame(wishedGame);
-
         int id = userDao.insert(newUser);
-
         assertNotEquals(0, id);
-        User insertedUser = (User)userDao.getById(id);
-        assertEquals("rphilman", insertedUser.getUserName());
+        User insertedUser = (User) userDao.getById(id);
+        assertEquals(newUser, insertedUser);
         assertEquals(1, insertedUser.getWishedGames().size());
     }
 }
