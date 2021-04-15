@@ -37,4 +37,5 @@
 | 4/11/21 | Worked on implementing igdb.com API. Create test, class, and id reference. | 5 |
 | 4/11/21 | Got a test working for each of the APIs. Created AppsItem class for steamId references | 5 |
 | 4/12/21 | Worked on AppDetails endpoint for steampowered.com API. Added a test and classes to get all project related info. | 5 |
-| 4/12/21 | Edited WishedGame to include steamId and gameName. Built more webapp pages. | 5 |
+| 4/13/21 | Edited WishedGame to include steamId and gameName. Built more webapp pages. | 5 |
+| 4/14/21 | Built more of the webapp. Need to figure out user vs admin authentication. | 4 |

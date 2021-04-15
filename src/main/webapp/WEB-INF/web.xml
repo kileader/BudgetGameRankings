@@ -13,7 +13,15 @@
     </form-login-config>
   </login-config>
 
-  <!-- Protect everything in the adminOnly directory -->
+  <!-- Define roles -->
+  <security-role>
+    <role-name>user</role-name>
+  </security-role>
+  <security-role>
+    <role-name>admin</role-name>
+  </security-role>
+
+  <!-- Protect admin.jsp -->
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>admin</web-resource-name>
@@ -24,8 +32,16 @@
     </auth-constraint>
   </security-constraint>
 
-  <security-role>
-    <role-name>admin</role-name>
-  </security-role>
+  <!-- Protect wishlist.jsp -->
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>user</web-resource-name>
+      <url-pattern>/wishlist.jsp</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>user</role-name>
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
 
 </web-app>

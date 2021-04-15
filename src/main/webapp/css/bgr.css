@@ -1,3 +1,15 @@
+/*
+Budget Game Rankings
+Author: Kevin Leader
+Date: Spring 2021
+Filename: bgr.css
+*/
+
+/*
+TODO Colors?
+https://www.sessions.edu/color-calculator-results/?colors=ffde05,6105ff,05a3ff
+*/
+
 * {
     box-sizing: border-box;
 }
@@ -16,16 +28,10 @@ nav a:hover {
     background-color: #343a40;
 }
 
-footer {
-    color: #fff;
-    background-color: black;
-    text-align: center;
-}
-
 div.container {
     background-color: white;
 }
-/*https://www.sessions.edu/color-calculator-results/?colors=ffde05,6105ff,05a3ff*/
+
 img {
     max-width: 100%;
 }
