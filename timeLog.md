@@ -40,3 +40,4 @@
 | 4/13/21 | Edited WishedGame to include steamId and gameName. Built more webapp pages. | 5 |
 | 4/14/21 | Built more of the webapp. Need to figure out user vs admin authentication. | 4 |
 | 4/15/21 | Webapp now meets Checkpoint 3 goals. Tried to get an API working, but something is messed up. | 8 |
+| 4/16/21 | Deployed webapp to AWS for checkpoint 3. Had to fix war file name, etc. | 2 |
