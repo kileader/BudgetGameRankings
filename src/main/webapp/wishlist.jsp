@@ -7,10 +7,11 @@ Filename: wishlist.jsp
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="title" value="BGR - Wishlist"/>
 
 <html>
 
-<jsp:include page="head.jsp"/>
+<%@include file="head.jsp"%>
 
 <body>
   <div class="container">
@@ -37,7 +38,7 @@ Filename: wishlist.jsp
             <td>${game.igdbGameId}</td>
             <td>
               <c:choose>
-                <c:when test="${game.steamId} == '-1'">
+                <c:when test="${game.steamId eq -1}">
                   N/A
                 </c:when>
                 <c:otherwise>

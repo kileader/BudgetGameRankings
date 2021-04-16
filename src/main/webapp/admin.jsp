@@ -7,11 +7,11 @@ Filename: admin.jsp
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="title" value="BGR - Administration"/>
 
 <html>
 
-<c:set var="title" value="Budget Game Rankings" />
-<jsp:include page="head.jsp"/>
+<%@include file="head.jsp"%>
 
 <body>
   <div class="container">
