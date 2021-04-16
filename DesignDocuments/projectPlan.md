@@ -15,14 +15,14 @@
 - [X] At least one DAO with full CRUD with Hibernate
 - [X] DAO is fully unit tested
 - [X] Log4J is implemented
-- [ ] Implement IGDB.com API
-- [ ] Work on user interface
+- [X] Implement IGDB.com API
+- [X] Work on user interface
 
 ### Week 8 and 9
-- [ ] Deploy to AWS
-- [ ] At least one JSP that displays data from database
-- [ ] Authentication (login) implemented
-- [ ] Implement pricing APIs
+- [X] Deploy to AWS
+- [X] At least one JSP that displays data from database
+- [X] Authentication (login) implemented
+- [X] Implement pricing APIs
 - [ ] Implement user and admin controls
 
 ### Week 10 to 14
