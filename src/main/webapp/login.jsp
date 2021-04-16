@@ -32,7 +32,7 @@ Filename: login.jsp
 
         <div class="form-group">
           <label class="bold" for="password">Password</label>
-          <input type="password" id="password" placeholder="Username" name="j_password"
+          <input type="password" id="password" placeholder="Password" name="j_password"
                  class="form-control" pattern="^.{1,255}$" required>
           <div class="invalid-feedback">Password is required (up to 255 characters)</div>
         </div>

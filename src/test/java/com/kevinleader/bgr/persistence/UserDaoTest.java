@@ -16,22 +16,18 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserDaoTest {
 
     GenericDao userDao;
+    User newUser;
 
     /**
-     * Sets up new dao for each test.
+     * Resets database, sets up new dao, and creates new user for each test.
      */
     @BeforeEach
     void setUp() {
-        userDao = new GenericDao(User.class);
-    }
-
-    /**
-     * Resets the test database.
-     */
-    @AfterEach
-    void tearDown(){
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
+
+        userDao = new GenericDao(User.class);
+        newUser = new User("rphilman", "rphilman@yahoo.com", "finalanswer1mil");
     }
 
     /**
@@ -39,7 +35,6 @@ class UserDaoTest {
      */
     @Test
     void insertSuccess() {
-        User newUser = new User("rphilman", "rphilman@yahoo.com", "finalanswer1mil");
         int id = userDao.insert(newUser);
         assertNotEquals(0, id);
     }
@@ -58,12 +53,10 @@ class UserDaoTest {
      */
     @Test
     void getByIdSuccess() {
-        User expectedUser = new User("fhensen",
-                "scoobydoolover@yahoo.com", "supersecret2");
-        expectedUser.setId(2);
-        User retrievedUser = (User) userDao.getById(2);
+        int id = userDao.insert(newUser);
+        User retrievedUser = (User) userDao.getById(id);
         assertNotNull(retrievedUser);
-        assertEquals(expectedUser, retrievedUser);
+        assertEquals(newUser, retrievedUser);
     }
 
     /**
@@ -71,9 +64,10 @@ class UserDaoTest {
      */
     @Test
     void getByPropertyEqualSuccess() {
-        List<User> users = userDao.getByPropertyEqual("userName", "jcoyne");
+        userDao.insert(newUser);
+        List<User> users = userDao.getByPropertyEqual("userName", "rphilman");
         assertEquals(1, users.size());
-        assertEquals(1, users.get(0).getId());
+        assertEquals(newUser, users.get(0));
     }
 
     /**
@@ -81,8 +75,10 @@ class UserDaoTest {
      */
     @Test
     void getByPropertyLikeSuccess() {
-        List<User> users = userDao.getByPropertyLike("userName", "k");
+        userDao.insert(newUser);
+        List<User> users = userDao.getByPropertyLike("userName", "r");
         assertEquals(2, users.size());
+        assertEquals(newUser, users.get(1));
     }
 
     /**
@@ -113,7 +109,6 @@ class UserDaoTest {
      */
     @Test
     void insertWithRoleSuccess() {
-        User newUser = new User("rphilman", "rphilman@yahoo.com", "finalanswer1mil");
         Role role = new Role(newUser, "underwater_basket_weaver", newUser.getUserName());
         newUser.addRole(role);
         int id = userDao.insert(newUser);
@@ -128,7 +123,6 @@ class UserDaoTest {
      */
     @Test
     void insertWithWishedGameSuccess() {
-        User newUser = new User("rphilman", "rphilman@yahoo.com", "finalanswer1mil");
         int igdbGameId = 113112;
         WishedGame wishedGame = new WishedGame(newUser,
                 "Hello Kitty and Sanrio Friends Racing", 35243, 370600);

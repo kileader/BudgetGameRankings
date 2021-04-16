@@ -35,7 +35,7 @@
   <!-- Protect wishlist.jsp -->
   <security-constraint>
     <web-resource-collection>
-      <web-resource-name>user</web-resource-name>
+      <web-resource-name>wishlist</web-resource-name>
       <url-pattern>/wishlist.jsp</url-pattern>
     </web-resource-collection>
     <auth-constraint>
