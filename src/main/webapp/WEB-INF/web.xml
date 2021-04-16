@@ -25,9 +25,22 @@
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>admin</web-resource-name>
+      <url-pattern>/admin</url-pattern>
       <url-pattern>/admin.jsp</url-pattern>
     </web-resource-collection>
     <auth-constraint>
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <!-- Protect wishlist -->
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>wishlist</web-resource-name>
+      <url-pattern>/wishlist</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>user</role-name>
       <role-name>admin</role-name>
     </auth-constraint>
   </security-constraint>
@@ -37,6 +50,30 @@
     <web-resource-collection>
       <web-resource-name>wishlist</web-resource-name>
       <url-pattern>/wishlist.jsp</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>user</role-name>
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <!-- Protect userIndex.jsp -->
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>userLogin</web-resource-name>
+      <url-pattern>/login</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>user</role-name>
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <!-- Protect userIndex.jsp -->
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>userLogin</web-resource-name>
+      <url-pattern>/userIndex.jsp</url-pattern>
     </web-resource-collection>
     <auth-constraint>
       <role-name>user</role-name>

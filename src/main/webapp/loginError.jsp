@@ -17,10 +17,10 @@ Filename: loginError.jsp
   <div class="container">
     <div class="row"><jsp:include page="headerAndNav.jsp"/></div>
 
-    <main class="row">
-      <div class="col-12">
-        <h2>Invalid Login. <a href="login.jsp">Try again?</a></h2>
-      </div>
+    <main>
+      <section>
+        <h2>Invalid Login. <a href="/BudgetGameRankings/login">Try again?</a></h2>
+      </section>
     </main>
 
     <!-- <div class="row">footer</div> -->

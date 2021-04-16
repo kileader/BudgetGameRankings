@@ -5,7 +5,7 @@ Date: Spring 2021
 Filename: head.jsp
 -->
 <head>
-  <title>${title}</title>
+  <title>Budge Game Rankings</title>
 
   <!-- Meta tags for Bootstrap -->
   <meta charset="utf-8"/>

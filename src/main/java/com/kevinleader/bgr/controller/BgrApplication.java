@@ -5,6 +5,9 @@ import javax.ws.rs.core.Application;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Application for the BGR API
+ */
 @ApplicationPath("/api")
 
 public class BgrApplication extends Application {

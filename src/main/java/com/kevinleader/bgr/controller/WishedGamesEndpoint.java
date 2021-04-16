@@ -11,15 +11,40 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
+/**
+ * The type Wished games endpoint.
+ */
 @Path("/wished_games")
 public class WishedGamesEndpoint {
 
+    /**
+     * The User dao.
+     */
     GenericDao userDao;
+    /**
+     * The Wished game dao.
+     */
     GenericDao wishedGameDao;
+    /**
+     * The All users.
+     */
     List<User> allUsers;
+    /**
+     * The Wished games for user.
+     */
     List<WishedGame> wishedGamesForUser;
+    /**
+     * The Output.
+     */
     String output;
 
+    /**
+     * Gets message.
+     *
+     * @param userName the user name
+     * @param password the password
+     * @return the message
+     */
     @GET
     @Path("/{userName}/{password}")
     @Produces("application/text")

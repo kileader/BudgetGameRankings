@@ -15,7 +15,7 @@ Filename: admin.jsp
 
 <body>
   <div class="container">
-    <div class="row"><jsp:include page="headerAndNav.jsp"/></div>
+    <div class="row"><jsp:include page="userHeaderAndNav.jsp"/></div>
 
     <main>
       <section>

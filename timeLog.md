@@ -39,3 +39,4 @@
 | 4/12/21 | Worked on AppDetails endpoint for steampowered.com API. Added a test and classes to get all project related info. | 5 |
 | 4/13/21 | Edited WishedGame to include steamId and gameName. Built more webapp pages. | 5 |
 | 4/14/21 | Built more of the webapp. Need to figure out user vs admin authentication. | 4 |
+| 4/15/21 | Webapp now meets Checkpoint 3 goals. Tried to get an API working, but something is messed up. | 8 |
