@@ -2,7 +2,7 @@
 Budget Game Rankings
 Author: Kevin Leader
 Date: Spring 2021
-Filename: headerAndNav.jsp
+Filename: headerAndNavLoggedIn.jsp
 -->
 
 <div class="col">
@@ -11,7 +11,7 @@ Filename: headerAndNav.jsp
     </header>
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a class="navbar-brand brand" href="index.jsp">BudgetGameRankings</a>
+        <a class="navbar-brand brand" href="/BudgetGameRankings/home">BudgetGameRankings</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -19,12 +19,12 @@ Filename: headerAndNav.jsp
 
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.jsp">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="/BudgetGameRankings/login">Log In</a></li>
-                <li class="nav-item"><a class="nav-link" href="signup.jsp">Sign Up</a></li>
+                <li class="nav-item"><a class="nav-link" href="/BudgetGameRankings/home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="logout.jsp">Log Out</a></li>
+                <li class="nav-item"><a class="nav-link" href="">Sign Up</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Rank Configs</a></li>
                 <li class="nav-item"><a class="nav-link" href="/BudgetGameRankings/wishlist">Your Wishlist</a></li>
-                <li class="nav-item"><a class="nav-link" href="admin.jsp">Administration</a></li>
+                <li class="nav-item"><a class="nav-link" href="/BudgetGameRankings/admin">Administration</a></li>
             </ul>
         </div>
     </nav>

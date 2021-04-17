@@ -20,8 +20,9 @@ Filename: index.jsp
     <main>
       <section>
         <h2>
-          Hi there. Rankings will display here eventually.
-          Please <a href="/BudgetGameRankings/login">log in</a> to check your wishlist.
+          Hi there. Rankings will display here eventually. If you have an account,
+          please <a href="/BudgetGameRankings/login">log in</a> to check your wishlist.
+          Otherwise, if you want to customize your experience, please <a href="signup.jsp">sign up.</a>
         </h2>
       </section>
     </main>

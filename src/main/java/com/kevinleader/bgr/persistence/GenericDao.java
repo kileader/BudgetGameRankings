@@ -3,7 +3,7 @@ package com.kevinleader.bgr.persistence;
 import java.util.List;
 import javax.persistence.criteria.*;
 
-import com.kevinleader.bgr.utilities.SessionFactoryProvider;
+import com.kevinleader.bgr.utility.SessionFactoryProvider;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;

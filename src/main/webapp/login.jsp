@@ -19,7 +19,7 @@ Filename: login.jsp
 
     <main>
 
-      <form action="j_security_check" method="post" class="needs-validation" novalidate>
+      <form action="j_security_check" method="POST" class="needs-validation" novalidate>
 
         <h2>Sign In</h2>
 

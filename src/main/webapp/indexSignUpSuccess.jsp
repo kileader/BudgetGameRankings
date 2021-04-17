@@ -2,12 +2,12 @@
 Budget Game Rankings
 Author: Kevin Leader
 Date: Spring 2021
-Filename: loginError.jsp
+Filename: indexSignUpSuccess.jsp
 -->
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="title" value="BGR - Invalid Login"/>
+<c:set var="title" value="Budget Game Rankings"/>
 
 <html>
 
@@ -19,7 +19,10 @@ Filename: loginError.jsp
 
     <main>
       <section>
-        <h2>Invalid Login. <a href="/BudgetGameRankings/login">Try again?</a></h2>
+        <h2>
+          You have successfully signed up!
+          Please <a href="/BudgetGameRankings/login">log in</a> to create a <a href="#">Rank Config.</a>
+        </h2>
       </section>
     </main>
 

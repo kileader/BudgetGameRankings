@@ -1,7 +1,7 @@
 package com.kevinleader.bgr.persistence;
 
-import com.kevinleader.bgr.entity.User;
-import com.kevinleader.bgr.entity.WishedGame;
+import com.kevinleader.bgr.entity.database.User;
+import com.kevinleader.bgr.entity.database.WishedGame;
 import com.kevinleader.bgr.test.util.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

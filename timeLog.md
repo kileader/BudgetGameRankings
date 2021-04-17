@@ -41,3 +41,4 @@
 | 4/14/21 | Built more of the webapp. Need to figure out user vs admin authentication. | 4 |
 | 4/15/21 | Webapp now meets Checkpoint 3 goals. Tried to get an API working, but something is messed up. | 8 |
 | 4/16/21 | Deployed webapp to AWS for checkpoint 3. Had to fix war file name, etc. | 2 |
+| 4/16/21 | Worked on fixing various bugs, restructuring directories, and creating API DAOs | 8 |
