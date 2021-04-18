@@ -45,6 +45,13 @@ Filename: signup.jsp
         </div>
 
         <div class="form-group">
+          <label class="bold" for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" placeholder="Confirm Password" name="password"
+                 class="form-control" pattern="^.{1,255}$" required>
+          <div class="invalid-feedback">Password is required (up to 255 characters)</div>
+        </div>
+
+        <div class="form-group">
           <button type="submit" class="btn btn-success">Create Account</button>
         </div>
 

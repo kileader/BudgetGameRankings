@@ -24,6 +24,7 @@ Filename: index.jsp
           please <a href="/BudgetGameRankings/login">log in</a> to check your wishlist.
           Otherwise, if you want to customize your experience, please <a href="signup.jsp">sign up.</a>
         </h2>
+
       </section>
     </main>
 
