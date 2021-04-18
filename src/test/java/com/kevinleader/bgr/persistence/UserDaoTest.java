@@ -15,14 +15,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class UserDaoTest {
 
-    GenericDao userDao;
-    User newUser;
+    private GenericDao userDao;
+    private User newUser;
 
     /**
      * Resets database, sets up new dao, and creates new user for each test.
      */
     @BeforeEach
-    void setUp() {
+    public void setUp() {
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
 

@@ -17,7 +17,7 @@ import org.apache.logging.log4j.Logger;
 public class IgdbDao {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
-    String fields = "id,aggregated_rating,aggregated_rating_count,cover,first_release_date," +
+    private String fields = "id,aggregated_rating,aggregated_rating_count,cover,first_release_date," +
             "genres,name,platforms,rating,rating_count,storyline,summary,total_rating," +
             "total_rating_count,url";
 
@@ -45,8 +45,8 @@ public class IgdbDao {
         logger.debug("run loadGamesToRank({})", whereConditions);
 
         String url = "https://api.igdb.com/v4/games";
-        String body = "fields " + fields + "; limit 500; where rating_count > 0 & aggregated_rating_count > 0"
-                + whereConditions + "; sort total_rating desc;";
+        String body = "fields " + fields + "; limit 500; where rating_count > 0 " +
+                "& aggregated_rating_count > 0" + whereConditions + "; sort total_rating desc;";
 
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target(url);
@@ -59,6 +59,12 @@ public class IgdbDao {
         Game[] games = mapper.readValue(response, Game[].class);
         client.close();
         return games;
+    }
+
+    public int getReleaseDateEpoch(int releaseSpan) {
+        long currentTimestamp = System.currentTimeMillis();
+        int currentTimeSec = (int) (currentTimestamp / 1000);
+        return currentTimeSec - releaseSpan;
     }
 
 }

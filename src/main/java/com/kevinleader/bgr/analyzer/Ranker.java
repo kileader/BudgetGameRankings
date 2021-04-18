@@ -9,8 +9,13 @@ import java.util.List;
 public class Ranker {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
+    private String whereConditions;
 
-    public List Ranker(RankingConfiguration rankConfig) {
-        
+    public String createWhereConditions(RankingConfiguration rankConfig) {
+
+
+        return whereConditions;
     }
+
+
 }
