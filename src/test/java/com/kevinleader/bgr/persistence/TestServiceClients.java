@@ -1,5 +1,7 @@
 package com.kevinleader.bgr.persistence;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.kevinleader.bgr.entity.igdb.Game;
 import com.kevinleader.bgr.entity.steam.*;
 import org.junit.Test;
@@ -52,12 +54,12 @@ public class TestServiceClients {
      * @throws Exception the exception
      */
     @Test
-    public void testFindSteamGameDetailsFromId() throws Exception {
+    public void testGetPriceOverviewFromId() throws Exception {
         steamDao = new SteamDao();
-//        String steamId = String.valueOf(892970); // Valheim, an early access game with no Metacritic score
-        int steamId = 1145360; // Hades, a released game
-        AppDetails appDetails = steamDao.findSteamGameDetailsFromId(steamId);
-        assertEquals(93, appDetails.getMetacritic().getScore());
+        int steamId = 892970; // Valheim, an early access game with no Metacritic score
+//        int steamId = 601510; // Yu-Gi-Oh! Duel Links, freemium, doesn't work
+        PriceOverview appPrice = steamDao.getPriceOverviewFromId(steamId);
+        assertEquals(1999, appPrice.getInitial());
     }
 
 }

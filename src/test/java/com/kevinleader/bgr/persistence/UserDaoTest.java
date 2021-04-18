@@ -1,5 +1,6 @@
 package com.kevinleader.bgr.persistence;
 
+import com.kevinleader.bgr.entity.database.RankingConfiguration;
 import com.kevinleader.bgr.entity.database.User;
 import com.kevinleader.bgr.entity.database.WishedGame;
 import com.kevinleader.bgr.entity.database.Role;
@@ -122,7 +123,6 @@ class UserDaoTest {
      */
     @Test
     void insertWithWishedGameSuccess() {
-        int igdbGameId = 113112;
         WishedGame wishedGame = new WishedGame(newUser,
                 "Hello Kitty and Sanrio Friends Racing", 35243, 370600);
         newUser.addWishedGame(wishedGame);
@@ -131,5 +131,21 @@ class UserDaoTest {
         User insertedUser = (User) userDao.getById(id);
         assertEquals(newUser, insertedUser);
         assertEquals(1, insertedUser.getWishedGames().size());
+    }
+
+    /**
+     * Tests inserting a user with rankingConfiguration.
+     */
+    @Test
+    void insertWithRankingConfigurationSuccess() {
+        RankingConfiguration rankConfig = new RankingConfiguration(newUser,
+                "Jesus Take The Wheel", "37,5,49,167",
+                "24,30,34,36,9", 70000000, 20000);
+        newUser.addRankingConfiguration(rankConfig);
+        int id = userDao.insert(newUser);
+        assertNotEquals(0, id);
+        User insertedUser = (User) userDao.getById(id);
+        assertEquals(newUser, insertedUser);
+        assertEquals(1, insertedUser.getRankingConfigurations().size());
     }
 }

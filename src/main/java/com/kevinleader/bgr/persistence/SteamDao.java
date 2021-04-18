@@ -2,8 +2,8 @@ package com.kevinleader.bgr.persistence;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.kevinleader.bgr.entity.steam.AppDetails;
 import com.kevinleader.bgr.entity.steam.AppListItem;
+import com.kevinleader.bgr.entity.steam.PriceOverview;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -21,6 +21,7 @@ import javax.ws.rs.core.MediaType;
 public class SteamDao {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
+    AppListItem[] apps;
 
     public AppListItem[] loadSteamIds() throws Exception {
         logger.debug("run loadSteamIds()");
@@ -37,15 +38,17 @@ public class SteamDao {
         JsonNode node3 = node2.get("apps");
         String json = node3.toString();
 
-        AppListItem[] apps = mapper.readValue(json, AppListItem[].class);
+        apps = mapper.readValue(json, AppListItem[].class);
         client.close();
         return apps;
     }
 
     public int findSteamIdFromName(String gameName) throws Exception {
+        logger.debug("run findSteamIdFromName({})", gameName);
         SteamDao steamDao = new SteamDao();
-        AppListItem[] apps = steamDao.loadSteamIds();
-
+        if (apps == null) {
+            apps = steamDao.loadSteamIds();
+        }
         for (AppListItem app : apps) {
             String retrievedAppName = app.getName();
             if (retrievedAppName.equals(gameName)) {
@@ -55,9 +58,10 @@ public class SteamDao {
         return -1;
     }
 
-    public AppDetails findSteamGameDetailsFromId(int steamId) throws Exception {
+    public PriceOverview getPriceOverviewFromId(int steamId) throws Exception {
+        logger.debug("run getPriceOverviewFromId({})", steamId);
         String stringId = String.valueOf(steamId);
-        String url = "https://store.steampowered.com/api/appdetails?appids=" + stringId;
+        String url = "https://store.steampowered.com/api/appdetails?appids=" + stringId + "&currency=USD";
 
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target(url);
@@ -69,19 +73,11 @@ public class SteamDao {
         JsonNode node2 = node1.get(stringId);
         JsonNode data = node2.get("data");
 
-        String priceOverview = "\"price_overview\":" + data.get("price_overview").toString();
-        String platforms = "\"platforms\":" + data.get("platforms").toString();
-        String metacritic = "\"metacritic\":" + data.get("metacritic").toString();
-        String categories = "\"categories\":" + data.get("categories").toString();
-        String genres = "\"genres\":" + data.get("genres").toString();
-        String releaseDate = "\"release_date\":" + data.get("release_date").toString();
-        String recommendations = "\"recommendations\":" + data.get("recommendations").get("total").toString();
-        String json = "{" + priceOverview + "," + platforms + "," + metacritic + "," + categories + "," +
-                genres + "," + releaseDate + "," + recommendations + "}";
+        String priceOverview = data.get("price_overview").toString();
+        PriceOverview appPrice = mapper.readValue(priceOverview, PriceOverview.class);
 
-        AppDetails app = mapper.readValue(json, AppDetails.class);
         client.close();
-        return app;
+        return appPrice;
     }
 
 }

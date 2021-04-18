@@ -16,6 +16,10 @@ public class RankingConfiguration {
     @GenericGenerator(name = "native", strategy = "native")
     private int id;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id", foreignKey = @ForeignKey(name = "ranking_configuration_user_id_fk"))
+    private User user;
+
     @Column(name = "configuration_name")
     private String configurationName;
 
@@ -26,17 +30,11 @@ public class RankingConfiguration {
     @Column(name = "release_span")
     private int releaseSpan;
 
-    @Column(name = "lowest_price")
-    private int lowestPrice;
-
     @Column(name = "highest_price")
     private int highestPrice;
 
-    @ManyToOne
-    private User user;
-
     /**
-     * Instantiates a new Rank setting.
+     * Instantiates a new Ranking configuration.
      */
     public RankingConfiguration() {
     }
@@ -44,22 +42,20 @@ public class RankingConfiguration {
     /**
      * Instantiates a new Ranking configuration.
      *
+     * @param user              the user
      * @param configurationName the configuration name
      * @param platforms         the platforms
      * @param genres            the genres
      * @param releaseSpan       the release span
-     * @param lowestPrice       the lowest price
      * @param highestPrice      the highest price
-     * @param user              the user
      */
-    public RankingConfiguration(String configurationName, String platforms, String genres, int releaseSpan, int lowestPrice, int highestPrice, User user) {
+    public RankingConfiguration(User user, String configurationName, String platforms, String genres, int releaseSpan, int highestPrice) {
+        this.user = user;
         this.configurationName = configurationName;
         this.platforms = platforms;
         this.genres = genres;
         this.releaseSpan = releaseSpan;
-        this.lowestPrice = lowestPrice;
         this.highestPrice = highestPrice;
-        this.user = user;
     }
 
     /**
@@ -78,6 +74,24 @@ public class RankingConfiguration {
      */
     public void setId(int id) {
         this.id = id;
+    }
+
+    /**
+     * Gets user.
+     *
+     * @return the user
+     */
+    public User getUser() {
+        return user;
+    }
+
+    /**
+     * Sets user.
+     *
+     * @param user the user
+     */
+    public void setUser(User user) {
+        this.user = user;
     }
 
     /**
@@ -153,24 +167,6 @@ public class RankingConfiguration {
     }
 
     /**
-     * Gets lowest price.
-     *
-     * @return the lowest price
-     */
-    public int getLowestPrice() {
-        return lowestPrice;
-    }
-
-    /**
-     * Sets lowest price.
-     *
-     * @param lowestPrice the lowest price
-     */
-    public void setLowestPrice(int lowestPrice) {
-        this.lowestPrice = lowestPrice;
-    }
-
-    /**
      * Gets highest price.
      *
      * @return the highest price
@@ -188,35 +184,16 @@ public class RankingConfiguration {
         this.highestPrice = highestPrice;
     }
 
-    /**
-     * Gets user.
-     *
-     * @return the user
-     */
-    public User getUser() {
-        return user;
-    }
-
-    /**
-     * Sets user.
-     *
-     * @param user the user
-     */
-    public void setUser(User user) {
-        this.user = user;
-    }
-
     @Override
     public String toString() {
         return "RankingConfiguration{" +
                 "id=" + id +
+                ", user=" + user +
                 ", configurationName='" + configurationName + '\'' +
                 ", platforms='" + platforms + '\'' +
                 ", genres='" + genres + '\'' +
                 ", releaseSpan=" + releaseSpan +
-                ", lowestPrice=" + lowestPrice +
                 ", highestPrice=" + highestPrice +
-                ", user=" + user +
                 '}';
     }
 }

@@ -1,5 +1,6 @@
 package com.kevinleader.bgr.controller.servlet;
 
+import com.kevinleader.bgr.entity.database.RankingConfiguration;
 import com.kevinleader.bgr.entity.database.Role;
 import com.kevinleader.bgr.entity.database.User;
 import com.kevinleader.bgr.persistence.GenericDao;
@@ -28,6 +29,7 @@ public class SignUp extends HttpServlet {
     private User receivedUser;
     private User newUser;
     private Role newRole;
+    private RankingConfiguration newRankingConfiguration;
 
     @Override
     public void init() {
@@ -49,6 +51,8 @@ public class SignUp extends HttpServlet {
 
         newRole = new Role(newUser, "user", newUser.getUserName());
         newUser.addRole(newRole);
+
+        newRankingConfiguration = new RankingConfiguration(newUser, "Any Game for Past Year", "Any", "Any", 31556926, 7000);
 
         int id = userDao.insert(newUser);
 
