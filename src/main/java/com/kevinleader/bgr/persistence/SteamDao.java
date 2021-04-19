@@ -21,7 +21,7 @@ import javax.ws.rs.core.MediaType;
 public class SteamDao {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
-    private AppListItem[] apps;
+    AppListItem[] apps;
 
     public AppListItem[] loadSteamIds() throws Exception {
         logger.debug("run loadSteamIds()");

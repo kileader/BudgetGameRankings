@@ -40,7 +40,6 @@ public class IgdbDao {
         return games;
     }
 
-    // TODO finish loadGamesToRank and start next step in displaying rankings
     public Game[] loadGamesToRank(String whereConditions) throws JsonProcessingException {
         logger.debug("run loadGamesToRank({})", whereConditions);
 

@@ -1,22 +1,22 @@
+*Freemium
+Android - 34
+iOS - 39
+
 *Variety
 Linux - 3
 PC (Microsoft Windows) - 5
 Mac OS - 14
 
 *$70
-Xbox Series - 169
 PlayStation 5 - 167
+Xbox Series - 169
 
 *$60
-Nintendo Switch - 130
-Xbox One - 49
-PlayStation 4 - 48
 Wii U - 41
-
-*Freemium
-iOS - 39
-Android - 34
+PlayStation 4 - 48
+Xbox One - 49
+Nintendo Switch - 130
 
 *Variety
-Playstation Vita - 46
 Nintendo 3DS - 37
+Playstation Vita - 46
