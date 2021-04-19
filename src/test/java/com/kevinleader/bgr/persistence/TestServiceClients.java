@@ -1,14 +1,8 @@
 package com.kevinleader.bgr.persistence;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.kevinleader.bgr.entity.igdb.Game;
 import com.kevinleader.bgr.entity.steam.*;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
-
-import javax.ws.rs.client.*;
-import javax.ws.rs.core.MediaType;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

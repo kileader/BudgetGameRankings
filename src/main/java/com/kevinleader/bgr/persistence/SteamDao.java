@@ -21,7 +21,7 @@ import javax.ws.rs.core.MediaType;
 public class SteamDao {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
-    AppListItem[] apps;
+    static AppListItem[] apps;
 
     public AppListItem[] loadSteamIds() throws Exception {
         logger.debug("run loadSteamIds()");
@@ -60,6 +60,9 @@ public class SteamDao {
 
     public PriceOverview getPriceOverviewFromId(int steamId) throws Exception {
         logger.debug("run getPriceOverviewFromId({})", steamId);
+        String priceOverview;
+        PriceOverview appPrice;
+
         String stringId = String.valueOf(steamId);
         String url = "https://store.steampowered.com/api/appdetails?appids=" + stringId + "&currency=USD";
 
@@ -73,9 +76,12 @@ public class SteamDao {
         JsonNode node2 = node1.get(stringId);
         JsonNode data = node2.get("data");
 
-        String priceOverview = data.get("price_overview").toString();
-        PriceOverview appPrice = mapper.readValue(priceOverview, PriceOverview.class);
-
+        if ((data != null) && (data.findValue("price_overview") != null)) {
+            priceOverview = data.get("price_overview").toString();
+            appPrice = mapper.readValue(priceOverview, PriceOverview.class);
+        } else { //TODO: change this?
+            appPrice = new PriceOverview("", 0, 0, "", "", 0);
+        }
         client.close();
         return appPrice;
     }

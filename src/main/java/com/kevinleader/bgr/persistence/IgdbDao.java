@@ -61,6 +61,7 @@ public class IgdbDao {
     }
 
     public int getReleaseDateEpoch(int releaseSpan) {
+        logger.debug("run getReleaseDateEpoch({})", releaseSpan);
         long currentTimestamp = System.currentTimeMillis();
         int currentTimeSec = (int) (currentTimestamp / 1000);
         return currentTimeSec - releaseSpan;

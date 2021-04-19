@@ -43,3 +43,4 @@
 | 4/16/21 | Deployed webapp to AWS for checkpoint 3. Had to fix war file name, etc. | 2 |
 | 4/16/21 | Worked on fixing various bugs, restructuring directories, and creating API DAOs | 8 |
 | 4/17/21 | Spent the whole day casually figuring out alot of things. Fixed up RankingConfiguration stuff. | 10 |
+| 4/18/21 | Spent long time today also. Almost have a ranking system finished. | 10 |

@@ -22,6 +22,18 @@ public class PriceOverview{
 	@JsonProperty("discount_percent")
 	private int discountPercent;
 
+	public PriceOverview() {
+	}
+
+	public PriceOverview(String finalFormatted, int initial, int jsonMemberFinal, String currency, String initialFormatted, int discountPercent) {
+		this.finalFormatted = finalFormatted;
+		this.initial = initial;
+		this.jsonMemberFinal = jsonMemberFinal;
+		this.currency = currency;
+		this.initialFormatted = initialFormatted;
+		this.discountPercent = discountPercent;
+	}
+
 	public void setFinalFormatted(String finalFormatted){
 		this.finalFormatted = finalFormatted;
 	}
