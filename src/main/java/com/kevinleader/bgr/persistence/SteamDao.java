@@ -87,7 +87,7 @@ public class SteamDao {
 //        client.close();
 //        return appPrice;
 //    }
-
+//
     public List<PriceOverview> getPriceOverviewsFromIds(List<Integer> steamIds) throws Exception {
         logger.debug("run getPriceOverviewsFromIds({})", steamIds);
         List<PriceOverview> appPrices = new ArrayList<>();

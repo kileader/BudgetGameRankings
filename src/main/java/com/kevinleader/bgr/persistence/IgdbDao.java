@@ -23,7 +23,7 @@ public class IgdbDao {
     private final Logger logger = LogManager.getLogger(this.getClass());
     private String fields = "id,aggregated_rating,aggregated_rating_count,cover,first_release_date," +
             "genres,name,platforms,rating,rating_count,storyline,summary,total_rating," +
-            "total_rating_count,url,websites";
+            "total_rating_count,url,websites.*";
 
     public Game[] searchFromGameName(String gameName) throws JsonProcessingException {
         logger.debug("run searchFromName({})", gameName);
@@ -48,7 +48,7 @@ public class IgdbDao {
         logger.debug("run loadGamesToRank({})", whereConditions);
 
         String url = "https://api.igdb.com/v4/games";
-        String body = "fields " + fields + "; limit " + whereConditions + " & rating_count > 4 " +
+        String body = "fields " + fields + "; limit 500; " + whereConditions + " & rating_count > 4 " +
                 "& aggregated_rating_count > 1; sort total_rating desc;";
 
         Client client = ClientBuilder.newClient();
@@ -80,22 +80,22 @@ public class IgdbDao {
         return names;
     }
 
-    public Website[] getWebsitesFromGameId(int gameId) throws JsonProcessingException {
-        logger.debug("run getWebsitesFromGameId({})", gameId);
-        String url = "https://api.igdb.com/v4/websites/";
-        String body = "fields *; where game = " + gameId + ";";
-
-        Client client = ClientBuilder.newClient();
-        WebTarget target = client.target(url);
-        Invocation.Builder builder = target.request(MediaType.APPLICATION_JSON);
-        builder.header("Client-Id", "bdm989e3d9fgsslcn2l9d9hktacpq3");
-        builder.header("Authorization", "Bearer 7pslgqjjgluo8ci4vslr0gsm4uvavq");
-        builder.header("Accept", "application/json");
-        String response = builder.post(Entity.entity(body, MediaType.APPLICATION_JSON), String.class);
-        ObjectMapper mapper = new ObjectMapper();
-        Website[] websites = mapper.readValue(response, Website[].class);
-        client.close();
-        return websites;
-    }
+//    public Website[] getWebsitesFromGameId(int gameId) throws JsonProcessingException {
+//        logger.debug("run getWebsitesFromGameId({})", gameId);
+//        String url = "https://api.igdb.com/v4/websites/";
+//        String body = "fields *; where game = " + gameId + ";";
+//
+//        Client client = ClientBuilder.newClient();
+//        WebTarget target = client.target(url);
+//        Invocation.Builder builder = target.request(MediaType.APPLICATION_JSON);
+//        builder.header("Client-Id", "bdm989e3d9fgsslcn2l9d9hktacpq3");
+//        builder.header("Authorization", "Bearer 7pslgqjjgluo8ci4vslr0gsm4uvavq");
+//        builder.header("Accept", "application/json");
+//        String response = builder.post(Entity.entity(body, MediaType.APPLICATION_JSON), String.class);
+//        ObjectMapper mapper = new ObjectMapper();
+//        Website[] websites = mapper.readValue(response, Website[].class);
+//        client.close();
+//        return websites;
+//    }
 
 }

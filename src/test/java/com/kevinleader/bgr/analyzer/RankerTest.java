@@ -24,7 +24,7 @@ public class RankerTest {
     public void getPricesSuccess() throws Exception {
         ranker = new Ranker();
         igdbDao = new IgdbDao();
-        String whereConditions = " & first_release_date > " +
+        String whereConditions = "where first_release_date > " +
                 igdbDao.getReleaseDateEpoch(157784630) +
                 " & name = \"Valheim\"";
         List<Integer> prices;
@@ -38,7 +38,7 @@ public class RankerTest {
     public void getGameValuesSuccess() throws Exception {
         ranker = new Ranker();
         igdbDao = new IgdbDao();
-        String whereConditions = " & first_release_date > " +
+        String whereConditions = "where first_release_date > " +
                 igdbDao.getReleaseDateEpoch(157784630);
         Game[] games = igdbDao.loadGamesToRank(whereConditions);
         List<Integer> prices = ranker.getPrices(games);
@@ -51,11 +51,9 @@ public class RankerTest {
         ranker = new Ranker();
         igdbDao = new IgdbDao();
 
-//        int limit = 100;
-        int limit = 500;
         int releaseDate = igdbDao.getReleaseDateEpoch(157784630);
         
-        String whereConditions = limit + "; where first_release_date > " + releaseDate;
+        String whereConditions = "where first_release_date > " + releaseDate;
 
         Game[] games = igdbDao.loadGamesToRank(whereConditions);
         List<String> names = igdbDao.getNames(games);

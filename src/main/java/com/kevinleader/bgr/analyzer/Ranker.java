@@ -63,19 +63,21 @@ public class Ranker {
             if (game.getPlatforms().contains(6) ||
                     game.getPlatforms().contains(162) ||
                     game.getPlatforms().contains(163)) { //check if on PC or VR
-                Website[] websites = igdbDao.getWebsitesFromGameId(game.getId());
                 int steamId = -1;
-                for (Website website : websites) { //check for steam url to get steamId
-                    if (website.getCategory() == 13) { //if the url is for steam
-                        String steamUrl = website.getUrl();
-                        Pattern pattern = Pattern.compile("app\\/\\d+");
-                        Matcher matcher = pattern.matcher(steamUrl);
-                        if (matcher.find()) {
-                            String stringGroup = matcher.group();
-                            String stringId = stringGroup.substring(4);
-                            steamId = Integer.parseInt(stringId); //extract the id
+                List<Website> websites = game.getWebsites();
+                if (websites != null) {
+                    for (Website website : websites) { //check for steam url to get steamId
+                        if (website.getCategory() == 13) { //if the url is for steam
+                            String steamUrl = website.getUrl();
+                            Pattern pattern = Pattern.compile("app\\/\\d+");
+                            Matcher matcher = pattern.matcher(steamUrl);
+                            if (matcher.find()) {
+                                String stringGroup = matcher.group();
+                                String stringId = stringGroup.substring(4);
+                                steamId = Integer.parseInt(stringId); //extract the id
+                            }
+                            break;
                         }
-                        break;
                     }
                 }
                 if (steamId > 0) { //if steamId exists

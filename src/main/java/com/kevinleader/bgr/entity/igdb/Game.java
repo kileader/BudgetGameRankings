@@ -51,7 +51,7 @@ public class Game{
 	private int id;
 
 	@JsonProperty("websites")
-	private List<Integer> websites;
+	private List<Website> websites;
 
 	public void setSummary(String summary){
 		this.summary = summary;
@@ -173,11 +173,11 @@ public class Game{
 		return id;
 	}
 
-	public List<Integer> getWebsites() {
+	public List<Website> getWebsites() {
 		return websites;
 	}
 
-	public void setWebsites(List<Integer> websites) {
+	public void setWebsites(List<Website> websites) {
 		this.websites = websites;
 	}
 

@@ -44,12 +44,13 @@ public class TestServiceClients {
     @Test
     public void loadGamesToRankSuccess() throws Exception {
         igdbDao = new IgdbDao();
-        String platforms = " & platforms = (5,167,169)"; // is on PC, xbox series x, or playstation 5
+        String limit = "500; where";
+        String platforms = " platforms = (5,167,169)"; // is on PC, xbox series x, or playstation 5
         String genres = " & genres = (31,12,32,25,8)"; // is an adventure, rpg, indie, hack and slash, or platformer game (DesignDocuments.genreId.txt)
         int releaseEpoch = igdbDao.getReleaseDateEpoch(31556926);
         String releaseDate = " & first_release_date > " + releaseEpoch; // released within a year ago
 //        String whereCondition = releaseDate;
-        String whereCondition = platforms + genres + releaseDate;
+        String whereCondition = limit + platforms + genres + releaseDate;
         Game[] games = igdbDao.loadGamesToRank(whereCondition);
         assertEquals("It Takes Two", games[0].getName());
     }
@@ -78,13 +79,13 @@ public class TestServiceClients {
 //        assertEquals(1999, appPrice.getInitial());
 //    }
 
-    @Test
-    public void getWebsitesFromGameIdSuccess() throws JsonProcessingException {
-        igdbDao = new IgdbDao();
-        int gameId = 113112;
-        Website[] websites = igdbDao.getWebsitesFromGameId(gameId);
-        assertEquals("https://en.wikipedia.org/wiki/Hades_(video_game)" , websites[0].getUrl());
-    }
+//    @Test
+//    public void getWebsitesFromGameIdSuccess() throws JsonProcessingException {
+//        igdbDao = new IgdbDao();
+//        int gameId = 113112;
+//        Website[] websites = igdbDao.getWebsitesFromGameId(gameId);
+//        assertEquals("https://en.wikipedia.org/wiki/Hades_(video_game)" , websites[0].getUrl());
+//    }
 
     /**
      * Test find steam game details from id.
