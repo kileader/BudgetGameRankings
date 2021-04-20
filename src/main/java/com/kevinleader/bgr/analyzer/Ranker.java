@@ -4,15 +4,12 @@ import com.kevinleader.bgr.entity.igdb.Game;
 import com.kevinleader.bgr.entity.igdb.Website;
 import com.kevinleader.bgr.entity.ranker.RankedGame;
 import com.kevinleader.bgr.entity.steam.PriceOverview;
-import com.kevinleader.bgr.persistence.IgdbDao;
 import com.kevinleader.bgr.persistence.SteamDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

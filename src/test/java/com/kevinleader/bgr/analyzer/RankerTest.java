@@ -1,6 +1,5 @@
 package com.kevinleader.bgr.analyzer;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.kevinleader.bgr.entity.igdb.Game;
 import com.kevinleader.bgr.entity.ranker.RankedGame;
 import com.kevinleader.bgr.persistence.IgdbDao;
