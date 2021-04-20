@@ -12,6 +12,8 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Invocation;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * DAO for use with the steampowered.com web service
@@ -58,13 +60,47 @@ public class SteamDao {
         return -1;
     }
 
-    public PriceOverview getPriceOverviewFromId(int steamId) throws Exception {
-        logger.debug("run getPriceOverviewFromId({})", steamId);
-        String priceOverview;
-        PriceOverview appPrice;
+//    public PriceOverview getPriceOverviewFromId(int steamId) throws Exception {
+//        logger.debug("run getPriceOverviewFromId({})", steamId);
+//        String priceOverview;
+//        PriceOverview appPrice;
+//
+//        String stringId = String.valueOf(steamId);
+//        String url = "https://store.steampowered.com/api/appdetails?appids=" + stringId + "&currency=USD";
+//
+//        Client client = ClientBuilder.newClient();
+//        WebTarget target = client.target(url);
+//        Invocation.Builder builder = target.request(MediaType.APPLICATION_JSON);
+//        String response = builder.get(String.class);
+//
+//        ObjectMapper mapper = new ObjectMapper();
+//        JsonNode node1 = mapper.readTree(response);
+//        JsonNode node2 = node1.get(stringId);
+//        JsonNode data = node2.get("data");
+//
+//        if ((data != null) && (data.findValue("price_overview") != null)) {
+//            priceOverview = data.get("price_overview").toString();
+//            appPrice = mapper.readValue(priceOverview, PriceOverview.class);
+//        } else {
+//            appPrice = new PriceOverview("", 0, 0, "", "", 0);
+//        }
+//        client.close();
+//        return appPrice;
+//    }
 
-        String stringId = String.valueOf(steamId);
-        String url = "https://store.steampowered.com/api/appdetails?appids=" + stringId + "&currency=USD";
+    public List<PriceOverview> getPriceOverviewsFromIds(List<Integer> steamIds) throws Exception {
+        logger.debug("run getPriceOverviewsFromIds({})", steamIds);
+        List<PriceOverview> appPrices = new ArrayList<>();
+        String stringIds = "";
+
+        for (int id : steamIds) {
+            stringIds += String.valueOf(id);
+            stringIds += ",";
+        }
+        String finalStringIds = stringIds.substring(0,stringIds.length()-1);
+
+        String url = "https://store.steampowered.com/api/appdetails?appids="
+                + finalStringIds + "&currency=USD&filters=price_overview";
 
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target(url);
@@ -73,17 +109,19 @@ public class SteamDao {
 
         ObjectMapper mapper = new ObjectMapper();
         JsonNode node1 = mapper.readTree(response);
-        JsonNode node2 = node1.get(stringId);
-        JsonNode data = node2.get("data");
-
-        if ((data != null) && (data.findValue("price_overview") != null)) {
-            priceOverview = data.get("price_overview").toString();
-            appPrice = mapper.readValue(priceOverview, PriceOverview.class);
-        } else { //TODO: change this?
-            appPrice = new PriceOverview("", 0, 0, "", "", 0);
+        for (int id : steamIds) {
+            PriceOverview appPrice;
+            JsonNode node2 = node1.get(Integer.toString(id));
+            JsonNode data = node2.get("data");
+            if ((data != null) && (data.findValue("price_overview") != null)) {
+                String priceOverview = data.get("price_overview").toString();
+                appPrice = mapper.readValue(priceOverview, PriceOverview.class);
+            } else {
+                appPrice = new PriceOverview("", 0, 0, "", "", 0);
+            }
+            appPrices.add(appPrice);
         }
-        client.close();
-        return appPrice;
+        return appPrices;
     }
 
 }

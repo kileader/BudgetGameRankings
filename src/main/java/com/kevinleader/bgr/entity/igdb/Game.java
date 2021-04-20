@@ -50,6 +50,9 @@ public class Game{
 	@JsonProperty("id")
 	private int id;
 
+	@JsonProperty("websites")
+	private List<Integer> websites;
+
 	public void setSummary(String summary){
 		this.summary = summary;
 	}
@@ -170,6 +173,14 @@ public class Game{
 		return id;
 	}
 
+	public List<Integer> getWebsites() {
+		return websites;
+	}
+
+	public void setWebsites(List<Integer> websites) {
+		this.websites = websites;
+	}
+
 	@Override
  	public String toString(){
 		return 
@@ -188,7 +199,8 @@ public class Game{
 			",total_rating_count = '" + totalRatingCount + '\'' + 
 			",aggregated_rating = '" + aggregatedRating + '\'' + 
 			",total_rating = '" + totalRating + '\'' + 
-			",id = '" + id + '\'' + 
+			",id = '" + id + '\'' +
+			",websites = '" + websites + '\'' +
 			"}";
 		}
 }

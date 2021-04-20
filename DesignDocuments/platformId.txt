@@ -2,10 +2,15 @@
 Android - 34
 iOS - 39
 
-*Variety
+*Computer
 Linux - 3
-PC (Microsoft Windows) - 5
+PC (Microsoft Windows) - 6
 Mac OS - 14
+
+*Virtual Reality
+Oculus VR - 162
+Steam VR - 163
+Playstation VR - 165
 
 *$70
 PlayStation 5 - 167
