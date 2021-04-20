@@ -27,8 +27,6 @@ public class Wishlist extends HttpServlet {
     private final Logger logger = LogManager.getLogger(this.getClass());
     private GenericDao userDao;
     private GenericDao wishedGameDao;
-    private User user;
-    private List<WishedGame> games;
 
     @Override
     public void init() {
@@ -47,9 +45,9 @@ public class Wishlist extends HttpServlet {
         String username = req.getUserPrincipal().getName();
         List<User> users = userDao.getByPropertyEqual("userName", username);
         int userId = users.get(0).getId();
-        user = (User) userDao.getById(userId);
+        User user = (User) userDao.getById(userId);
 
-        games = wishedGameDao.getByPropertyEqual("user", user);
+        List<WishedGame> games = wishedGameDao.getByPropertyEqual("user", user);
         req.setAttribute("games", games);
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("/wishlist.jsp");

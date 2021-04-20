@@ -16,18 +16,29 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * The type Ranker.
+ */
 public class Ranker {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
-    private IgdbDao igdbDao;
-    private SteamDao steamDao;
+    private final SteamDao steamDao;
 
+    /**
+     * Instantiates a new Ranker.
+     */
     public Ranker() {
-        igdbDao = new IgdbDao();
         steamDao = new SteamDao();
     }
 
+    /**
+     * Gets prices.
+     *
+     * @param games the games
+     * @return the prices
+     * @throws Exception the exception
+     */
     public List<Integer> getPrices(Game[] games) throws Exception {
         List<Integer> steamIds = new ArrayList<>();
         List<Integer> steamPrices = new ArrayList<>();
@@ -39,7 +50,7 @@ public class Ranker {
             logger.debug("find price for {}", game.getName());
 
             int price = -1; //unknown price
-            Boolean isSteamPrice = false;
+            boolean isSteamPrice = false;
 
             if (game.getPlatforms().contains(41) ||
                     game.getPlatforms().contains(48) ||
@@ -105,10 +116,9 @@ public class Ranker {
             steamPrices.add(price);
         }
 
-        Integer steamIndex = 0;
-        Integer otherIndex = 0;
-        for (int i = 0; i < indexIsSteamPrice.size(); i++) {
-            Boolean isSteamPrice = indexIsSteamPrice.get(i);
+        int steamIndex = 0;
+        int otherIndex = 0;
+        for (boolean isSteamPrice : indexIsSteamPrice) {
             if (isSteamPrice) {
                 prices.add(steamPrices.get(steamIndex));
                 steamIndex++;
@@ -120,6 +130,14 @@ public class Ranker {
         return prices;
     }
 
+    /**
+     * Gets game values.
+     *
+     * @param games  the games
+     * @param prices the prices
+     * @return the game values
+     * @throws Exception the exception
+     */
     public List<Double> getGameValues(Game[] games, List<Integer> prices) throws Exception {
         List<Double> values = new ArrayList<>();
         for (int i = 0; i < games.length; i++) {
@@ -132,6 +150,13 @@ public class Ranker {
         return values;
     }
 
+    /**
+     * Gets ranked game list.
+     *
+     * @param names  the names
+     * @param values the values
+     * @return the ranked game list
+     */
     public List<RankedGame> getRankedGameList(List<String> names, List<Double> values) {
         List<RankedGame> rankedGames = new ArrayList<>();
         for (int i = 0; i < names.size(); i++) {

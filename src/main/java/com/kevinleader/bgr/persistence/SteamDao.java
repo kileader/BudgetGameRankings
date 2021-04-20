@@ -23,8 +23,17 @@ import java.util.List;
 public class SteamDao {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
+    /**
+     * The Apps.
+     */
     static AppListItem[] apps;
 
+    /**
+     * Load steam ids app list item [ ].
+     *
+     * @return the app list item [ ]
+     * @throws Exception the exception
+     */
     public AppListItem[] loadSteamIds() throws Exception {
         logger.debug("run loadSteamIds()");
         String url = "https://api.steampowered.com/ISteamApps/GetAppList/v2/";
@@ -45,6 +54,13 @@ public class SteamDao {
         return apps;
     }
 
+    /**
+     * Find steam id from name int.
+     *
+     * @param gameName the game name
+     * @return the int
+     * @throws Exception the exception
+     */
     public int findSteamIdFromName(String gameName) throws Exception {
         logger.debug("run findSteamIdFromName({})", gameName);
         SteamDao steamDao = new SteamDao();
@@ -60,34 +76,13 @@ public class SteamDao {
         return -1;
     }
 
-//    public PriceOverview getPriceOverviewFromId(int steamId) throws Exception {
-//        logger.debug("run getPriceOverviewFromId({})", steamId);
-//        String priceOverview;
-//        PriceOverview appPrice;
-//
-//        String stringId = String.valueOf(steamId);
-//        String url = "https://store.steampowered.com/api/appdetails?appids=" + stringId + "&currency=USD";
-//
-//        Client client = ClientBuilder.newClient();
-//        WebTarget target = client.target(url);
-//        Invocation.Builder builder = target.request(MediaType.APPLICATION_JSON);
-//        String response = builder.get(String.class);
-//
-//        ObjectMapper mapper = new ObjectMapper();
-//        JsonNode node1 = mapper.readTree(response);
-//        JsonNode node2 = node1.get(stringId);
-//        JsonNode data = node2.get("data");
-//
-//        if ((data != null) && (data.findValue("price_overview") != null)) {
-//            priceOverview = data.get("price_overview").toString();
-//            appPrice = mapper.readValue(priceOverview, PriceOverview.class);
-//        } else {
-//            appPrice = new PriceOverview("", 0, 0, "", "", 0);
-//        }
-//        client.close();
-//        return appPrice;
-//    }
-//
+    /**
+     * Gets price overviews from ids.
+     *
+     * @param steamIds the steam ids
+     * @return the price overviews from ids
+     * @throws Exception the exception
+     */
     public List<PriceOverview> getPriceOverviewsFromIds(List<Integer> steamIds) throws Exception {
         logger.debug("run getPriceOverviewsFromIds({})", steamIds);
         List<PriceOverview> appPrices = new ArrayList<>();

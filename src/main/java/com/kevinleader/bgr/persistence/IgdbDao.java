@@ -25,6 +25,13 @@ public class IgdbDao {
             "genres,name,platforms,rating,rating_count,storyline,summary,total_rating," +
             "total_rating_count,url,websites.*";
 
+    /**
+     * Search from game name game [ ].
+     *
+     * @param gameName the game name
+     * @return the game [ ]
+     * @throws JsonProcessingException the json processing exception
+     */
     public Game[] searchFromGameName(String gameName) throws JsonProcessingException {
         logger.debug("run searchFromName({})", gameName);
 
@@ -44,6 +51,13 @@ public class IgdbDao {
         return games;
     }
 
+    /**
+     * Load games to rank game [ ].
+     *
+     * @param whereConditions the where conditions
+     * @return the game [ ]
+     * @throws JsonProcessingException the json processing exception
+     */
     public Game[] loadGamesToRank(String whereConditions) throws JsonProcessingException {
         logger.debug("run loadGamesToRank({})", whereConditions);
 
@@ -64,6 +78,12 @@ public class IgdbDao {
         return games;
     }
 
+    /**
+     * Gets release date epoch.
+     *
+     * @param releaseSpan the release span
+     * @return the release date epoch
+     */
     public int getReleaseDateEpoch(int releaseSpan) {
         logger.debug("run getReleaseDateEpoch({})", releaseSpan);
         long currentTimestamp = System.currentTimeMillis();
@@ -71,6 +91,12 @@ public class IgdbDao {
         return currentTimeSec - releaseSpan;
     }
 
+    /**
+     * Gets names.
+     *
+     * @param games the games
+     * @return the names
+     */
     public List<String> getNames(Game[] games) {
         logger.debug("run getNames(games)");
         List<String> names = new ArrayList<>();

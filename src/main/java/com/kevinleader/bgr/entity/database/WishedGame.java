@@ -43,6 +43,14 @@ public class WishedGame {
     public WishedGame() {
     }
 
+    /**
+     * Instantiates a new Wished game.
+     *
+     * @param user       the user
+     * @param gameName   the game name
+     * @param igdbGameId the igdb game id
+     * @param steamId    the steam id
+     */
     public WishedGame(User user, String gameName, int igdbGameId, int steamId) {
         this.user = user;
         this.gameName = gameName;
@@ -50,42 +58,92 @@ public class WishedGame {
         this.steamId = steamId;
     }
 
+    /**
+     * Gets id.
+     *
+     * @return the id
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * Sets id.
+     *
+     * @param id the id
+     */
     public void setId(int id) {
         this.id = id;
     }
 
+    /**
+     * Gets user.
+     *
+     * @return the user
+     */
     public User getUser() {
         return user;
     }
 
+    /**
+     * Sets user.
+     *
+     * @param user the user
+     */
     public void setUser(User user) {
         this.user = user;
     }
 
+    /**
+     * Gets game name.
+     *
+     * @return the game name
+     */
     public String getGameName() {
         return gameName;
     }
 
+    /**
+     * Sets game name.
+     *
+     * @param gameName the game name
+     */
     public void setGameName(String gameName) {
         this.gameName = gameName;
     }
 
+    /**
+     * Gets igdb game id.
+     *
+     * @return the igdb game id
+     */
     public int getIgdbGameId() {
         return igdbGameId;
     }
 
+    /**
+     * Sets igdb game id.
+     *
+     * @param igdbGameId the igdb game id
+     */
     public void setIgdbGameId(int igdbGameId) {
         this.igdbGameId = igdbGameId;
     }
 
+    /**
+     * Gets steam id.
+     *
+     * @return the steam id
+     */
     public int getSteamId() {
         return steamId;
     }
 
+    /**
+     * Sets steam id.
+     *
+     * @param steamId the steam id
+     */
     public void setSteamId(int steamId) {
         this.steamId = steamId;
     }

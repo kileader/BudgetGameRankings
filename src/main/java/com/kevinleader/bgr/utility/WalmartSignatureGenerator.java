@@ -8,8 +8,16 @@ import java.util.*;
 
 import org.apache.commons.codec.binary.Base64;
 
+/**
+ * The type Walmart signature generator.
+ */
 public class WalmartSignatureGenerator {
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         WalmartSignatureGenerator generator = new WalmartSignatureGenerator();
 
@@ -49,6 +57,15 @@ public class WalmartSignatureGenerator {
         } catch(Exception e) { }
         System.out.println("Signature: " + data);
     }
+
+    /**
+     * Generate signature string.
+     *
+     * @param key          the key
+     * @param stringToSign the string to sign
+     * @return the string
+     * @throws Exception the exception
+     */
     public String generateSignature(String key, String stringToSign) throws Exception {
         Signature signatureInstance = Signature.getInstance("SHA256WithRSA");
 
@@ -66,6 +83,13 @@ public class WalmartSignatureGenerator {
 
         return signatureString;
     }
+
+    /**
+     * Canonicalize string [ ].
+     *
+     * @param headersToSign the headers to sign
+     * @return the string [ ]
+     */
     protected static String[] canonicalize(Map<String, String> headersToSign) {
         StringBuffer canonicalizedStrBuffer=new StringBuffer();
         StringBuffer parameterNamesBuffer=new StringBuffer();
@@ -81,8 +105,20 @@ public class WalmartSignatureGenerator {
         return new String[] {parameterNamesBuffer.toString(), canonicalizedStrBuffer.toString()};
     }
 
+    /**
+     * The type Service key rep.
+     */
     class ServiceKeyRep extends KeyRep  {
         private static final long serialVersionUID = -7213340660431987616L;
+
+        /**
+         * Instantiates a new Service key rep.
+         *
+         * @param type      the type
+         * @param algorithm the algorithm
+         * @param format    the format
+         * @param encoded   the encoded
+         */
         public ServiceKeyRep(Type type, String algorithm, String format, byte[] encoded) {
             super(type, algorithm, format, encoded);
         }

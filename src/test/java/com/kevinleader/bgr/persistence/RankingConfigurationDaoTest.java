@@ -11,13 +11,34 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 
+/**
+ * The type Ranking configuration dao test.
+ */
 class RankingConfigurationDaoTest {
 
+    /**
+     * The User dao.
+     */
     GenericDao userDao;
+    /**
+     * The Ranking configuration dao.
+     */
     GenericDao rankingConfigurationDao;
+    /**
+     * The New user.
+     */
     User newUser;
+    /**
+     * The Default config.
+     */
     RankingConfiguration defaultConfig;
+    /**
+     * The New config.
+     */
     RankingConfiguration newConfig;
+    /**
+     * The Rank configs.
+     */
     List<RankingConfiguration> rankConfigs;
 
     /**

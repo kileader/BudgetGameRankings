@@ -20,7 +20,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 public class TestServiceClients {
 
+    /**
+     * The Igdb dao.
+     */
     IgdbDao igdbDao;
+    /**
+     * The Steam dao.
+     */
     SteamDao steamDao;
 
     /**

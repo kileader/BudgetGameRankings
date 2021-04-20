@@ -164,10 +164,20 @@ public class User {
         this.rankingConfigurations = rankingConfigurations;
     }
 
+    /**
+     * Gets roles.
+     *
+     * @return the roles
+     */
     public Set<Role> getRoles() {
         return roles;
     }
 
+    /**
+     * Sets roles.
+     *
+     * @param roles the roles
+     */
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }

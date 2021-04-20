@@ -20,7 +20,6 @@ import java.util.Properties;
  * @author Alex M - Fall 2019 - added multi-line sql capability
  * @author Kevin Leader
  */
-
 public class Database {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
@@ -53,22 +52,29 @@ public class Database {
 
     }
 
-    /** get the only Database object available
-        @return the single database object
-    */
+    /**
+     * get the only Database object available
+     *
+     * @return the single database object
+     */
     public static Database getInstance() {
         return instance;
     }
 
-    /** get the database connection
-        @return the database connection
-    */
+    /**
+     * get the database connection
+     *
+     * @return the database connection
+     */
     public Connection getConnection() {
         return connection;
     }
-  
-    /** attempt to connect to the database
-    */
+
+    /**
+     * attempt to connect to the database
+     *
+     * @throws Exception the exception
+     */
     public void connect() throws Exception {
         if (connection != null)
             return;
@@ -83,8 +89,9 @@ public class Database {
         connection = DriverManager.getConnection(url, properties.getProperty("username"),  properties.getProperty("password"));
     }
 
-    /** close and clean up the database connection
-    */
+    /**
+     * close and clean up the database connection
+     */
     public void disconnect() {
         if (connection != null) {
             try {

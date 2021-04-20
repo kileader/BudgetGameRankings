@@ -15,13 +15,34 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 class WishedGameDaoTest {
 
+    /**
+     * The User dao.
+     */
     GenericDao userDao;
+    /**
+     * The Wished game dao.
+     */
     GenericDao wishedGameDao;
 
+    /**
+     * The New user.
+     */
     User newUser;
+    /**
+     * The New wished game 1.
+     */
     WishedGame newWishedGame1;
+    /**
+     * The New wished game 2.
+     */
     WishedGame newWishedGame2;
+    /**
+     * The New wished game super.
+     */
     WishedGame newWishedGameSuper;
+    /**
+     * The Wished games.
+     */
     List<WishedGame> wishedGames;
 
     /**

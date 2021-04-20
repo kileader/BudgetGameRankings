@@ -59,6 +59,7 @@ public class GenericDao<T> {
     /**
      * Get an entity by id.
      *
+     * @param <T> the type parameter
      * @param id  the id to search by
      * @return the entity
      */
@@ -91,7 +92,7 @@ public class GenericDao<T> {
      *
      * @param propertyName the property name.
      * @param value        the value by which to find.
-     * @return list
+     * @return list by property equal
      */
     public List<T> getByPropertyEqual(String propertyName, Object value) {
         logger.debug("run getByPropertyEqual() with " + propertyName + " = " + value);
@@ -110,7 +111,7 @@ public class GenericDao<T> {
      * sample usage: getByPropertyLike("lastName", "C")
      *
      * @param propertyName entity property to search by
-     * @param value value of the property to search for
+     * @param value        value of the property to search for
      * @return list of entities meeting the criteria search
      */
     public List<T> getByPropertyLike(String propertyName, String value) {
