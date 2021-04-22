@@ -49,15 +49,14 @@ public class Ranker {
             int price = -1; //unknown price
             boolean isSteamPrice = false;
 
-            if (game.getPlatforms().contains(41) ||
-                    game.getPlatforms().contains(48) ||
+            if (game.getPlatforms().contains(48) ||
                     game.getPlatforms().contains(49) ||
                     game.getPlatforms().contains(130) ||
-                    game.getPlatforms().contains(165)) { //check if $60 game (last gen)
+                    game.getPlatforms().contains(165)) { //check if $60 game (eighth gen)
                 price = 5999;
                 logger.debug("assign price as 5999");
             } else if (game.getPlatforms().contains(167) ||
-                    game.getPlatforms().contains(169)) { //check if $70 game (current gen)
+                    game.getPlatforms().contains(169)) { //check if $70 game (ninth gen)
                 price = 6999;
                 logger.debug("assign price as 6999");
             }

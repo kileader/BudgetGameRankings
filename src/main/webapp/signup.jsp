@@ -48,7 +48,8 @@ Filename: signup.jsp
           <label class="bold" for="confirmPassword">Confirm Password</label>
           <input type="password" id="confirmPassword" placeholder="Confirm Password" name="password"
                  class="form-control" pattern="^.{1,255}$" required>
-          <div class="invalid-feedback">Password is required (up to 255 characters)</div>
+          <span id="message"></span>
+          <div class="invalid-feedback">Incorrect Confirm Password</div>
         </div>
 
         <div class="form-group">
@@ -58,18 +59,27 @@ Filename: signup.jsp
       </form>
     </main>
 
+
     <!-- <div class="row" data-w3-include-html="footer.html"></div> -->
   </div>
   <script>
+      // Add confirm password functionality
+      $(`#password, #confirmPassword`).on('keyup', function () {
+          if ($('#password').val() === $('#confirmPassword').val()) {
+              $('#message').html('Matching').css('color', 'green');
+          } else
+              $('#message').html('Not Matching').css('color', 'red');
+      });
+
       // Disable form submissions if there are invalid fields
       (function() {
           'use strict';
           window.addEventListener('load', function() {
               // Get the forms we want to add validation styles to
-              var forms = document.getElementsByClassName('needs-validation');
+              let forms = document.getElementsByClassName('needs-validation');
               // Loop over them and prevent submission
-              var validation = Array.prototype.filter.call(forms, function(form) {
-                  form.addEventListener('submit', function(event) {
+              let validation = Array.prototype.filter.call(forms, function (form) {
+                  form.addEventListener('submit', function (event) {
                       if (form.checkValidity() === false) {
                           event.preventDefault();
                           event.stopPropagation();

@@ -45,3 +45,4 @@
 | 4/17/21 | Spent the whole day casually figuring out alot of things. Fixed up RankingConfiguration stuff. | 10 |
 | 4/18/21 | Spent long time today also. Almost have a ranking system finished. | 10 |
 | 4/19/21 | Worked mostly on Ranker.getPrices(). Able to get steam game values accurately. | 10 |
+| 4/21/21 | Created a decent looking start for creating a new rank config. | 6 |
