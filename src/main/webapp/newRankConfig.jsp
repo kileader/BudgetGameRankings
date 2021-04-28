@@ -43,26 +43,19 @@ Filename: newRankConfig.jsp
 
         <h3>Platforms:</h3>
         <p>
+          Either search for all games or choose from the options below.
           The default checked boxes have games with a price assigned.
           In general, games that are also on PC will have the best value.
         </p>
 
-<%--        <!-- Javascript for checking all or unchecking all boxes -->--%>
-<%--        <script>--%>
-<%--          function checkAll(source) {--%>
-<%--            let checkboxes = document.getElementsByName("platforms");--%>
-<%--            for (let i = 0, n = checkboxes.length; i < n; i++) {--%>
-<%--                checkboxes[i].checked = source.checked;--%>
-<%--            }--%>
-<%--          }--%>
-<%--        </script>--%>
-<%--        <div class="form-group">--%>
-<%--          <label for="checkAll" class="bold">Check or Uncheck All Boxes</label>--%>
-<%--          <input type="checkbox" id="checkAll" onclick="checkAll(this)">--%>
-<%--        </div>--%>
+        </script>
+        <div class="form-group">
+          <label for="checkAll" class="bold">Check or Uncheck All Boxes</label>
+          <input type="checkbox" id="checkAll" onclick="checkAll(this)">
+        </div>
 
         <div class="form-group">
-          <table id="platforms" class="table table-borderless mt-0 justify-content-center">
+          <table id="platforms" class="table table-borderless">
             <thead>
               <tr>
                 <th>Home Computer</th><th>Ninth Generation</th><th>Eighth Generation</th>

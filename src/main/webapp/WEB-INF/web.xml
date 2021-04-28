@@ -57,7 +57,7 @@
     </auth-constraint>
   </security-constraint>
 
-  <!-- Protect indexLoggedIn.jsp -->
+  <!-- Protect login -->
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>userLogin</web-resource-name>
@@ -69,11 +69,47 @@
     </auth-constraint>
   </security-constraint>
 
-  <!-- Protect indexLoggedIn.jsp -->
+  <!-- Protect userIndex.jsp -->
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>userLogin</web-resource-name>
       <url-pattern>/userIndex.jsp</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>user</role-name>
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <!-- Protect newRankConfig.jsp -->
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>newRankConfig</web-resource-name>
+      <url-pattern>/newRankConfig.jsp</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>user</role-name>
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <!-- Protect displayRanking.jsp -->
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>displayRanking</web-resource-name>
+      <url-pattern>/displayRanking.jsp</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>user</role-name>
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <!-- Protect displayRanking -->
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>displayRanking</web-resource-name>
+      <url-pattern>/displayRanking</url-pattern>
     </web-resource-collection>
     <auth-constraint>
       <role-name>user</role-name>

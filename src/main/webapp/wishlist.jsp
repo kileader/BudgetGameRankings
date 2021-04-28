@@ -22,12 +22,12 @@ Filename: wishlist.jsp
 
       <table id="gamesTable" class="table table-striped table-bordered" style="width:100%">
         <thead>
-        <tr>
-          <th>WishedGame ID</th>
-          <th>Game Name</th>
-          <th>IGDB Game ID</th>
-          <th>Steam ID</th>
-        </tr>
+          <tr>
+            <th>WishedGame ID</th>
+            <th>Game Name</th>
+            <th>IGDB Game ID</th>
+            <th>Steam ID</th>
+          </tr>
         </thead>
 
         <tbody>
