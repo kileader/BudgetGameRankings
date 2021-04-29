@@ -21,7 +21,7 @@ Filename: indexSignUpSuccess.jsp
       <section>
         <h2>
           You have successfully signed up!
-          Please <a href="/BudgetGameRankings/login">log in</a> to create a <a href="#">Rank Config.</a>
+          Please <a href="login">log in</a> to create a <a href="">Rank Config.</a>
         </h2>
       </section>
     </main>

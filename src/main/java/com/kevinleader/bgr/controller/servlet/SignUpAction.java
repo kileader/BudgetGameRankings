@@ -16,13 +16,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Serves indexSignUpSuccess.jsp
+ * Signs up a new user
  */
 @WebServlet(
         name = "SignUp",
-        urlPatterns = {"/SignUp"}
+        urlPatterns = {"/signup"}
 )
-public class SignUp extends HttpServlet {
+public class SignUpAction extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     private GenericDao userDao;
@@ -56,7 +56,7 @@ public class SignUp extends HttpServlet {
 
         int id = userDao.insert(newUser);
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/indexSignUpSuccess.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/index.jsp");
         dispatcher.forward(req, resp);
     }
 

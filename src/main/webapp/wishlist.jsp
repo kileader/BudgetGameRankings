@@ -15,7 +15,7 @@ Filename: wishlist.jsp
 
 <body>
   <div class="container">
-    <div class="row"><jsp:include page="headerAndNavLoggedIn.jsp"/></div>
+    <div class="row"><jsp:include page="headerAndNav.jsp"/></div>
 
     <main>
       <h2>Your Wishlist</h2>

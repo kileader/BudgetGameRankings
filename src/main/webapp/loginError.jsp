@@ -19,7 +19,7 @@ Filename: loginError.jsp
 
     <main>
       <section>
-        <h2>Invalid Login. <a href="/BudgetGameRankings/login">Try again?</a></h2>
+        <h2>Invalid Login. <a href="login">Try again?</a></h2>
       </section>
     </main>
 

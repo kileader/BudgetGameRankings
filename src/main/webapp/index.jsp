@@ -20,11 +20,21 @@ Filename: index.jsp
     <main>
       <section>
         <h2>
-          Hi there. Rankings will display here eventually. If you have an account,
-          please <a href="/BudgetGameRankings/login">log in</a> to check your wishlist.
-          Otherwise, if you want to customize your experience, please <a href="signup.jsp">sign up.</a>
+          <%
+            if (request.getRemoteUser() == null) {
+          %>
+            Hi there. Rankings will display here eventually. If you have an account,
+            please <a href="login">log in</a> to check your wishlist.
+            Otherwise, if you want to customize your experience, please <a href="signup">sign up.</a>
+          <%
+            } else {
+          %>
+            Welcome, <%=request.getRemoteUser()%>. Rankings will display here eventually.
+            You can check out <a href="wishlist">your wishlist.</a>
+          <%
+            }
+          %>
         </h2>
-
       </section>
     </main>
 

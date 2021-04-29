@@ -46,3 +46,4 @@
 | 4/18/21 | Spent long time today also. Almost have a ranking system finished. | 10 |
 | 4/19/21 | Worked mostly on Ranker.getPrices(). Able to get steam game values accurately. | 10 |
 | 4/21/21 | Created a decent looking start for creating a new rank config. | 6 |
+| 4/28/21 | Met for peer review. Used JSTL to rework website structure using login. | 5 |

@@ -42,7 +42,7 @@ public class IgdbDao {
         WebTarget target = client.target(url);
         Invocation.Builder builder = target.request(MediaType.APPLICATION_JSON);
         builder.header("Client-Id", "bdm989e3d9fgsslcn2l9d9hktacpq3");
-        builder.header("Authorization", "Bearer 7pslgqjjgluo8ci4vslr0gsm4uvavq");
+        builder.header("Authorization", "Bearer tzy4jcjfhn7dtdw0kb9p9cfgpii0ys");
         builder.header("Accept", "application/json");
         String response = builder.get(String.class);
         ObjectMapper mapper = new ObjectMapper();

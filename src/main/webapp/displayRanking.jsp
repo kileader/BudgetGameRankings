@@ -10,12 +10,11 @@ Filename: displayRanking.jsp
 <c:set var="title" value="BGR - Display Ranking"/>
 
 <html>
-
 <%@include file="head.jsp"%>
 
 <body>
 <div class="container">
-  <div class="row"><jsp:include page="headerAndNavLoggedIn.jsp"/></div>
+  <div class="row"><jsp:include page="headerAndNav.jsp"/></div>
 
   <main>
     <h2>Your Ranking</h2>

@@ -12,13 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Serves indexLoggedIn.jsp
+ * Logs a user in
  */
 @WebServlet(
         name = "Login",
-        urlPatterns = {"/login", "/home"}
+        urlPatterns = {"/login"}
 )
-public class Login extends HttpServlet {
+public class LoginAction extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
@@ -28,7 +28,7 @@ public class Login extends HttpServlet {
 
         logger.debug("run Login.doGet()");
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/indexLoggedIn.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/index.jsp");
         dispatcher.forward(req, resp);
     }
 

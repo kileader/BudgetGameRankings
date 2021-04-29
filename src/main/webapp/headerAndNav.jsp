@@ -6,8 +6,8 @@ Filename: headerAndNav.jsp
 -->
 
 <div class="col">
-  <header class="jumbotron mb-0 justify-content-center">
-    <h1 class="justify-content-center">Budget Game Rankings</h1>
+  <header class="jumbotron mb-0">
+    <h1>Budget Game Rankings</h1>
   </header>
 
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -20,12 +20,21 @@ Filename: headerAndNav.jsp
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="index.jsp">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="/BudgetGameRankings/login">Log In</a></li>
-        <li class="nav-item"><a class="nav-link" href="signup.jsp">Sign Up</a></li>
-        <li class="nav-item"><a class="nav-link" href="newRankConfig.jsp">Rank Configs</a></li>
-        <li class="nav-item"><a class="nav-link" href="/BudgetGameRankings/displayRanking">Display Ranking</a></li>
-        <li class="nav-item"><a class="nav-link" href="/BudgetGameRankings/wishlist">Your Wishlist</a></li>
-        <li class="nav-item"><a class="nav-link" href="admin.jsp">Administration</a></li>
+        <li class="nav-item"><a class="nav-link" href="displayRanking">Display Ranking</a></li>
+        <%
+          if (request.getRemoteUser() == null) {
+        %>
+          <li class="nav-item"><a class="nav-link" href="login">Log In</a></li>
+          <li class="nav-item"><a class="nav-link" href="signup.jsp">Sign Up</a></li>
+        <%
+          } else {
+        %>
+          <li class="nav-item"><a class="nav-link" href="newRankConfig.jsp">Rank Configs</a></li>
+          <li class="nav-item"><a class="nav-link" href="wishlist">Your Wishlist</a></li>
+          <li class="nav-item"><a class="nav-link" href="logout.jsp">Sign Out</a></li>
+        <%
+          }
+        %>
       </ul>
     </div>
   </nav>

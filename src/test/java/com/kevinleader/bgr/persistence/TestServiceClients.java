@@ -44,15 +44,14 @@ public class TestServiceClients {
     @Test
     public void loadGamesToRankSuccess() throws Exception {
         igdbDao = new IgdbDao();
-        String limit = "500; where";
         String platforms = " platforms = (5,167,169)"; // is on PC, xbox series x, or playstation 5
         String genres = " & genres = (31,12,32,25,8)"; // is an adventure, rpg, indie, hack and slash, or platformer game (DesignDocuments.genreId.txt)
         int releaseEpoch = igdbDao.getReleaseDateEpoch(31556926);
         String releaseDate = " & first_release_date > " + releaseEpoch; // released within a year ago
 //        String whereCondition = releaseDate;
-        String whereCondition = limit + platforms + genres + releaseDate;
+        String whereCondition = "where " + platforms + genres + releaseDate;
         Game[] games = igdbDao.loadGamesToRank(whereCondition);
-        assertEquals("It Takes Two", games[0].getName());
+        assertEquals("Disco Elysium: The Final Cut", games[0].getName());
     }
 
     /**
