@@ -41,7 +41,7 @@ Filename: newRankConfig.jsp
     <section>
       <form action="something" method="POST" class="needs-validation" novalidate>
 
-        <h3>Platforms:</h3>
+        <h3>Platforms</h3>
         <p>
           Either search for all games or choose from the options below.
           The default checked boxes have games with a price assigned.
@@ -59,15 +59,16 @@ Filename: newRankConfig.jsp
           <label class="form-check-label bold" for="allPlatforms">All Platforms</label>
         </div>
 
-        <table id="platforms" class="table table-borderless">
-          <thead>
+        <fieldset id="platforms">
+          <table class="table table-borderless">
+            <thead>
             <tr>
               <th>Home Computer</th><th>Ninth Generation</th><th>Eighth Generation</th>
               <th>Virtual Reality</th><th>Mobile and Handheld</th>
             </tr>
-          </thead>
-          <tbody>
-          <!-- The following values are the id numbers that igdb.com uses to represent each platform. -->
+            </thead>
+            <tbody>
+            <!-- The following values are the id numbers that igdb.com uses to represent each platform. -->
             <tr>
               <td>
                 <input type="checkbox" id="pc" name="p1" value="6" checked>
@@ -153,10 +154,11 @@ Filename: newRankConfig.jsp
                 <label for="vita" class="bold">Playstation Vita</label>
               </td>
             </tr>
-          </tbody>
-        </table>
+            </tbody>
+          </table>
+        </fieldset>
 
-        <h3>Genres:</h3>
+        <h3>Genres</h3>
         <p>
           Either search for all games or choose from the options below.
           These are all possible genres in the igdb.com database.
@@ -173,110 +175,145 @@ Filename: newRankConfig.jsp
           <label class="form-check-label bold" for="allGenres">All Genres</label>
         </div>
 
-        <table id="genres" class="table table-borderless">
-          <tr>
-            <td>
-              <input type="checkbox" id="adventure" name="g1" value="31">
-              <label for="adventure" class="bold">Adventure</label>
-            </td>
-            <td>
-              <input type="checkbox" id="arcade" name="g2" value="33">
-              <label for="arcade" class="bold">Arcade</label>
-            </td>
-            <td>
-              <input type="checkbox" id="beatEmUp" name="g3" value="25">
-              <label for="beatEmUp" class="bold">Beat 'em Up</label>
-            </td>
-            <td>
-              <input type="checkbox" id="cardGame" name="g4" value="35">
-              <label for="cardGame" class="bold">Card & Board Game</label>
-            </td>
-            <td>
-              <input type="checkbox" id="fighting" name="g5" value="4">
-              <label for="fighting" class="bold">Fighting</label>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <input type="checkbox" id="indie" name="g6" value="32">
-              <label for="indie" class="bold">Indie</label>
-            </td>
-            <td>
-              <input type="checkbox" id="moba" name="g7" value="36">
-              <label for="moba" class="bold">MOBA</label>
-            </td>
-            <td>
-              <input type="checkbox" id="music" name="g8" value="7">
-              <label for="music" class="bold">Music</label>
-            </td>
-            <td>
-              <input type="checkbox" id="pinball" name="g9" value="30">
-              <label for="pinball" class="bold">Pinball</label>
-            </td>
-            <td>
-              <input type="checkbox" id="platformer" name="g10" value="8">
-              <label for="platformer" class="bold">Platformer</label>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <input type="checkbox" id="point_and_click" name="g11" value="2">
-              <label for="point_and_click" class="bold">Point-and-Click</label>
-            </td>
-            <td>
-              <input type="checkbox" id="puzzle" name="g12" value="9">
-              <label for="puzzle" class="bold">Puzzle</label>
-            </td>
-            <td>
-              <input type="checkbox" id="quiz" name="g13" value="26">
-              <label for="quiz" class="bold">Quiz/Trivia</label>
-            </td>
-            <td>
-              <input type="checkbox" id="racing" name="g14" value="10">
-              <label for="racing" class="bold">Racing</label>
-            </td>
-            <td>
-              <input type="checkbox" id="rts" name="g15" value="11">
-              <label for="rts" class="bold">Real Time Strategy</label>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <input type="checkbox" id="rpg" name="g16" value="12">
-              <label for="rpg" class="bold">Role-Playing Game</label>
-            </td>
-            <td>
-              <input type="checkbox" id="shooter" name="g17" value="5">
-              <label for="shooter" class="bold">Shooter</label>
-            </td>
-            <td>
-              <input type="checkbox" id="simulator" name="g18" value="13">
-              <label for="simulator" class="bold">Simulator</label>
-            </td>
-            <td>
-              <input type="checkbox" id="sport" name="g19" value="14">
-              <label for="sport" class="bold">Sport</label>
-            </td>
-            <td>
-              <input type="checkbox" id="strategy" name="g20" value="15">
-              <label for="strategy" class="bold">Strategy</label>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <input type="checkbox" id="tactical" name="g21" value="24">
-              <label for="tactical" class="bold">Tactical</label>
-            </td>
-            <td>
-              <input type="checkbox" id="tbs" name="g22" value="16">
-              <label for="tbs" class="bold">Turn-Based Strategy</label>
-            </td>
-            <td>
-              <input type="checkbox" id="visualnovel" name="g23" value="34">
-              <label for="visualnovel" class="bold">Visual Novel</label>
-            </td>
-          </tr>
-        </table>
+        <fieldset id="genres">
+          <table class="table table-borderless">
+            <tr>
+              <td>
+                <input type="checkbox" id="adventure" name="g1" value="31">
+                <label for="adventure" class="bold">Adventure</label>
+              </td>
+              <td>
+                <input type="checkbox" id="arcade" name="g2" value="33">
+                <label for="arcade" class="bold">Arcade</label>
+              </td>
+              <td>
+                <input type="checkbox" id="beatEmUp" name="g3" value="25">
+                <label for="beatEmUp" class="bold">Beat 'em Up</label>
+              </td>
+              <td>
+                <input type="checkbox" id="cardGame" name="g4" value="35">
+                <label for="cardGame" class="bold">Card & Board Game</label>
+              </td>
+              <td>
+                <input type="checkbox" id="fighting" name="g5" value="4">
+                <label for="fighting" class="bold">Fighting</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="indie" name="g6" value="32">
+                <label for="indie" class="bold">Indie</label>
+              </td>
+              <td>
+                <input type="checkbox" id="moba" name="g7" value="36">
+                <label for="moba" class="bold">MOBA</label>
+              </td>
+              <td>
+                <input type="checkbox" id="music" name="g8" value="7">
+                <label for="music" class="bold">Music</label>
+              </td>
+              <td>
+                <input type="checkbox" id="pinball" name="g9" value="30">
+                <label for="pinball" class="bold">Pinball</label>
+              </td>
+              <td>
+                <input type="checkbox" id="platformer" name="g10" value="8">
+                <label for="platformer" class="bold">Platformer</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="point_and_click" name="g11" value="2">
+                <label for="point_and_click" class="bold">Point-and-Click</label>
+              </td>
+              <td>
+                <input type="checkbox" id="puzzle" name="g12" value="9">
+                <label for="puzzle" class="bold">Puzzle</label>
+              </td>
+              <td>
+                <input type="checkbox" id="quiz" name="g13" value="26">
+                <label for="quiz" class="bold">Quiz/Trivia</label>
+              </td>
+              <td>
+                <input type="checkbox" id="racing" name="g14" value="10">
+                <label for="racing" class="bold">Racing</label>
+              </td>
+              <td>
+                <input type="checkbox" id="rts" name="g15" value="11">
+                <label for="rts" class="bold">Real Time Strategy</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="rpg" name="g16" value="12">
+                <label for="rpg" class="bold">Role-Playing Game</label>
+              </td>
+              <td>
+                <input type="checkbox" id="shooter" name="g17" value="5">
+                <label for="shooter" class="bold">Shooter</label>
+              </td>
+              <td>
+                <input type="checkbox" id="simulator" name="g18" value="13">
+                <label for="simulator" class="bold">Simulator</label>
+              </td>
+              <td>
+                <input type="checkbox" id="sport" name="g19" value="14">
+                <label for="sport" class="bold">Sport</label>
+              </td>
+              <td>
+                <input type="checkbox" id="strategy" name="g20" value="15">
+                <label for="strategy" class="bold">Strategy</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="tactical" name="g21" value="24">
+                <label for="tactical" class="bold">Tactical</label>
+              </td>
+              <td>
+                <input type="checkbox" id="tbs" name="g22" value="16">
+                <label for="tbs" class="bold">Turn-Based Strategy</label>
+              </td>
+              <td>
+                <input type="checkbox" id="visualnovel" name="g23" value="34">
+                <label for="visualnovel" class="bold">Visual Novel</label>
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+
+        <div class="row">
+          <div class="col-md">
+            <h3>Release Span</h3>
+            <p>Enter a number value for oldest release date in years ago. (example: 1 year ago or 2.5 years ago)</p>
+            <div class="form-group">
+              <label class="bold" for="releaseSpan">Release Span (years)</label>
+              <input type="text" id="releaseSpan" placeholder="Release Span" name="releaseSpan"
+                     class="form-control" pattern="^\d*\.?\d*$" required value="1.5">
+            </div>
+          </div>
+
+          <div class="col-sm">
+            <h3>Lowest Price</h3>
+            <p>Enter a price in USD for the lowest priced game to rank. (Greater than 0 suggested)</p>
+            <div class="form-group">
+              <label class="bold" for="lowestPrice">Lowest Price (US Dollars)</label>
+              <input type="text" id="lowestPrice" placeholder="Lowest Price" name="lowestPrice"
+                     class="form-control" pattern="^\d*\.?\d*$" required value="5.00">
+            </div>
+          </div>
+
+          <div class="col-sm">
+            <h3>Highest Price</h3>
+            <p>Enter a price in USD for the highest priced game to rank.</p>
+            <div class="form-group">
+              <label class="bold" for="highestPrice">Highest Price (US Dollars)</label>
+              <input type="text" id="highestPrice" placeholder="Highest Price" name="highestPrice"
+                     class="form-control" pattern="^\d*\.?\d*$" required value="70.00">
+            </div>
+          </div>
+        </div>
+
 
         <div class="form-group">
           <button type="submit" class="btn btn-success">Create New Rank Config</button>
@@ -292,17 +329,17 @@ Filename: newRankConfig.jsp
 <script>
     function disablePlatforms(flag) {
         if (!flag) {
-            document.getElementById("platforms").style.display = "block";
+            document.getElementById("platforms").removeAttribute("disabled");
         } else {
-            document.getElementById("platforms").style.display = "none";
+            document.getElementById("platforms").setAttribute("disabled", "true");
         }
     }
 
     function disableGenres(flag) {
         if (!flag) {
-            document.getElementById("genres").style.display = "block";
+            document.getElementById("genres").removeAttribute("disabled");
         } else {
-            document.getElementById("genres").style.display = "none";
+            document.getElementById("genres").setAttribute("disabled", "true");
         }
     }
 
