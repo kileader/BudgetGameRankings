@@ -19,7 +19,7 @@ Filename: signup.jsp
 
     <main>
 
-      <form action="SignUp" method="GET" class="needs-validation" novalidate>
+      <form action="signup" method="GET" class="needs-validation" novalidate>
 
         <h2>Sign Up</h2>
 

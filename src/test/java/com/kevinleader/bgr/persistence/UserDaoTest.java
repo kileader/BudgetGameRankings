@@ -142,7 +142,7 @@ class UserDaoTest {
     void insertWithRankingConfigurationSuccess() {
         RankingConfiguration rankConfig = new RankingConfiguration(newUser,
                 "Jesus Take The Wheel", "37,5,49,167",
-                "24,30,34,36,9", 70000000, 20000);
+                "24,30,34,36,9", 70000000);
         newUser.addRankingConfiguration(rankConfig);
         int id = userDao.insert(newUser);
         assertNotEquals(0, id);

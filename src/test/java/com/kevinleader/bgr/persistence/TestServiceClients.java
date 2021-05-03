@@ -54,20 +54,20 @@ public class TestServiceClients {
         assertEquals("Disco Elysium: The Final Cut", games[0].getName());
     }
 
-    /**
-     * Tests finding a steam id from game name.
-     *
-     * @throws Exception the exception
-     */
-    @Test
-    public void findSteamIdFromNameSuccess() throws Exception {
-        steamDao = new SteamDao();
-        String gameName = "test2";
-        int expectedAppId = 660010;
-
-        int receivedId = steamDao.findSteamIdFromName(gameName);
-        assertEquals(expectedAppId, receivedId);
-    }
+//    /**
+//     * Tests finding a steam id from game name.
+//     *
+//     * @throws Exception the exception
+//     */
+//    @Test
+//    public void findSteamIdFromNameSuccess() throws Exception {
+//        steamDao = new SteamDao();
+//        String gameName = "test2";
+//        int expectedAppId = 660010;
+//
+//        int receivedId = steamDao.findSteamIdFromName(gameName);
+//        assertEquals(expectedAppId, receivedId);
+//    }
 
 //    @Test
 //    public void getPriceOverviewFromIdSuccess() throws Exception {

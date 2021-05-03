@@ -39,11 +39,11 @@ Filename: newRankConfig.jsp
     </article>
 
     <section>
-      <form action="something" method="POST" class="needs-validation" novalidate>
+      <form action="saveRankConfig" method="POST" class="needs-validation" novalidate>
 
         <h3>Platforms</h3>
         <p>
-          Either search for all games or choose from the options below.
+          Either search with all platforms or choose from the options below.
           The default checked boxes have games with a price assigned.
           In general, games that are also on PC will have the best value.
         </p>
@@ -160,7 +160,7 @@ Filename: newRankConfig.jsp
 
         <h3>Genres</h3>
         <p>
-          Either search for all games or choose from the options below.
+          Either search with all genres or choose from the options below.
           These are all possible genres in the igdb.com database.
         </p>
 
@@ -292,28 +292,35 @@ Filename: newRankConfig.jsp
                      class="form-control" pattern="^\d*\.?\d*$" required value="1.5">
             </div>
           </div>
-
-          <div class="col-sm">
-            <h3>Lowest Price</h3>
-            <p>Enter a price in USD for the lowest priced game to rank. (Greater than 0 suggested)</p>
-            <div class="form-group">
-              <label class="bold" for="lowestPrice">Lowest Price (US Dollars)</label>
-              <input type="text" id="lowestPrice" placeholder="Lowest Price" name="lowestPrice"
-                     class="form-control" pattern="^\d*\.?\d*$" required value="5.00">
-            </div>
-          </div>
-
-          <div class="col-sm">
-            <h3>Highest Price</h3>
-            <p>Enter a price in USD for the highest priced game to rank.</p>
-            <div class="form-group">
-              <label class="bold" for="highestPrice">Highest Price (US Dollars)</label>
-              <input type="text" id="highestPrice" placeholder="Highest Price" name="highestPrice"
-                     class="form-control" pattern="^\d*\.?\d*$" required value="70.00">
-            </div>
-          </div>
+<%--          <div class="col-sm">--%>
+<%--            <h3>Lowest Price</h3>--%>
+<%--            <p>Enter a price in USD for the lowest priced game to rank. (Greater than 0 suggested)</p>--%>
+<%--            <div class="form-group">--%>
+<%--              <label class="bold" for="lowestPrice">Lowest Price (US Dollars)</label>--%>
+<%--              <input type="text" id="lowestPrice" placeholder="Lowest Price" name="lowestPrice"--%>
+<%--                     class="form-control" pattern="^\d*\.?\d*$" required value="5.00">--%>
+<%--            </div>--%>
+<%--          </div>--%>
+<%--          <div class="col-sm">--%>
+<%--            <h3>Highest Price</h3>--%>
+<%--            <p>Enter a price in USD for the highest priced game to rank.</p>--%>
+<%--            <div class="form-group">--%>
+<%--              <label class="bold" for="highestPrice">Highest Price (US Dollars)</label>--%>
+<%--              <input type="text" id="highestPrice" placeholder="Highest Price" name="highestPrice"--%>
+<%--                     class="form-control" pattern="^\d*\.?\d*$" required value="70.00">--%>
+<%--            </div>--%>
+<%--          </div>--%>
         </div>
 
+        <h3>Configuration Name</h3>
+        <p>
+          Name your new ranking configuration.
+        </p>
+        <div class="form-group">
+          <label class="bold" for="configurationName">Configuration Name</label>
+          <input type="text" id="configurationName" placeholder="Configuration Name" name="configurationName"
+                 class="form-control" pattern="^.+$" required value="New Rank Config">
+        </div>
 
         <div class="form-group">
           <button type="submit" class="btn btn-success">Create New Rank Config</button>

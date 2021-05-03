@@ -26,6 +26,7 @@ public class SignUpAction extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     private GenericDao userDao;
+    private GenericDao rankingConfigurationDao;
     private User receivedUser;
     private User newUser;
     private Role newRole;
@@ -34,6 +35,7 @@ public class SignUpAction extends HttpServlet {
     @Override
     public void init() {
         userDao = new GenericDao(User.class);
+        rankingConfigurationDao = new GenericDao(RankingConfiguration.class);
         receivedUser = new User();
     }
 
@@ -52,9 +54,10 @@ public class SignUpAction extends HttpServlet {
         newRole = new Role(newUser, "user", newUser.getUserName());
         newUser.addRole(newRole);
 
-        newRankingConfiguration = new RankingConfiguration(newUser, "Any Game for Past Year", "Any", "Any", 31556926, 7000);
+        newRankingConfiguration = new RankingConfiguration(newUser, "Any Game for Past Year", "Any", "Any", 31556926);
 
         int id = userDao.insert(newUser);
+        int id2 = rankingConfigurationDao.insert(newRankingConfiguration);
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("/index.jsp");
         dispatcher.forward(req, resp);

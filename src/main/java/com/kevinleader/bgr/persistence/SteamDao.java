@@ -54,27 +54,27 @@ public class SteamDao {
         return apps;
     }
 
-    /**
-     * Find steam id from name int.
-     *
-     * @param gameName the game name
-     * @return the int
-     * @throws Exception the exception
-     */
-    public int findSteamIdFromName(String gameName) throws Exception {
-        logger.debug("run findSteamIdFromName({})", gameName);
-        SteamDao steamDao = new SteamDao();
-        if (apps == null) {
-            apps = steamDao.loadSteamIds();
-        }
-        for (AppListItem app : apps) {
-            String retrievedAppName = app.getName();
-            if (retrievedAppName.equals(gameName)) {
-                return app.getAppid();
-            }
-        }
-        return -1;
-    }
+//    /**
+//     * Find steam id from name int.
+//     *
+//     * @param gameName the game name
+//     * @return the int
+//     * @throws Exception the exception
+//     */
+//    public int findSteamIdFromName(String gameName) throws Exception {
+//        logger.debug("run findSteamIdFromName({})", gameName);
+//        SteamDao steamDao = new SteamDao();
+//        if (apps == null) {
+//            apps = steamDao.loadSteamIds();
+//        }
+//        for (AppListItem app : apps) {
+//            String retrievedAppName = app.getName();
+//            if (retrievedAppName.equals(gameName)) {
+//                return app.getAppid();
+//            }
+//        }
+//        return -1;
+//    }
 
     /**
      * Gets price overviews from ids.

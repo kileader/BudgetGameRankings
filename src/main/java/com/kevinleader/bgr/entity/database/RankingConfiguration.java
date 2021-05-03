@@ -30,8 +30,6 @@ public class RankingConfiguration {
     @Column(name = "release_span")
     private int releaseSpan;
 
-    @Column(name = "highest_price")
-    private int highestPrice;
 
     /**
      * Instantiates a new Ranking configuration.
@@ -47,15 +45,13 @@ public class RankingConfiguration {
      * @param platforms         the platforms
      * @param genres            the genres
      * @param releaseSpan       the release span
-     * @param highestPrice      the highest price
      */
-    public RankingConfiguration(User user, String configurationName, String platforms, String genres, int releaseSpan, int highestPrice) {
+    public RankingConfiguration(User user, String configurationName, String platforms, String genres, int releaseSpan) {
         this.user = user;
         this.configurationName = configurationName;
         this.platforms = platforms;
         this.genres = genres;
         this.releaseSpan = releaseSpan;
-        this.highestPrice = highestPrice;
     }
 
     /**
@@ -166,24 +162,6 @@ public class RankingConfiguration {
         this.releaseSpan = releaseSpan;
     }
 
-    /**
-     * Gets highest price.
-     *
-     * @return the highest price
-     */
-    public int getHighestPrice() {
-        return highestPrice;
-    }
-
-    /**
-     * Sets highest price.
-     *
-     * @param highestPrice the highest price
-     */
-    public void setHighestPrice(int highestPrice) {
-        this.highestPrice = highestPrice;
-    }
-
     @Override
     public String toString() {
         return "RankingConfiguration{" +
@@ -193,7 +171,6 @@ public class RankingConfiguration {
                 ", platforms='" + platforms + '\'' +
                 ", genres='" + genres + '\'' +
                 ", releaseSpan=" + releaseSpan +
-                ", highestPrice=" + highestPrice +
                 '}';
     }
 }

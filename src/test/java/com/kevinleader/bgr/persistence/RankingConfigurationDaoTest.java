@@ -55,10 +55,10 @@ class RankingConfigurationDaoTest {
         newUser = new User("Ranias", "kevin.i.leader@gmail.com", "password");
         defaultConfig = new RankingConfiguration(newUser,
                 "Any Game For Past Year", "Any",
-                "Any", 31556926, 7000);
+                "Any", 31556926);
         newConfig = new RankingConfiguration(newUser,
                 "Jesus Take The Wheel", "37,5,49,167",
-                "24,30,34,36,9", 70000000, 20000);
+                "24,30,34,36,9", 70000000);
     }
 
     /**
