@@ -4,6 +4,7 @@ import com.kevinleader.bgr.entity.igdb.Game;
 import com.kevinleader.bgr.entity.igdb.Website;
 import com.kevinleader.bgr.entity.ranker.RankedGame;
 import com.kevinleader.bgr.entity.steam.PriceOverview;
+import com.kevinleader.bgr.persistence.IgdbDao;
 import com.kevinleader.bgr.persistence.SteamDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -21,12 +22,14 @@ public class Ranker {
     private final Logger logger = LogManager.getLogger(this.getClass());
 
     private final SteamDao steamDao;
+    private final IgdbDao igdbDao;
 
     /**
      * Instantiates a new Ranker.
      */
     public Ranker() {
         steamDao = new SteamDao();
+        igdbDao = new IgdbDao();
     }
 
     /**
@@ -153,12 +156,20 @@ public class Ranker {
      * @param values the values
      * @return the ranked game list
      */
-    public List<RankedGame> getRankedGameList(List<String> names, List<Double> values) {
+    public List<RankedGame> getRankedGameListFromNamesAndValues(List<String> names, List<Double> values) {
         List<RankedGame> rankedGames = new ArrayList<>();
         for (int i = 0; i < names.size(); i++) {
             RankedGame rankedGame = new RankedGame(names.get(i), values.get(i));
             rankedGames.add(rankedGame);
         }
+        return rankedGames;
+    }
+
+    public List<RankedGame> getRankedGameList(Game[] games) throws Exception {
+        List<String> names = igdbDao.getNames(games);
+        List<Integer> prices = getPrices(games);
+        List<Double> values = getGameValues(games, prices);
+        List<RankedGame> rankedGames = getRankedGameListFromNamesAndValues(names, values);
         return rankedGames;
     }
 

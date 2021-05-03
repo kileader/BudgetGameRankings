@@ -5,6 +5,7 @@ import javax.ws.rs.core.MediaType;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.kevinleader.bgr.entity.database.RankingConfiguration;
 import com.kevinleader.bgr.entity.igdb.Game;
 import com.kevinleader.bgr.entity.igdb.Website;
 import org.apache.logging.log4j.LogManager;
@@ -104,6 +105,26 @@ public class IgdbDao {
             names.add(game.getName());
         }
         return names;
+    }
+
+    public String createWhereCondition(RankingConfiguration rankConfig) {
+        logger.debug("run createWhereConditions({})", rankConfig);
+        String platforms = "";
+        String genres = "";
+        int releaseSpan = rankConfig.getReleaseSpan();
+
+        if (!rankConfig.getPlatforms().equals("Any")) {
+            platforms = "platforms = (" + rankConfig.getPlatforms() + ") & ";
+        }
+        if (!rankConfig.getGenres().equals("Any")) {
+            genres = "genres = (" + rankConfig.getGenres() + ") & ";
+        }
+
+        int releaseEpoch = getReleaseDateEpoch(releaseSpan);
+        String releaseDate = "first_release_date > " + releaseEpoch;
+
+        String whereCondition = "where " + platforms + genres + releaseDate;
+        return whereCondition;
     }
 
 //    public Website[] getWebsitesFromGameId(int gameId) throws JsonProcessingException {

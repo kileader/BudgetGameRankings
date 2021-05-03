@@ -85,7 +85,7 @@ public class RankerTest {
         List<String> names = igdbDao.getNames(games);
         List<Integer> prices = ranker.getPrices(games);
         List<Double> values = ranker.getGameValues(games, prices);
-        List<RankedGame> rankedGames = ranker.getRankedGameList(names, values);
+        List<RankedGame> rankedGames = ranker.getRankedGameListFromNamesAndValues(names, values);
         assertEquals(500, rankedGames.size());
     }
 

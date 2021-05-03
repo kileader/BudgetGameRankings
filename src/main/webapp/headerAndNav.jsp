@@ -29,7 +29,7 @@ Filename: headerAndNav.jsp
         <%
           } else {
         %>
-          <li class="nav-item"><a class="nav-link" href="newRankConfig.jsp">Rank Configs</a></li>
+          <li class="nav-item"><a class="nav-link" href="newRankConfig.jsp">New Rank Config</a></li>
           <li class="nav-item"><a class="nav-link" href="wishlist">Your Wishlist</a></li>
           <li class="nav-item"><a class="nav-link" href="logout.jsp">Sign Out</a></li>
         <%

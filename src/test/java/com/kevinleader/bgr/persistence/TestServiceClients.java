@@ -1,5 +1,6 @@
 package com.kevinleader.bgr.persistence;
 
+import com.kevinleader.bgr.entity.database.RankingConfiguration;
 import com.kevinleader.bgr.entity.igdb.Game;
 import com.kevinleader.bgr.entity.steam.*;
 import org.junit.Test;
@@ -14,14 +15,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 public class TestServiceClients {
 
-    /**
-     * The Igdb dao.
-     */
     IgdbDao igdbDao;
-    /**
-     * The Steam dao.
-     */
     SteamDao steamDao;
+    GenericDao rankConfigDao = new GenericDao(RankingConfiguration.class);
 
     /**
      * Tests igdb search from game name.
@@ -101,6 +97,14 @@ public class TestServiceClients {
         List<PriceOverview> appPrices = steamDao.getPriceOverviewsFromIds(steamIds);
         assertEquals(3, appPrices.size());
         assertEquals(1999, appPrices.get(0).getJsonMemberFinal());
+    }
+
+    @Test
+    public void createWhereConditionSuccess() {
+        igdbDao = new IgdbDao();
+        RankingConfiguration rankConfig = (RankingConfiguration) rankConfigDao.getById(1);
+        String whereCondition = igdbDao.createWhereCondition(rankConfig);
+        assertEquals("where first_release_date > 15", whereCondition.substring(0,whereCondition.length()-8));
     }
 
 }

@@ -13,54 +13,58 @@ Filename: displayRanking.jsp
 <%@include file="head.jsp"%>
 
 <body>
-<div class="container">
-  <div class="row"><jsp:include page="headerAndNav.jsp"/></div>
+  <div class="container">
+    <div class="row"><jsp:include page="headerAndNav.jsp"/></div>
 
-  <main>
-    <h2>Your Ranking</h2>
+    <main>
+      <section>
+        <form action="displayRankingAction" method="GET">
+          <h2>Choose a Ranking Configuration to Display</h2>
+          <div class="form-group">
+            <label for="rankConfigSelect">Choose Config</label>
+            <select name="rankConfigId" id="rankConfigSelect">
+              <c:forEach var="rankConfig" items="${rankConfigs}">
+                <option value="${rankConfig.id}">${rankConfig.configurationName}</option>
+              </c:forEach>
+            </select>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-success">Display Ranking</button>
+          </div>
+        </form>
+      </section>
 
-    <form action="">
-      <div class="form-group">
-        <label class="bold" for="ranking">Choose a ranking:</label>
-        <select id="ranking" name="ranking">
-          <c:forEach var="ranking" items="${rankingConfigurations}">
+<%--      <h2>Your Ranking Configurations</h2>--%>
 
-          </c:forEach>
-        </select>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-success">Create Account</button>
-      </div>
-    </form>
+<%--      <table id="rankConfigsTable" class="table table-striped table-bordered" style="width:100%">--%>
+<%--        <thead>--%>
+<%--          <tr>--%>
+<%--            <th>Rank Config ID</th>--%>
+<%--            <th>Configuration Name</th>--%>
+<%--            <th>Platforms</th>--%>
+<%--            <th>Genres</th>--%>
+<%--            <th>Release Span</th>--%>
+<%--            <th></th>--%>
+<%--          </tr>--%>
+<%--        </thead>--%>
 
-    <table id="gamesTable" class="table table-striped table-bordered" style="width:100%">
-      <thead>
-        <tr>
-          <th>Game Name</th>
-          <th>Value</th>
-        </tr>
-      </thead>
+<%--        <tbody>--%>
+<%--        <c:forEach var="rankConfig" items="${rankConfigs}">--%>
+<%--          <tr>--%>
+<%--            <td>${rankConfig.id}</td>--%>
+<%--            <td>${rankConfig.configurationName}</td>--%>
+<%--            <td>${rankConfig.platforms}</td>--%>
+<%--            <td>${rankConfig.genres}</td>--%>
+<%--            <td>${rankConfig.releaseSpan}</td>--%>
+<%--            <td><a href="">remove</a></td>--%>
+<%--&lt;%&ndash;            TODO: Make remove actions for RankingConfig and WIshedGame&ndash;%&gt;--%>
+<%--          </tr>--%>
+<%--        </c:forEach>--%>
+<%--        </tbody>--%>
+<%--      </table>--%>
+    </main>
 
-      <tbody>
-      <c:forEach var="game" items="${games}">
-        <tr>
-          <td>${game.name}</td>
-          <td>${game.value}</td>
-        </tr>
-      </c:forEach>
-      </tbody>
-    </table>
-  </main>
-
-  <!-- footer -->
-</div>
+    <!-- footer -->
+  </div>
 </body>
 </html>
-
-<script type="text/javascript" class="init">
-    $(document).ready( function() {
-        $('#gamesTable').DataTable( {
-                "order": [[1, "desc"]]
-        } );
-    } );
-</script>

@@ -13,7 +13,7 @@ Filename: signup.jsp
 
 <%@include file="head.jsp"%>
 
-<<body>
+<body>
   <div class="container">
     <div class="row"><jsp:include page="headerAndNav.jsp"/></div>
 
