@@ -127,6 +127,24 @@ public class IgdbDao {
         return whereCondition;
     }
 
+    public String createWhereConditionFromIds(List<Integer> igdbIds) {
+        logger.debug("run createWhereConditionsFromIds({})", igdbIds);
+
+        String whereCondition = "where id = (";
+        boolean firstTime = true;
+        for (int id : igdbIds) {
+            if (!firstTime) {
+                whereCondition += ",";
+            } else {
+                firstTime = false;
+            }
+            whereCondition += id;
+        }
+        whereCondition += ");";
+
+        return whereCondition;
+    }
+
 //    public Website[] getWebsitesFromGameId(int gameId) throws JsonProcessingException {
 //        logger.debug("run getWebsitesFromGameId({})", gameId);
 //        String url = "https://api.igdb.com/v4/websites/";

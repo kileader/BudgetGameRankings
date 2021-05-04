@@ -107,4 +107,13 @@ public class TestServiceClients {
         assertEquals("where first_release_date > 14", whereCondition.substring(0,whereCondition.length()-8));
     }
 
+    @Test
+    public void createWhereConditionFromIdsSuccess() {
+        igdbDao = new IgdbDao();
+        List<Integer> igdbIds = new ArrayList<>();
+        igdbIds.add(1454);
+        igdbIds.add(2985);
+        String whereCondition = igdbDao.createWhereConditionFromIds(igdbIds);
+        assertEquals("where id = (1454,2985);", whereCondition);
+    }
 }

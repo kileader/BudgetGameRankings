@@ -23,20 +23,41 @@ Filename: wishlist.jsp
       <table id="gamesTable" class="table table-striped table-bordered" style="width:100%">
         <thead>
           <tr>
-            <th>WishedGame ID</th>
             <th>Game Name</th>
-            <th>IGDB Game ID</th>
+            <th>Value (Rating/USD)</th>
+            <th>igdb.com Rating</th>
+            <th>Current Price (USD)</th>
+            <th>Websites</th>
             <th></th>
           </tr>
         </thead>
 
         <tbody>
-        <c:forEach var="game" items="${games}">
+        <c:forEach var="game" items="${wishedGames}">
           <tr>
-            <td>${game.id}</td>
-            <td>${game.gameName}</td>
-            <td>${game.igdbGameId}</td>
-            <td><a href="deleteWishedGame?gameToDeleteId=${game.id}">delete from wishlist</a></td>
+            <td>${game.name}</td>
+            <td>${game.value}</td>
+            <td>${game.rating}</td>
+            <td>${game.price}</td>
+            <td>
+              <a href="${game.url}" target="_blank">igdb</a>
+              <c:forEach var="website" items="${game.websites}">
+                <c:choose>
+                  <c:when test="${website.category == '1'}">
+                    <a href="${website.url}" target="_blank">official</a>
+                  </c:when>
+                  <c:when test="${website.category == '3'}">
+                    <a href="${website.url}" target="_blank">wikipedia</a>
+                  </c:when>
+                  <c:when test="${website.category == '13'}">
+                    <a href="${website.url}" target="_blank">steam</a>
+                  </c:when>
+                </c:choose>
+              </c:forEach>
+            </td>
+            <td>
+              <a href="deleteWishedGame?gameToDeleteIgdbId=${game.igdbId}">delete from wishlist</a>
+            </td>
           </tr>
         </c:forEach>
         </tbody>

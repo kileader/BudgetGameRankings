@@ -47,12 +47,13 @@ public class DeleteWishedGame extends HttpServlet {
         User user = (User) userDao.getById(userId);
         req.setAttribute("user", user);
 
-        int gameToDeleteId = Integer.parseInt(req.getParameter("gameToDeleteId"));
-        WishedGame wishedGameToDelete = (WishedGame) wishedGameDao.getById(gameToDeleteId);
+        int gameToDeleteIgdbId = Integer.parseInt(req.getParameter("gameToDeleteIgdbId"));
+        List<WishedGame> wishedGamesToDelete = wishedGameDao.getByPropertyEqual("igdbGameId", gameToDeleteIgdbId);
 
-        // Prevent sneaky deletes to other users
-        if (wishedGameToDelete.getUser().toString().equals(user.toString())) {
-            wishedGameDao.delete(wishedGameToDelete);
+        for (WishedGame game : wishedGamesToDelete) {
+            if (game.getUser().toString().equals(user.toString())) {
+                wishedGameDao.delete(game);
+            }
         }
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("/wishlist");

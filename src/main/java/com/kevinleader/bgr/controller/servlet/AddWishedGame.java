@@ -57,7 +57,7 @@ public class AddWishedGame extends HttpServlet {
 
         WishedGame newWishedGame = new WishedGame(user,gameNameToAdd,igdbIdToAdd);
 
-        wishedGameDao.insert(newWishedGame);
+        int wishedGameId = wishedGameDao.insert(newWishedGame);
 //        // Check if it already exists before inserting
 //        usersWishedGames = user.getWishedGames();
 //        boolean foundId = false;

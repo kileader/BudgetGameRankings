@@ -49,3 +49,4 @@
 | 4/28/21 | Met for peer review. Used JSTL to rework website structure using login. | 5 |
 | 5/2/21  | Worked all day on displaying rankings. Managed to get a working system for MVP | 10 |
 | 5/3/21  | Made everything look a bit nicer and display more info. Got all needed actions working. | 10 |
+| 5/4/21  | Fix admin and other things for presentation today. | 4 |
