@@ -26,7 +26,6 @@ Filename: admin.jsp
             <th>User ID</th>
             <th>User Name</th>
             <th>Email</th>
-            <th>Password</th>
             <th></th>
           </tr>
         </thead>
@@ -36,7 +35,6 @@ Filename: admin.jsp
             <td>${user.id}</td>
             <td>${user.userName}</td>
             <td>${user.email}</td>
-            <td>${user.password}</td>
             <td><a href="deleteUser?userToDeleteId=${user.id}">Delete User</a></td>
           </tr>
         </c:forEach>
