@@ -91,7 +91,7 @@ public class SaveRankConfigAction extends HttpServlet {
         newRankingConfiguration = new RankingConfiguration(user,configurationName,platforms,genres,releaseSpan);
         int id = rankingConfigurationDao.insert(newRankingConfiguration);
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/displayRanking.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/index.jsp");
         dispatcher.forward(req, resp);
     }
 

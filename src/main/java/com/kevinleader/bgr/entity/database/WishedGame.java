@@ -32,12 +32,6 @@ public class WishedGame {
     private int igdbGameId;
 
     /**
-     * id number for the game on steampowered.com
-     */
-    @Column(name = "steam_id")
-    private int steamId;
-
-    /**
      * Instantiates a new game on a user's wishlist.
      */
     public WishedGame() {
@@ -49,13 +43,11 @@ public class WishedGame {
      * @param user       the user
      * @param gameName   the game name
      * @param igdbGameId the igdb game id
-     * @param steamId    the steam id
      */
-    public WishedGame(User user, String gameName, int igdbGameId, int steamId) {
+    public WishedGame(User user, String gameName, int igdbGameId) {
         this.user = user;
         this.gameName = gameName;
         this.igdbGameId = igdbGameId;
-        this.steamId = steamId;
     }
 
     /**
@@ -130,24 +122,6 @@ public class WishedGame {
         this.igdbGameId = igdbGameId;
     }
 
-    /**
-     * Gets steam id.
-     *
-     * @return the steam id
-     */
-    public int getSteamId() {
-        return steamId;
-    }
-
-    /**
-     * Sets steam id.
-     *
-     * @param steamId the steam id
-     */
-    public void setSteamId(int steamId) {
-        this.steamId = steamId;
-    }
-
     @Override
     public String toString() {
         return "WishedGame{" +
@@ -155,7 +129,6 @@ public class WishedGame {
                 ", user=" + user +
                 ", gameName='" + gameName + '\'' +
                 ", igdbGameId=" + igdbGameId +
-                ", steamId=" + steamId +
                 '}';
     }
 }

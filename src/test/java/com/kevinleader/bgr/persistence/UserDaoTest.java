@@ -126,7 +126,7 @@ class UserDaoTest {
     @Test
     void insertWithWishedGameSuccess() {
         WishedGame wishedGame = new WishedGame(newUser,
-                "Hello Kitty and Sanrio Friends Racing", 35243, 370600);
+                "Hello Kitty and Sanrio Friends Racing", 35243);
         newUser.addWishedGame(wishedGame);
         int id = userDao.insert(newUser);
         assertNotEquals(0, id);

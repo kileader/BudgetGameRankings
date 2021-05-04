@@ -2,7 +2,6 @@ package com.kevinleader.bgr.controller.servlet;
 
 import com.kevinleader.bgr.analyzer.Ranker;
 import com.kevinleader.bgr.entity.database.RankingConfiguration;
-import com.kevinleader.bgr.entity.database.User;
 import com.kevinleader.bgr.entity.igdb.Game;
 import com.kevinleader.bgr.entity.ranker.RankedGame;
 import com.kevinleader.bgr.persistence.GenericDao;
@@ -16,6 +15,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
@@ -29,7 +29,7 @@ import java.util.List;
 public class DisplayRankingAction extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
-    private RankingConfiguration rankConfig;
+    private RankingConfiguration chosenRankConfig;
     private GenericDao rankConfigDao = new GenericDao(RankingConfiguration.class);
     private IgdbDao igdbDao;
     private Ranker ranker;
@@ -46,10 +46,15 @@ public class DisplayRankingAction extends HttpServlet {
             throws ServletException, IOException {
         logger.debug("run DisplayRankingAction.doGet()");
 
-        int rankConfigId = Integer.valueOf(req.getParameter("rankConfigId"));
-        rankConfig = (RankingConfiguration) rankConfigDao.getById(rankConfigId);
+        HttpSession session = req.getSession();
+        List<RankingConfiguration> rankConfigs = (List<RankingConfiguration>) session.getAttribute("rankConfigs");
+        req.setAttribute("rankConfigs", rankConfigs);
 
-        String whereCondition = igdbDao.createWhereCondition(rankConfig);
+        int rankConfigId = Integer.valueOf(req.getParameter("rankConfigId"));
+        chosenRankConfig = (RankingConfiguration) rankConfigDao.getById(rankConfigId);
+        req.setAttribute("chosenRankConfig", chosenRankConfig);
+
+        String whereCondition = igdbDao.createWhereCondition(chosenRankConfig);
         Game[] games = igdbDao.loadGamesToRank(whereCondition);
         
         List<RankedGame> rankedGames = null;
@@ -61,7 +66,7 @@ public class DisplayRankingAction extends HttpServlet {
 
         req.setAttribute("rankedGames", rankedGames);
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/actuallyDisplayRanking.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/displayRanking.jsp");
         dispatcher.forward(req, resp);
     }
 

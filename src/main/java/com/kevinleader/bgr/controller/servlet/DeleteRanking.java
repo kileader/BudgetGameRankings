@@ -12,18 +12,17 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
 /**
- * Serves displayRanking.jsp
+ * Deletes a ranking configuration
  */
 @WebServlet(
-        name = "DisplayRanking",
-        urlPatterns = {"/displayRanking"}
+        name = "DeleteRanking",
+        urlPatterns = {"/deleteRanking"}
 )
-public class DisplayRanking extends HttpServlet {
+public class DeleteRanking extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     private GenericDao userDao;
@@ -31,7 +30,7 @@ public class DisplayRanking extends HttpServlet {
 
     @Override
     public void init() {
-        logger.debug("run DisplayRanking.init()");
+        logger.debug("run DeleteRanking.init()");
         userDao = new GenericDao(User.class);
         rankingConfigurationDao = new GenericDao(RankingConfiguration.class);
     }
@@ -39,8 +38,7 @@ public class DisplayRanking extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-
-        logger.debug("run DisplayRanking.doGet()");
+        logger.debug("run DeleteRanking.doGet()");
 
         // Grab user from login
         String username = req.getUserPrincipal().getName();
@@ -49,14 +47,15 @@ public class DisplayRanking extends HttpServlet {
         User user = (User) userDao.getById(userId);
         req.setAttribute("user", user);
 
-        HttpSession session = req.getSession();
-        session.setAttribute("user", user);
+        int configToDeleteId = Integer.parseInt(req.getParameter("configToDelete"));
+        RankingConfiguration configToDelete = (RankingConfiguration) rankingConfigurationDao.getById(configToDeleteId);
 
-        List<RankingConfiguration> rankConfigs = rankingConfigurationDao.getByPropertyEqual("user", user);
-        session.setAttribute("rankConfigs", rankConfigs);
-        req.setAttribute("rankConfigs", rankConfigs);
+        // Prevent sneaky deletes to other users
+        if (configToDelete.getUser().toString().equals(user.toString())) {
+            rankingConfigurationDao.delete(configToDelete);
+        }
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/displayRanking.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/configList");
         dispatcher.forward(req, resp);
     }
 

@@ -39,3 +39,8 @@ img {
 label.bold, p.text-danger {
     font-weight: bold;
 }
+
+span.deletetext {
+    font-size: x-small;
+    color: red;
+}

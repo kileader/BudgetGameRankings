@@ -112,7 +112,7 @@ public class SteamDao {
                 String priceOverview = data.get("price_overview").toString();
                 appPrice = mapper.readValue(priceOverview, PriceOverview.class);
             } else {
-                appPrice = new PriceOverview("", 0, 0, "", "", 0);
+                appPrice = new PriceOverview("", 0, -1, "", "", 0);
             }
             appPrices.add(appPrice);
         }

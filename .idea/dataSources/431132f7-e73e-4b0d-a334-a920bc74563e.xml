@@ -1125,30 +1125,25 @@ user|||tomcat|localhost|SELECT|G</Grants>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="318" parent="291" name="steam_id">
-      <Position>5</Position>
-      <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <index id="319" parent="291" name="wished_game_id_uindex">
+    <index id="318" parent="291" name="wished_game_id_uindex">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="320" parent="291" name="user_id_fk">
+    <index id="319" parent="291" name="user_id_fk">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="321" parent="291" name="PRIMARY">
+    <key id="320" parent="291" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="322" parent="291" name="wished_game_id_uindex">
+    <key id="321" parent="291" name="wished_game_id_uindex">
       <ColNames>id</ColNames>
       <UnderlyingIndexName>wished_game_id_uindex</UnderlyingIndexName>
     </key>
-    <foreign-key id="323" parent="291" name="user_id_fk">
+    <foreign-key id="322" parent="291" name="user_id_fk">
       <ColNames>user_id</ColNames>
       <RefTableName>user</RefTableName>
       <RefColNames>id</RefColNames>

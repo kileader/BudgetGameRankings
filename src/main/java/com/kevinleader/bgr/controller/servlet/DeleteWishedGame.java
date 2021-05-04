@@ -2,6 +2,7 @@ package com.kevinleader.bgr.controller.servlet;
 
 import com.kevinleader.bgr.entity.database.RankingConfiguration;
 import com.kevinleader.bgr.entity.database.User;
+import com.kevinleader.bgr.entity.database.WishedGame;
 import com.kevinleader.bgr.persistence.GenericDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -12,35 +13,33 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
 /**
- * Serves displayRanking.jsp
+ * Deletes a wished game
  */
 @WebServlet(
-        name = "DisplayRanking",
-        urlPatterns = {"/displayRanking"}
+        name = "DeleteWishedGame",
+        urlPatterns = {"/deleteWishedGame"}
 )
-public class DisplayRanking extends HttpServlet {
+public class DeleteWishedGame extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     private GenericDao userDao;
-    private GenericDao rankingConfigurationDao;
+    private GenericDao wishedGameDao;
 
     @Override
     public void init() {
-        logger.debug("run DisplayRanking.init()");
+        logger.debug("run DeleteWishedGame.init()");
         userDao = new GenericDao(User.class);
-        rankingConfigurationDao = new GenericDao(RankingConfiguration.class);
+        wishedGameDao = new GenericDao(WishedGame.class);
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-
-        logger.debug("run DisplayRanking.doGet()");
+        logger.debug("run DeleteWishedGame.doGet()");
 
         // Grab user from login
         String username = req.getUserPrincipal().getName();
@@ -49,14 +48,15 @@ public class DisplayRanking extends HttpServlet {
         User user = (User) userDao.getById(userId);
         req.setAttribute("user", user);
 
-        HttpSession session = req.getSession();
-        session.setAttribute("user", user);
+        int gameToDeleteId = Integer.parseInt(req.getParameter("gameToDeleteId"));
+        WishedGame wishedGameToDelete = (WishedGame) wishedGameDao.getById(gameToDeleteId);
 
-        List<RankingConfiguration> rankConfigs = rankingConfigurationDao.getByPropertyEqual("user", user);
-        session.setAttribute("rankConfigs", rankConfigs);
-        req.setAttribute("rankConfigs", rankConfigs);
+        // Prevent sneaky deletes to other users
+        if (wishedGameToDelete.getUser().toString().equals(user.toString())) {
+            wishedGameDao.delete(wishedGameToDelete);
+        }
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/displayRanking.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/wishlist");
         dispatcher.forward(req, resp);
     }
 

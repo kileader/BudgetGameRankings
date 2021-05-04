@@ -12,18 +12,17 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
 /**
- * Serves displayRanking.jsp
+ * Serves configList.jsp
  */
 @WebServlet(
-        name = "DisplayRanking",
-        urlPatterns = {"/displayRanking"}
+        name = "ConfigList",
+        urlPatterns = {"/configList"}
 )
-public class DisplayRanking extends HttpServlet {
+public class ConfigList extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     private GenericDao userDao;
@@ -31,7 +30,7 @@ public class DisplayRanking extends HttpServlet {
 
     @Override
     public void init() {
-        logger.debug("run DisplayRanking.init()");
+        logger.debug("run ConfigList.init()");
         userDao = new GenericDao(User.class);
         rankingConfigurationDao = new GenericDao(RankingConfiguration.class);
     }
@@ -40,23 +39,18 @@ public class DisplayRanking extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
-        logger.debug("run DisplayRanking.doGet()");
+        logger.debug("run ConfigList.doGet()");
 
         // Grab user from login
         String username = req.getUserPrincipal().getName();
         List<User> users = userDao.getByPropertyEqual("userName", username);
         int userId = users.get(0).getId();
         User user = (User) userDao.getById(userId);
-        req.setAttribute("user", user);
-
-        HttpSession session = req.getSession();
-        session.setAttribute("user", user);
 
         List<RankingConfiguration> rankConfigs = rankingConfigurationDao.getByPropertyEqual("user", user);
-        session.setAttribute("rankConfigs", rankConfigs);
         req.setAttribute("rankConfigs", rankConfigs);
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/displayRanking.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/configList.jsp");
         dispatcher.forward(req, resp);
     }
 

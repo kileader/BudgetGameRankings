@@ -54,7 +54,7 @@ public class SignUpAction extends HttpServlet {
         newRole = new Role(newUser, "user", newUser.getUserName());
         newUser.addRole(newRole);
 
-        newRankingConfiguration = new RankingConfiguration(newUser, "Any Game for Past Year", "Any", "Any", 31556926);
+        newRankingConfiguration = new RankingConfiguration(newUser, "Any Game for Past 5 Years", "Any", "Any", 157784630);
 
         int id = userDao.insert(newUser);
         int id2 = rankingConfigurationDao.insert(newRankingConfiguration);

@@ -109,8 +109,8 @@ public class Ranker {
                 price = po.getJsonMemberFinal(); //get the steam final price
                 logger.debug("assign price as {}", price);
             } else {
-                price = 0; //it's free or freemium
-                logger.debug("assign price as free(mium)");
+                price = -1; //it's unknown
+                logger.debug("assign price as unknown");
             }
             steamPrices.add(price);
         }
@@ -143,33 +143,24 @@ public class Ranker {
             if (prices.get(i) <= 0) {
                 values.add(-1.0);
             } else {
-                values.add(games[i].getTotalRating()/(prices.get(i)/100));
+                values.add(games[i].getTotalRating()/((double) prices.get(i)/100));
             }
         }
         return values;
-    }
-
-    /**
-     * Gets ranked game list.
-     *
-     * @param names  the names
-     * @param values the values
-     * @return the ranked game list
-     */
-    public List<RankedGame> getRankedGameListFromNamesAndValues(List<String> names, List<Double> values) {
-        List<RankedGame> rankedGames = new ArrayList<>();
-        for (int i = 0; i < names.size(); i++) {
-            RankedGame rankedGame = new RankedGame(names.get(i), values.get(i));
-            rankedGames.add(rankedGame);
-        }
-        return rankedGames;
     }
 
     public List<RankedGame> getRankedGameList(Game[] games) throws Exception {
         List<String> names = igdbDao.getNames(games);
         List<Integer> prices = getPrices(games);
         List<Double> values = getGameValues(games, prices);
-        List<RankedGame> rankedGames = getRankedGameListFromNamesAndValues(names, values);
+
+        List<RankedGame> rankedGames = new ArrayList<>();
+        for (int i = 0; i < names.size(); i++) {
+            RankedGame rankedGame = new RankedGame(names.get(i), values.get(i),
+                    games[i].getRating(), (double) prices.get(i)/100,
+                    games[i].getUrl(), games[i].getWebsites(), games[i].getId());
+            rankedGames.add(rankedGame);
+        }
         return rankedGames;
     }
 

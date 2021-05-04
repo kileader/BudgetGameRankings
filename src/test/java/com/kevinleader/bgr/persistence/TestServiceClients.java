@@ -104,7 +104,7 @@ public class TestServiceClients {
         igdbDao = new IgdbDao();
         RankingConfiguration rankConfig = (RankingConfiguration) rankConfigDao.getById(1);
         String whereCondition = igdbDao.createWhereCondition(rankConfig);
-        assertEquals("where first_release_date > 15", whereCondition.substring(0,whereCondition.length()-8));
+        assertEquals("where first_release_date > 14", whereCondition.substring(0,whereCondition.length()-8));
     }
 
 }

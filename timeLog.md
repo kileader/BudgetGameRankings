@@ -47,3 +47,5 @@
 | 4/19/21 | Worked mostly on Ranker.getPrices(). Able to get steam game values accurately. | 10 |
 | 4/21/21 | Created a decent looking start for creating a new rank config. | 6 |
 | 4/28/21 | Met for peer review. Used JSTL to rework website structure using login. | 5 |
+| 5/2/21  | Worked all day on displaying rankings. Managed to get a working system for MVP | 10 |
+| 5/3/21  | Made everything look a bit nicer and display more info. Got all needed actions working. | 10 |

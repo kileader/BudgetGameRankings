@@ -57,9 +57,9 @@ class WishedGameDaoTest {
         wishedGameDao = new GenericDao(WishedGame.class);
 
         newUser = new User("Ranias", "kevin.i.leader@gmail.com", "password");
-        newWishedGame1 = new WishedGame(newUser, "Papers, Please", 2935, 239030);
-        newWishedGame2 = new WishedGame(newUser, "Diddy Kong Racing", 2723, -1);
-        newWishedGameSuper = new WishedGame(newUser, "Super Monkey Ball: Banana Blitz HD", 120867, 1061730);
+        newWishedGame1 = new WishedGame(newUser, "Papers, Please", 2935);
+        newWishedGame2 = new WishedGame(newUser, "Diddy Kong Racing", 2723);
+        newWishedGameSuper = new WishedGame(newUser, "Super Monkey Ball: Banana Blitz HD", 120867);
     }
 
     /**

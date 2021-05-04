@@ -7,7 +7,7 @@ Filename: newRankConfig.jsp
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="title" value="BGR - Ranking Configuration"/>
+<c:set var="title" value="Budget Game Rankings - New Rank Config"/>
 
 <html>
 
@@ -289,7 +289,7 @@ Filename: newRankConfig.jsp
             <div class="form-group">
               <label class="bold" for="releaseSpan">Release Span (years)</label>
               <input type="text" id="releaseSpan" placeholder="Release Span" name="releaseSpan"
-                     class="form-control" pattern="^\d*\.?\d*$" required value="1.5">
+                     class="form-control" pattern="^\d*\.?\d*$" required value="5">
             </div>
           </div>
 <%--          <div class="col-sm">--%>
