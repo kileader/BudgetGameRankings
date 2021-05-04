@@ -27,32 +27,32 @@ public class SteamDao {
      * The Apps.
      */
     static AppListItem[] apps;
-
-    /**
-     * Load steam ids app list item [ ].
-     *
-     * @return the app list item [ ]
-     * @throws Exception the exception
-     */
-    public AppListItem[] loadSteamIds() throws Exception {
-        logger.debug("run loadSteamIds()");
-        String url = "https://api.steampowered.com/ISteamApps/GetAppList/v2/";
-
-        Client client = ClientBuilder.newClient();
-        WebTarget target = client.target(url);
-        Invocation.Builder builder = target.request(MediaType.APPLICATION_JSON);
-        String response = builder.get(String.class);
-
-        ObjectMapper mapper = new ObjectMapper();
-        JsonNode node1 = mapper.readTree(response);
-        JsonNode node2 = node1.get("applist");
-        JsonNode node3 = node2.get("apps");
-        String json = node3.toString();
-
-        apps = mapper.readValue(json, AppListItem[].class);
-        client.close();
-        return apps;
-    }
+//
+//    /**
+//     * Load steam ids app list item [ ].
+//     *
+//     * @return the app list item [ ]
+//     * @throws Exception the exception
+//     */
+//    public AppListItem[] loadSteamIds() throws Exception {
+//        logger.debug("run loadSteamIds()");
+//        String url = "https://api.steampowered.com/ISteamApps/GetAppList/v2/";
+//
+//        Client client = ClientBuilder.newClient();
+//        WebTarget target = client.target(url);
+//        Invocation.Builder builder = target.request(MediaType.APPLICATION_JSON);
+//        String response = builder.get(String.class);
+//
+//        ObjectMapper mapper = new ObjectMapper();
+//        JsonNode node1 = mapper.readTree(response);
+//        JsonNode node2 = node1.get("applist");
+//        JsonNode node3 = node2.get("apps");
+//        String json = node3.toString();
+//
+//        apps = mapper.readValue(json, AppListItem[].class);
+//        client.close();
+//        return apps;
+//    }
 
 //    /**
 //     * Find steam id from name int.
@@ -118,5 +118,39 @@ public class SteamDao {
         }
         return appPrices;
     }
+
+//    public List<Integer> getMetacriticScoresFromIds(List<Integer> steamIds) throws Exception {
+//        logger.debug("run getMetacriticScoresFromIds({})", steamIds);
+//        List<Integer> metacriticScores = new ArrayList<>();
+//        String stringIds = "";
+//
+//        for (int id : steamIds) {
+//            stringIds += String.valueOf(id);
+//            stringIds += ",";
+//        }
+//        String finalStringIds = stringIds.substring(0,stringIds.length()-1);
+//
+//        String url = "https://store.steampowered.com/api/appdetails?appids="
+//                + finalStringIds + "&currency=USD&filters=metacritic";
+//
+//        Client client = ClientBuilder.newClient();
+//        WebTarget target = client.target(url);
+//        Invocation.Builder builder = target.request(MediaType.APPLICATION_JSON);
+//        String response = builder.get(String.class);
+//
+//        ObjectMapper mapper = new ObjectMapper();
+//        JsonNode node1 = mapper.readTree(response);
+//        for (int id : steamIds) {
+//            int metacriticScore = -1;
+//            JsonNode node2 = node1.get(Integer.toString(id));
+//            JsonNode data = node2.get("data");
+//            if ((data != null) && (data.findValue("metacritic") != null)) {
+//                JsonNode metacritic = data.get("metacritic");
+//                metacriticScore = metacritic.get("score").asInt();
+//            }
+//            metacriticScores.add(metacriticScore);
+//        }
+//        return metacriticScores;
+//    }
 
 }

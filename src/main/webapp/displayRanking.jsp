@@ -66,7 +66,8 @@ Filename: displayRanking.jsp
                   </c:choose>
                 </c:forEach>
               </td>
-              <td><a href="addWishedGame?gameNameToAdd=${rankedGame.name}&igdbIdToAdd=${rankedGame.igdbId}">add to wishlist</a></td>
+              <td><a href="addWishedGame?gameNameToAdd=${rankedGame.name}&igdbIdToAdd=${rankedGame.igdbId}"
+                  target="_blank">add to wishlist</a></td>
             </tr>
           </c:forEach>
           </tbody>

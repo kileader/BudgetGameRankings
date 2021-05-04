@@ -25,7 +25,7 @@ Filename: index.jsp
           <h2>Welcome</h2>
           <h3>
             Hi there. If you have an account, please <a href="login">log in</a>.
-            Otherwise, please <a href="signup">sign up.</a>
+            Otherwise, please <a href="signup.jsp">sign up.</a>
           </h3>
           <p>
             (Using fake emails and super simple usernames and passwords is best at the moment.)
@@ -52,9 +52,6 @@ Filename: index.jsp
         <%
           }
         %>
-      </section>
-      <section>
-        <form
       </section>
     </main>
 

@@ -18,9 +18,30 @@ Filename: admin.jsp
     <div class="row"><jsp:include page="headerAndNav.jsp"/></div>
 
     <main>
-      <section>
-        <h2>Hi admin. You will have control over user accounts here.</h2>
-      </section>
+      <h2>All Users</h2>
+
+      <table id="usersTable" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+          <tr>
+            <th>User ID</th>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+        <c:forEach var="user" items="${users}">
+          <tr>
+            <td>${user.id}</td>
+            <td>${user.userName}</td>
+            <td>${user.email}</td>
+            <td>${user.password}</td>
+            <td><a href="deleteUser?userToDeleteId=${user.id}">Delete User</a></td>
+          </tr>
+        </c:forEach>
+        </tbody>
+      </table>
     </main>
 
 <%--    <div class="row">footer</div>--%>

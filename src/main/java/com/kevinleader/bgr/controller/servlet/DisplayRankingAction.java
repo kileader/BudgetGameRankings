@@ -61,7 +61,7 @@ public class DisplayRankingAction extends HttpServlet {
         try {
             rankedGames = ranker.getRankedGameList(games);
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("exception: ", e);
         }
 
         req.setAttribute("rankedGames", rankedGames);

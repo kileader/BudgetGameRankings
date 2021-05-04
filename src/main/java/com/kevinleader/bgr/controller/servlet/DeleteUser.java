@@ -1,7 +1,7 @@
 package com.kevinleader.bgr.controller.servlet;
 
+import com.kevinleader.bgr.entity.database.Role;
 import com.kevinleader.bgr.entity.database.User;
-import com.kevinleader.bgr.entity.database.WishedGame;
 import com.kevinleader.bgr.persistence.GenericDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,32 +13,34 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
- * Deletes a wished game
+ * Deletes a user via admin page
  */
 @WebServlet(
-        name = "DeleteWishedGame",
-        urlPatterns = {"/deleteWishedGame"}
+        name = "DeleteUser",
+        urlPatterns = {"/deleteUser"}
 )
-public class DeleteWishedGame extends HttpServlet {
+public class DeleteUser extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     private GenericDao userDao;
-    private GenericDao wishedGameDao;
+    private Set<Role> currentUserRoles;
 
     @Override
     public void init() {
-        logger.debug("run DeleteWishedGame.init()");
+        logger.debug("run DeleteUser.init()");
         userDao = new GenericDao(User.class);
-        wishedGameDao = new GenericDao(WishedGame.class);
+        currentUserRoles = new HashSet<>();
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        logger.debug("run DeleteWishedGame.doGet()");
+        logger.debug("run DeleteUser.doGet()");
 
         // Grab user from login
         String username = req.getUserPrincipal().getName();
@@ -47,15 +49,12 @@ public class DeleteWishedGame extends HttpServlet {
         User user = (User) userDao.getById(userId);
         req.setAttribute("user", user);
 
-        int gameToDeleteId = Integer.parseInt(req.getParameter("gameToDeleteId"));
-        WishedGame wishedGameToDelete = (WishedGame) wishedGameDao.getById(gameToDeleteId);
+        int userToDeleteId = Integer.parseInt(req.getParameter("userToDeleteId"));
+        User userToDelete = (User) userDao.getById(userToDeleteId);
 
-        // Prevent sneaky deletes to other users
-        if (wishedGameToDelete.getUser().toString().equals(user.toString())) {
-            wishedGameDao.delete(wishedGameToDelete);
-        }
+        userDao.delete(userToDelete);
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/wishlist");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/admin");
         dispatcher.forward(req, resp);
     }
 
