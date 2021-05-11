@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 /**
- * The type Ranking configuration dao test.
+ * Tests the GenericDao class using RankingConfiguration.
  */
 class RankingConfigurationDaoTest {
 

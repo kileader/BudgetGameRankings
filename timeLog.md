@@ -50,3 +50,4 @@
 | 5/2/21  | Worked all day on displaying rankings. Managed to get a working system for MVP | 10 |
 | 5/3/21  | Made everything look a bit nicer and display more info. Got all needed actions working. | 10 |
 | 5/4/21  | Fix admin and other things for presentation today. | 4 |
+| 5/11/21  | Clean up before final review. Updated JavaDocs, deleted or commented out unused code. Rename things. Update sample folders. | 4 |

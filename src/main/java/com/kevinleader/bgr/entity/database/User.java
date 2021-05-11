@@ -8,7 +8,7 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
- * A javabean class to represent a user.
+ * Javabean to represent a user.
  *
  * @author Kevin Leader
  */
@@ -39,6 +39,8 @@ public class User {
 
     /**
      * Instantiates a new User with no parameters.
+     *
+     * @author Kevin Leader
      */
     public User() {
     }

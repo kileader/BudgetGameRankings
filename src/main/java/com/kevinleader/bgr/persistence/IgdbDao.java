@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A DAO for use with the Igdb.com web service
+ * DAO for use with the Igdb.com web service
  *
  * @author Kevin Leader
  */
@@ -27,10 +27,10 @@ public class IgdbDao {
             "total_rating_count,url,websites.*";
 
     /**
-     * Search from game name game [ ].
+     * Search igdb.com from game name.
      *
      * @param gameName the game name
-     * @return the game [ ]
+     * @return the game array
      * @throws JsonProcessingException the json processing exception
      */
     public Game[] searchFromGameName(String gameName) throws JsonProcessingException {
@@ -53,10 +53,10 @@ public class IgdbDao {
     }
 
     /**
-     * Load games to rank game [ ].
+     * Load games to rank by using igdb.com api.
      *
      * @param whereConditions the where conditions
-     * @return the game [ ]
+     * @return the game array
      * @throws JsonProcessingException the json processing exception
      */
     public Game[] loadGamesToRank(String whereConditions) throws JsonProcessingException {
@@ -80,7 +80,7 @@ public class IgdbDao {
     }
 
     /**
-     * Gets release date epoch.
+     * Gets release date epoch in seconds.
      *
      * @param releaseSpan the release span
      * @return the release date epoch
@@ -93,7 +93,7 @@ public class IgdbDao {
     }
 
     /**
-     * Gets names.
+     * Gets video game names from a list of igdb games.
      *
      * @param games the games
      * @return the names
@@ -107,6 +107,12 @@ public class IgdbDao {
         return names;
     }
 
+    /**
+     * Creates a where condition string using a ranking configuration to be used with igdb.com api.
+     *
+     * @param rankConfig the chosen ranking configuration
+     * @return the string
+     */
     public String createWhereCondition(RankingConfiguration rankConfig) {
         logger.debug("run createWhereConditions({})", rankConfig);
         String platforms = "";
@@ -127,6 +133,12 @@ public class IgdbDao {
         return whereCondition;
     }
 
+    /**
+     * Creates a where condition string using igdb game IDs.
+     *
+     * @param igdbIds the igdb ids
+     * @return the string
+     */
     public String createWhereConditionFromIds(List<Integer> igdbIds) {
         logger.debug("run createWhereConditionsFromIds({})", igdbIds);
 

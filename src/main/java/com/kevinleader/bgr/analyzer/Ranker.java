@@ -15,7 +15,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * The type Ranker.
+ * Contains logic for the ranking of games by value.
+ *
+ * @author Kevin Leader
  */
 public class Ranker {
 
@@ -33,7 +35,7 @@ public class Ranker {
     }
 
     /**
-     * Gets prices.
+     * Gets game prices in US Cents from steam or estimates them according to game platform.
      *
      * @param games the games
      * @return the prices
@@ -130,7 +132,7 @@ public class Ranker {
     }
 
     /**
-     * Gets game values.
+     * Calculates game value by dividing total rating on IGDB.com by the game price in USD.
      *
      * @param games  the games
      * @param prices the prices
@@ -149,6 +151,13 @@ public class Ranker {
         return values;
     }
 
+    /**
+     * Aggregates data for listing the ranked games.
+     *
+     * @param games the games
+     * @return the ranked game list
+     * @throws Exception the exception
+     */
     public List<RankedGame> getRankedGameList(Game[] games) throws Exception {
         List<String> names = igdbDao.getNames(games);
         List<Integer> prices = getPrices(games);

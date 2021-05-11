@@ -21,7 +21,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Serves wishlist.jsp
+ * Gets the user's wished games, generates a ranking list, then forwards to wishlist.jsp.
+ *
+ * @author Kevin Leader
  */
 @WebServlet(
         name = "Wishlist",

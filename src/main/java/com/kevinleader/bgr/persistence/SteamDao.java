@@ -27,7 +27,7 @@ public class SteamDao {
      * The Apps.
      */
     static AppListItem[] apps;
-//
+
 //    /**
 //     * Load steam ids app list item [ ].
 //     *
@@ -77,7 +77,7 @@ public class SteamDao {
 //    }
 
     /**
-     * Gets price overviews from ids.
+     * Gets steam price overviews from steam IDs.
      *
      * @param steamIds the steam ids
      * @return the price overviews from ids

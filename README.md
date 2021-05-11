@@ -26,6 +26,7 @@ rankings based on user chosen parameters.
   * steampowered.com API
 * CSS
   * Bootstrap
+  * JQuery Data Tables
 * Data Validation
   * Bootstrap Validator for front end
   * Explore Hibernate's validation

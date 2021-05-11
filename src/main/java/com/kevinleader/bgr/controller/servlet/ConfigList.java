@@ -16,7 +16,9 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Serves configList.jsp
+ * Serves configList.jsp and sets ranking configurations for current user.
+ *
+ * @author Kevin Leader
  */
 @WebServlet(
         name = "ConfigList",

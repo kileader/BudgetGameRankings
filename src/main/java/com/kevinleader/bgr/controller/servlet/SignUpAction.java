@@ -16,7 +16,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Signs up a new user
+ * Gets properties for a new user from the sign up form, and inserts the new user. Then forwards to index.jsp.
+ *
+ * @author Kevin Leader
  */
 @WebServlet(
         name = "SignUp",
@@ -34,6 +36,7 @@ public class SignUpAction extends HttpServlet {
 
     @Override
     public void init() {
+        logger.debug("run SignUpAction.init()");
         userDao = new GenericDao(User.class);
         rankingConfigurationDao = new GenericDao(RankingConfiguration.class);
         receivedUser = new User();
@@ -42,7 +45,7 @@ public class SignUpAction extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        logger.debug("run SignUp.doGet()");
+        logger.debug("run SignUpAction.doGet()");
 
         receivedUser.setUserName(req.getParameter("userName"));
         receivedUser.setEmail(req.getParameter("email"));

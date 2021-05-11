@@ -73,11 +73,8 @@ Filename: displayRanking.jsp
           </tbody>
         </table>
       </section>
-<%-- TODO: Make remove actions for RankingConfig and WishedGames--%>
-
     </main>
 
-    <!-- footer -->
   </div>
   <script type="text/javascript" class="init">
       $(document).ready( function() {

@@ -331,7 +331,6 @@ Filename: newRankConfig.jsp
 
   </main>
 
-  <!-- <div class="row" data-w3-include-html="footer.html"></div> -->
 </div>
 <script>
     function disablePlatforms(flag) {

@@ -26,7 +26,6 @@ Filename: indexSignUpSuccess.jsp
       </section>
     </main>
 
-    <!-- <div class="row">footer</div> -->
   </div>
 </body>
 </html>

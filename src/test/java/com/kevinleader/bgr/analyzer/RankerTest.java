@@ -3,9 +3,6 @@ package com.kevinleader.bgr.analyzer;
 import com.kevinleader.bgr.entity.igdb.Game;
 import com.kevinleader.bgr.entity.ranker.RankedGame;
 import com.kevinleader.bgr.persistence.IgdbDao;
-import com.kevinleader.bgr.persistence.SteamDao;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.junit.Test;
 
 import java.util.List;
@@ -13,11 +10,10 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * The type Ranker test.
+ * Tests for the Ranker class.
  */
 public class RankerTest {
 
-    private final Logger logger = LogManager.getLogger(this.getClass());
     /**
      * The Ranker.
      */
@@ -26,13 +22,9 @@ public class RankerTest {
      * The Igdb dao.
      */
     IgdbDao igdbDao;
-    /**
-     * The Steam dao.
-     */
-    SteamDao steamDao;
 
     /**
-     * Gets prices success.
+     * Tests getting prices.
      *
      * @throws Exception the exception
      */
@@ -47,11 +39,10 @@ public class RankerTest {
         Game[] games = igdbDao.loadGamesToRank(whereConditions);
         prices = ranker.getPrices(games);
         assertEquals(games.length, prices.size());
-
     }
 
     /**
-     * Gets game values success.
+     * Tests getting game values.
      *
      * @throws Exception the exception
      */
@@ -68,7 +59,7 @@ public class RankerTest {
     }
 
     /**
-     * Gets ranked game list success.
+     * Tests getting a ranked game list.
      *
      * @throws Exception the exception
      */
@@ -86,6 +77,4 @@ public class RankerTest {
         List<RankedGame> rankedGames = ranker.getRankedGameList(games);
         assertEquals(500, rankedGames.size());
     }
-
-
 }

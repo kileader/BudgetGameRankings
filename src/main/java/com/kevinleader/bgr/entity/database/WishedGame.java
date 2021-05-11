@@ -5,7 +5,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 
 /**
- * A javabean class to represent a game on a wishlist.
+ * Javabean to represent a game on a wishlist.
  *
  * @author Kevin Leader
  */
@@ -25,14 +25,13 @@ public class WishedGame {
     @Column(name = "game_name")
     private String gameName;
 
-    /**
-     * id number used for the game on igdb.com
-     */
     @Column(name = "igdb_game_id")
     private int igdbGameId;
 
     /**
      * Instantiates a new game on a user's wishlist.
+     *
+     * @author Kevin Leader
      */
     public WishedGame() {
     }
@@ -42,7 +41,7 @@ public class WishedGame {
      *
      * @param user       the user
      * @param gameName   the game name
-     * @param igdbGameId the igdb game id
+     * @param igdbGameId id number used for the game on igdb.com
      */
     public WishedGame(User user, String gameName, int igdbGameId) {
         this.user = user;

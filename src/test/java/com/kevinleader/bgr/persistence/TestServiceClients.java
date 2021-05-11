@@ -15,8 +15,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 public class TestServiceClients {
 
+    /**
+     * The Igdb dao.
+     */
     IgdbDao igdbDao;
+    /**
+     * The Steam dao.
+     */
     SteamDao steamDao;
+    /**
+     * The Rank config dao.
+     */
     GenericDao rankConfigDao = new GenericDao(RankingConfiguration.class);
 
     /**
@@ -44,7 +53,6 @@ public class TestServiceClients {
         String genres = " & genres = (31,12,32,25,8)"; // is an adventure, rpg, indie, hack and slash, or platformer game (DesignDocuments.genreId.txt)
         int releaseEpoch = igdbDao.getReleaseDateEpoch(31556926);
         String releaseDate = " & first_release_date > " + releaseEpoch; // released within a year ago
-//        String whereCondition = releaseDate;
         String whereCondition = "where " + platforms + genres + releaseDate;
         Game[] games = igdbDao.loadGamesToRank(whereCondition);
         assertEquals("Disco Elysium: The Final Cut", games[0].getName());
@@ -83,7 +91,7 @@ public class TestServiceClients {
 //    }
 
     /**
-     * Test find steam game details from id.
+     * Tests finding price overviews from steam IDs.
      *
      * @throws Exception the exception
      */
@@ -96,9 +104,14 @@ public class TestServiceClients {
         steamIds.add(1145360);// Hades
         List<PriceOverview> appPrices = steamDao.getPriceOverviewsFromIds(steamIds);
         assertEquals(3, appPrices.size());
-        assertEquals(1999, appPrices.get(0).getJsonMemberFinal());
+        assertEquals(1999, appPrices.get(0).getInitial());
+        assertEquals(-1, appPrices.get(1).getJsonMemberFinal());
+        assertEquals(2499, appPrices.get(2).getInitial());
     }
 
+    /**
+     * Tests creating a where condition string from a ranking configuration.
+     */
     @Test
     public void createWhereConditionSuccess() {
         igdbDao = new IgdbDao();
@@ -107,6 +120,9 @@ public class TestServiceClients {
         assertEquals("where first_release_date > 14", whereCondition.substring(0,whereCondition.length()-8));
     }
 
+    /**
+     * Tests creating a where condition from igdb IDs.
+     */
     @Test
     public void createWhereConditionFromIdsSuccess() {
         igdbDao = new IgdbDao();

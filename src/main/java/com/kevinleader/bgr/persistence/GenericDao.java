@@ -10,7 +10,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 /**
- * A generic DAO somewhat inspired by http://rodrigouchoa.wordpress.com
+ * Generic DAO somewhat inspired by http://rodrigouchoa.wordpress.com
  *
  * @param <T> the type parameter
  * @author pawaite

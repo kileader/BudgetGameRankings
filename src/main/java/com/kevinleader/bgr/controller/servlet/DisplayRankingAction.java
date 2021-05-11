@@ -20,7 +20,9 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Displays rankings for displayRanking.jsp
+ * Sets the list of ranked games by the chosen ranking configuration, and reloads displayRanking.
+ *
+ * @author Kevin Leader
  */
 @WebServlet(
         name = "DisplayRankingAction",

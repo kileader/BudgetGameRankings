@@ -4,7 +4,9 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * The type Game.
+ * Javabean representing a video game's relevant properties as listed on igdb.com
+ *
+ * @author Kevin Leader
  */
 public class Game{
 

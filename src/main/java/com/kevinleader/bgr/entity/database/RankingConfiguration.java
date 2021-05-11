@@ -5,7 +5,9 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 
 /**
- * A javabean class to represent the settings for a custom ranking list.
+ * Javabean to represent the settings for a custom ranking list.
+ *
+ * @author Kevin Leader
  */
 @Entity(name = "RankingConfiguration")
 @Table(name = "ranking_configuration")
@@ -42,9 +44,9 @@ public class RankingConfiguration {
      *
      * @param user              the user
      * @param configurationName the configuration name
-     * @param platforms         the platforms
-     * @param genres            the genres
-     * @param releaseSpan       the release span
+     * @param platforms         comma separated integers representing platforms on igdb.com
+     * @param genres            comma separated integers representing genres on igdb.com
+     * @param releaseSpan       the release span in seconds
      */
     public RankingConfiguration(User user, String configurationName, String platforms, String genres, int releaseSpan) {
         this.user = user;

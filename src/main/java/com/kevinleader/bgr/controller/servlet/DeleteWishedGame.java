@@ -16,7 +16,9 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Deletes a wished game
+ * Deletes a wished game and reloads wishlist.
+ *
+ * @author Kevin Leader
  */
 @WebServlet(
         name = "DeleteWishedGame",

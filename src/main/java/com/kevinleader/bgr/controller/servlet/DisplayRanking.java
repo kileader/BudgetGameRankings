@@ -17,7 +17,9 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Serves displayRanking.jsp
+ * Serves displayRanking.jsp and sets ranking configurations for the current user.
+ *
+ * @author Kevin Leader
  */
 @WebServlet(
         name = "DisplayRanking",

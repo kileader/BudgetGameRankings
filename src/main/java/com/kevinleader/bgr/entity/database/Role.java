@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 /**
- * A javabean class to represent a role.
+ * Javabean to represent a user's role.
  *
  * @author Kevin Leader
  */

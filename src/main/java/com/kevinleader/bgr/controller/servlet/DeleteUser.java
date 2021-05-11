@@ -18,7 +18,9 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Deletes a user via admin page
+ * Deletes a user and reloads admin page.
+ *
+ * @author Kevin Leader
  */
 @WebServlet(
         name = "DeleteUser",

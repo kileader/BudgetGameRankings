@@ -7,7 +7,7 @@ Filename: configList.jsp
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="title" value="Budget Game Rankings - Config List"/>
+<c:set var="title" value="Budget Game Rankings - Configuration List"/>
 
 <html>
 
@@ -47,7 +47,6 @@ Filename: configList.jsp
     </table>
   </main>
 
-  <!-- footer -->
 </div>
 </body>
 </html>

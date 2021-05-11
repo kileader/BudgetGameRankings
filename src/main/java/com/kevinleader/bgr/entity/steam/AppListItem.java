@@ -3,7 +3,9 @@ package com.kevinleader.bgr.entity.steam;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * The type App list item.
+ * Javabean representing a steam game's steam appId and game name.
+ *
+ * @author Kevin Leader
  */
 public class AppListItem {
 

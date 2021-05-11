@@ -3,7 +3,9 @@ package com.kevinleader.bgr.entity.steam;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * The type Price overview.
+ * Javabean representing a steam game's information for price.
+ *
+ * @author Kevin Leader
  */
 public class PriceOverview{
 
@@ -34,12 +36,12 @@ public class PriceOverview{
 	/**
 	 * Instantiates a new Price overview.
 	 *
-	 * @param finalFormatted   the final formatted
-	 * @param initial          the initial
-	 * @param jsonMemberFinal  the json member final
-	 * @param currency         the currency
-	 * @param initialFormatted the initial formatted
-	 * @param discountPercent  the discount percent
+	 * @param finalFormatted   the final cost after discounts in formatted string
+	 * @param initial          the regularly priced cost
+	 * @param jsonMemberFinal  the final cost after discounts
+	 * @param currency         abbreviation representing a currency (should always be USD)
+	 * @param initialFormatted the initial cost in formatted string
+	 * @param discountPercent  the discount percentage as listed on steam
 	 */
 	public PriceOverview(String finalFormatted, int initial, int jsonMemberFinal, String currency, String initialFormatted, int discountPercent) {
 		this.finalFormatted = finalFormatted;

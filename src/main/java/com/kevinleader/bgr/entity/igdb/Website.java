@@ -3,7 +3,9 @@ package com.kevinleader.bgr.entity.igdb;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * The type Website.
+ * Javabean for a game's website's info on igdb.com
+ *
+ * @author Kevin Leader
  */
 public class Website {
 

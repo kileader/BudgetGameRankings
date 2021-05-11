@@ -42,7 +42,6 @@ Filename: admin.jsp
       </table>
     </main>
 
-<%--    <div class="row">footer</div>--%>
   </div>
 </body>
 </html>

@@ -18,7 +18,9 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Inserts a game into a user's wishlist
+ * Inserts a game into a user's wishlist and forwards to the wishlist.
+ *
+ * @author Kevin Leader
  */
 @WebServlet(
         name = "AddWishedGame",
@@ -58,19 +60,6 @@ public class AddWishedGame extends HttpServlet {
         WishedGame newWishedGame = new WishedGame(user,gameNameToAdd,igdbIdToAdd);
 
         int wishedGameId = wishedGameDao.insert(newWishedGame);
-//        // Check if it already exists before inserting
-//        usersWishedGames = user.getWishedGames();
-//        boolean foundId = false;
-//        if (usersWishedGames != null) {
-//            for (WishedGame game : usersWishedGames) {
-//                if (game.getIgdbGameId() == igdbIdToAdd) {
-//                    foundId = true;
-//                }
-//            }
-//        }
-//        if (!foundId) {
-//            wishedGameDao.insert(newWishedGame);
-//        }
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("/wishlist");
         dispatcher.forward(req, resp);

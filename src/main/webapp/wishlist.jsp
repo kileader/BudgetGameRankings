@@ -64,7 +64,6 @@ Filename: wishlist.jsp
       </table>
     </main>
 
-    <!-- footer -->
   </div>
 </body>
 </html>

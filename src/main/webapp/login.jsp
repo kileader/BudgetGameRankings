@@ -44,7 +44,6 @@ Filename: login.jsp
       </form>
     </main>
 
-    <!-- <div class="row" data-w3-include-html="footer.html"></div> -->
   </div>
   <script>
     // Disable form submissions if there are invalid fields

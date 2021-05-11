@@ -15,7 +15,9 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Serves admin.jsp
+ * Serves admin.jsp and sets a list of users.
+ *
+ * @author Kevin Leader
  */
 @WebServlet(
         name = "Admin",

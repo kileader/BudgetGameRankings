@@ -16,7 +16,9 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Deletes a ranking configuration
+ * Deletes a ranking configuration and reloads /configList
+ *
+ * @author Kevin Leader
  */
 @WebServlet(
         name = "DeleteRanking",

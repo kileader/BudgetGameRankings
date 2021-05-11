@@ -16,7 +16,10 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Saves a rank config
+ * Saves a rank config by making comma separated strings of integers for platforms and genres,
+ * and calculating a the release span from current time in seconds. Then forwards to index.jsp.
+ *
+ * @author Kevin Leader
  */
 @WebServlet(
         name = "SaveRankConfig",
@@ -31,6 +34,7 @@ public class SaveRankConfigAction extends HttpServlet {
 
     @Override
     public void init() {
+        logger.debug("run SaveRankConfig.init()");
         userDao = new GenericDao(User.class);
         rankingConfigurationDao = new GenericDao(RankingConfiguration.class);
     }

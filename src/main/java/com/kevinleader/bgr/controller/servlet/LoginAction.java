@@ -12,7 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Logs a user in
+ * Forwards to index.jsp after successful login.
+ *
+ * @author Kevin Leader
  */
 @WebServlet(
         name = "Login",
