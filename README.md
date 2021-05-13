@@ -11,6 +11,10 @@ their value, such as rating over price? Can there be multiple rankings on differ
 This project aims to solve these questions by using APIs to gather data about game ratings and prices and displaying
 rankings based on user chosen parameters.
 
+### Video Demonstration
+
+https://youtu.be/8lMcARkRcuE
+
 ### Project Technologies/Techniques 
 
 * Security/Authentication

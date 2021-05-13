@@ -5,6 +5,7 @@
       <configuration>
         <datasource-map>
           <unit-entry name="hibernate.cfg.xml" value="79786e5c-7976-4646-8a9d-fa95548cd06a" />
+          <unit-entry name="src:main:resources_sample:hibernate.cfg.xml" />
           <unit-entry name="src:main:sample_resources:hibernate.cfg.xml" value="39f63e0e-c8b7-4d65-9a64-eda565df112f" />
           <unit-entry name="src:test:sample_resources:hibernate.cfg.xml" value="db16781d-5614-47b0-a626-d41ee42ef6d8" />
         </datasource-map>

@@ -75,7 +75,7 @@ Filename: newRankConfig.jsp
                 <label for="pc" class="bold">PC (Windows)</label>
               </td>
               <td>
-                <input type="checkbox" id="ps5" name="p2" value="167" checked>
+                <input type="checkbox" id="ps5" name="p2" value="176" checked>
                 <label for="ps5" class="bold">PlayStation 5</label>
               </td>
               <td>
