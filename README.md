@@ -1,6 +1,6 @@
 # Kevin Leader Individual Project
 
-This repository is of an individual project for Enterprise Java.
+This repository is of an individual project for Madison College's Enterprise Java Course.
 
 ### Problem Statement
 
@@ -8,8 +8,8 @@ There aren't many straightforward rankings for budget videogames. There are of c
 current budget games, best classic games, best games for different genres, etc. Is it possible to rank games based on
 their value, such as rating over price? Can there be multiple rankings on different parameters? Can it be programmatic?
 
-This project aims to solve these questions by using APIs to gather data about game ratings and prices and displaying
-rankings based on user chosen parameters.
+This project solves these questions by using APIs to gather data about game ratings and prices and displaying
+rankings based on user-chosen parameters.
 
 ### Video Demonstration
 
